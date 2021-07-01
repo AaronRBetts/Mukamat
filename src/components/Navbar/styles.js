@@ -5,6 +5,7 @@ const drawerWidth = 0;
 export default makeStyles((theme) => ({
   appBar: {
     padding: '0 10vw',
+    ["@media (max-width:800px)"]: { padding: '0' },
     boxShadow: '10px 10px 20px rgba(0,0,0,0,5)',
     borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
     [theme.breakpoints.up('sm')]: {
@@ -14,6 +15,15 @@ export default makeStyles((theme) => ({
         justifyContent: 'space-between',
       }
     },
+  },
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
   },
   title: {
     alignItems: 'center',
@@ -43,29 +53,6 @@ export default makeStyles((theme) => ({
     },
     ["@media (max-width:800px)"]: { display: 'none' },
   },
-  search: {
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: 'auto',
-    },
-  },
-  searchIcon: {
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   inputRoot: {
     color: 'inherit',
   },
@@ -79,4 +66,12 @@ export default makeStyles((theme) => ({
       width: '20ch',
     },
   },
+  Watermark: {
+    marginTop: 'auto',
+  },
+  SiteInfo: {
+    display: 'flex',
+    height: '100%',
+
+  }
 }));

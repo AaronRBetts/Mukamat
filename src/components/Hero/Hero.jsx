@@ -20,7 +20,6 @@ const Hero = () => {
             {/* <Paper className={classes.ImageContainer}>
                 <Image cover src={HeroImage} className={classes.HeroImage} />
             </Paper> */}
-        <h5 className={classes.Watermark}>Authored by Birgit Saatsi</h5>
         </div>
         </Fade>
     )

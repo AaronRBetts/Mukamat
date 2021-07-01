@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { commerce } from './lib/commerce';
 import { Products, Navbar, Cart, Checkout, Hero } from './components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import CartFloat from './components/CartFloat/CartFloat'
 
 const App = () => {
     const [products, setProducts] = useState([]);
@@ -52,7 +53,7 @@ const App = () => {
 
     return (
         <Router>
-            <Navbar totalItems={cart.total_items}/>
+            <CartFloat totalItems={cart.total_items}/>
             <Switch>
                 <Route exact path="/">
                     <Hero />
