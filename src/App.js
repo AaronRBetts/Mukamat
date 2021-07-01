@@ -48,6 +48,7 @@ const App = () => {
 
     // console.log(products);
     console.log(cart);
+    console.log(process.env.REACT_APP_CHEC_PUBLIC_KEY)
 
     return (
         <Router>

@@ -22,13 +22,16 @@ export default makeStyles((theme) => ({
         paddingLeft: '100px',
         flexWrap: 'wrap',
         maxWidth: '400px',
+        ["@media (max-width:800px)"]: { paddingLeft: '10px' },
         '& h1': {
             lineHeight: '0.8',
-            margin: '10px 0'
+            margin: '10px 0',
+            ["@media (max-width:800px)"]: { fontSize: '3em' },
         },
         '& h4': {
             paddingLeft: '10px',
             borderLeft: '8px solid #CE9FFC',
+            ["@media (max-width:800px)"]: { fontSize: '2em' },
         },
         '& button': {
             margin: '10px 20px 0 0'

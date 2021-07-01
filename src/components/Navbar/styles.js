@@ -40,7 +40,8 @@ export default makeStyles((theme) => ({
     transition: 'all 0.2s ease',
     '&:hover': {
       textDecoration: 'underline 4px #CE9FFC',
-    }
+    },
+    ["@media (max-width:800px)"]: { display: 'none' },
   },
   search: {
     position: 'relative',
