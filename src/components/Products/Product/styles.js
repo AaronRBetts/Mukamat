@@ -5,6 +5,7 @@ export default makeStyles(() => ({
         maxWidth: '100%',
         background: 'linear-gradient(135deg, #C56CD6 0%,#3425AF 100%);',
         boxShadow: '5px 5px 10px rgba(0,0,0,0.5)',
+        padding: '0',
         '& *': {
             // color: '#fff',
         }
@@ -35,7 +36,8 @@ export default makeStyles(() => ({
         },
     },
     BookInfo: {
-        padding: '10px',
+        padding: '0',
+        borderRadius: '3px',
         background: 'rgba(255,255,255,0.8)',
         boxShadow: '-5px -5px 30px rgba(0,0,0,0.5)',
         '& a': {

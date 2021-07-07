@@ -43,6 +43,9 @@ export default makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'nowrap',
   },
+  DrawerLogo: {
+    padding: '10px'
+  },
   navLinks: {
     textDecoration: 'underline 0px #fff',
     color: '#000',
@@ -65,13 +68,5 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       width: '20ch',
     },
-  },
-  Watermark: {
-    marginTop: 'auto',
-  },
-  SiteInfo: {
-    display: 'flex',
-    height: '100%',
-
   }
 }));

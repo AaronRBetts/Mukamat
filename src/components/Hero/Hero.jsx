@@ -14,7 +14,6 @@ const Hero = () => {
                 <Typography variant="h1">Mukamat</Typography>
                 <Typography variant="h4">Suomen ja englannin kielen oppima­teri­aalia erityisen tuen tarpeessa oleville oppilaille.</Typography>
                 <Button variant="contained" color="primary">Tutustu oppimateriaaleihimme</Button>
-                <Button variant="outlined" color="primary">Tutustu oppimateriaaleihimme</Button>
             </div>
         </Fade>
             {/* <Paper className={classes.ImageContainer}>

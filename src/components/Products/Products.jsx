@@ -8,9 +8,10 @@ const Products = ({ products, onAddToCart }) => {
     const classes = useStyles();
 
     return(
-        <main className={classes.content}>
+        <main className={classes.content} id="kirjamme">
             <Typography variant="h2" gutterBottom>Kirjamme</Typography>
-            <Typography variant="h5" gutterBottom>Take a look at a selection of our books, hover your mouse over the book to learn more</Typography>
+            <Typography variant="h5" gutterBottom>
+            Katso kirjavalikoimaamme, napauta kirjaa nähdäksesi lisää.</Typography>
             <Grid container justify="center" spacing={4}>
                 {products.map((product) => (
                     <Grid item key={product.id} xs={12} sm={8} md={6} lg={4}>

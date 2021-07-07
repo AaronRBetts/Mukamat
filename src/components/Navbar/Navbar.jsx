@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
+import Link from '@material-ui/core/Link';
 import IconButton from '@material-ui/core/IconButton';
 import HomeIcon from '@material-ui/icons/Home';
 import List from '@material-ui/core/List';
@@ -19,6 +20,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import LocalShippingIcon from '@material-ui/icons/LocalShipping';
+import MailIcon from '@material-ui/icons/Mail';
+import GavelIcon from '@material-ui/icons/Gavel';
 import App from '../../App'
 
 const drawerWidth = 240;
@@ -40,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
       background: '#ffa801',
       color: '#1e272e'
     },
+  },
+  DrawerLogo: {
+    padding: '10px'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -78,27 +84,40 @@ function Navbar(props) {
 
   const drawer = (
     <div>
-      <div className={classes.toolbar} />
+      <Typography variant="h5" className={classes.DrawerLogo}>Mukamat Oy</Typography>
+      {/* <div className={classes.toolbar} /> */}
       <Divider />
       <List>
-        {['Home', 'Kirjamme'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <HomeIcon /> : <MenuBookIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+          <ListItem button component={Link} to="#/kirjamme">
+            <ListItemIcon><HomeIcon /></ListItemIcon>
+            <ListItemText primary={'Home'} />
           </ListItem>
-        ))}
+          <ListItem button component={Link} to="#/kirjamme">
+            <ListItemIcon><MenuBookIcon /></ListItemIcon>
+            <ListItemText primary={'Kirjamme'} />
+          </ListItem>
       </List>
       <Divider />
       <List>
-        {['About us', 'Return policy', 'Legal policy'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <EmojiPeopleIcon /> : <LocalShippingIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+          <ListItem button>
+            <ListItemIcon><EmojiPeopleIcon /></ListItemIcon>
+            <ListItemText primary={'About us'} />
           </ListItem>
-        ))}
+          <ListItem button>
+            <ListItemIcon><LocalShippingIcon /></ListItemIcon>
+            <ListItemText primary={'Returns'} />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon><GavelIcon /></ListItemIcon>
+            <ListItemText primary={'Legal'} />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon><MailIcon /></ListItemIcon>
+            <ListItemText primary={'Contact'} />
+          </ListItem>
       </List>
       <Box className={classes.SiteInfo}>
-        <Typography className={classes.Watermark}>Authored by Birgit Saatsi</Typography>
+        <Typography className={classes.Watermark}>Kirjat: Birgit Saatsi</Typography>
       </Box>
             
     </div>
