@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography} from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 
 const Popup = ({product}) => {
@@ -27,7 +28,7 @@ const Popup = ({product}) => {
 
   return (
     <div>
-      <Button color="primary" onClick={handleClickOpen('paper')}>Näytä lisää</Button>
+      <Button fullWidth size="large" variant="contained" color="primary" onClick={handleClickOpen('paper')}>Näytä lisää</Button>
       <Dialog
         open={open}
         onClose={handleClose}
@@ -46,6 +47,9 @@ const Popup = ({product}) => {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
+          <Button component={Link} to={`/kirjamme/${product.permalink}`} variant="contained" color="primary">
+            Näytä Lisää
+          </Button>
           <Button onClick={handleClose}  variant="outlined" color="primary">
             Close
           </Button>

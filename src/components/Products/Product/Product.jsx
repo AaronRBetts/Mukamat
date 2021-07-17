@@ -3,7 +3,6 @@ import { Card, CardContent, CardActions, Typography, Button, Fade, Paper, InputL
 import { AddShoppingCart } from '@material-ui/icons'
 // import { Link } from 'react-router-dom';
 import Book from './Book/Book'
-import { BookDetails } from '../../';
 import Popup from '../../Popup/Popup'
 
 import useStyles from './styles';
@@ -15,7 +14,6 @@ const Product = ({ product, onAddToCart }) => {
     const handleChange = (event) => {
       setQty(event.target.value);
     };
-    // const description = `${product.description.slice(0,200)} ...`
 
     return (
         <Fade in timeout={1500}>
@@ -26,11 +24,11 @@ const Product = ({ product, onAddToCart }) => {
             {/* <CardMedia className={classes.media} image={product.media.source} title={product.name}/> */}
             <CardContent className={classes.BookInfo}>
                 <div className={classes.cardContent}>
+                    <Typography variant="h4">{product.name}</Typography>
                     <Typography variant="h6" >
                         {product.price.formatted_with_symbol}
                     </Typography>
                 </div>
-                <BookDetails product={product} />
                 <CardActions disableSpacing className={classes.cardActions}>
                     
                 <Paper className={classes.qtyWrapper}>

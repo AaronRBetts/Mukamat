@@ -17,24 +17,20 @@ export default makeStyles((theme) => ({
     HeroTitle: {
         borderRadius: '0 20px 20px 0',
         padding: '10px',
-        background: 'rgba(255, 255, 255, 1)',
+        background: '#fafafa',
         margin: '100px auto auto 0',
-        paddingLeft: '100px',
         flexWrap: 'wrap',
         maxWidth: '400px',
         paddingLeft: '10px',
-        ["@media (max-width:1200px)"]: { paddingLeft: '10px' },
         '& h1': {
             lineHeight: '0.8',
             fontSize: '3em',
             margin: '10px 0',
-            ["@media (max-width:1200px)"]: { fontSize: '3em' },
         },
         '& h4': {
             paddingLeft: '10px',
             borderLeft: '8px solid #CE9FFC',
             fontSize: '2em',
-            ["@media (max-width:1200px)"]: { fontSize: '2em' },
         },
         '& button': {
             margin: '10px 20px 0 0'

@@ -1,4 +1,8 @@
 import React from 'react';
+
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
@@ -6,9 +10,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
-import Link from '@material-ui/core/Link';
 import IconButton from '@material-ui/core/IconButton';
 import HomeIcon from '@material-ui/icons/Home';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -72,6 +76,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+const Routes = []
+
 function Navbar(props) {
   const { window } = props;
   const classes = useStyles();
@@ -88,36 +94,45 @@ function Navbar(props) {
       {/* <div className={classes.toolbar} /> */}
       <Divider />
       <List>
-          <ListItem button component={Link} to="#/kirjamme">
+          <ListItem button component={Link} to="/">
             <ListItemIcon><HomeIcon /></ListItemIcon>
             <ListItemText primary={'Home'} />
           </ListItem>
-          <ListItem button component={Link} to="#/kirjamme">
+          {/* <ListItem button component={ScrollLink} offset={-80} smooth={true} duration={500} to="kirjamme">
+            
+              <ListItemIcon><MenuBookIcon /></ListItemIcon>
+              <ListItemText primary={'Kirjamme'} />
+          </ListItem> */}
+          <ListItem button component={Link} to="/kirjamme">
             <ListItemIcon><MenuBookIcon /></ListItemIcon>
             <ListItemText primary={'Kirjamme'} />
+          </ListItem>
+          <ListItem button component={Link} to="/cart">
+            <ListItemIcon><ShoppingCartIcon /></ListItemIcon>
+            <ListItemText primary={'Checkout'} />
           </ListItem>
       </List>
       <Divider />
       <List>
-          <ListItem button>
+          <ListItem button component={Link} to="/about">
             <ListItemIcon><EmojiPeopleIcon /></ListItemIcon>
             <ListItemText primary={'About us'} />
           </ListItem>
-          <ListItem button>
+          <ListItem button component={Link} to="/returns">
             <ListItemIcon><LocalShippingIcon /></ListItemIcon>
-            <ListItemText primary={'Returns'} />
+            <ListItemText primary={'Returns & Shipping'} />
           </ListItem>
-          <ListItem button>
+          <ListItem button component={Link} to="/kirjamme">
             <ListItemIcon><GavelIcon /></ListItemIcon>
             <ListItemText primary={'Legal'} />
           </ListItem>
-          <ListItem button>
+          <ListItem button component={Link} to="/contact">
             <ListItemIcon><MailIcon /></ListItemIcon>
             <ListItemText primary={'Contact'} />
           </ListItem>
       </List>
       <Box className={classes.SiteInfo}>
-        <Typography className={classes.Watermark}>Kirjat: Birgit Saatsi</Typography>
+        <Typography variant="body2" className={classes.Watermark}>Kirjat: Birgit Saatsi</Typography>
       </Box>
             
     </div>
@@ -127,6 +142,7 @@ function Navbar(props) {
 
   return (
     <div className={classes.root}>
+      <Router>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
@@ -145,7 +161,6 @@ function Navbar(props) {
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
           <Drawer
             container={container}
@@ -157,7 +172,7 @@ function Navbar(props) {
               paper: classes.drawerPaper,
             }}
             ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
+              keepMounted: true,
             }}
           >
             {drawer}
@@ -179,6 +194,7 @@ function Navbar(props) {
         <div className={classes.toolbar} />
         <App />
       </main>
+    </Router>
     </div>
   );
 }

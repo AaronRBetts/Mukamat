@@ -36,7 +36,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
           </TableHead>
           <TableBody>
             {cart.line_items.map((item) => (
-                <CartItem item={item} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} />
+                <CartItem key={item.id} item={item} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} />
             ))}
           </TableBody>
         </Table>
