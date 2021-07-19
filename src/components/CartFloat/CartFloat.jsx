@@ -11,7 +11,7 @@ const CartFloat = ({ totalItems }) => {
 
     return (
         <>
-                {location.pathname === '/' && (
+                {location.pathname !== ('/cart' || 'checkout') && (
                     <div className={classes.button}>
                         <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
                             <Badge badgeContent={totalItems} color="secondary">

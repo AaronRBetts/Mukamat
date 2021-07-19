@@ -31,6 +31,7 @@ export default makeStyles((theme) => ({
             paddingLeft: '10px',
             borderLeft: '8px solid #CE9FFC',
             fontSize: '2em',
+            marginBottom: '10px'
         },
         '& button': {
             margin: '10px 20px 0 0'

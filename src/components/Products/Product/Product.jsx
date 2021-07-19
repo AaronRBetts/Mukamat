@@ -21,7 +21,6 @@ const Product = ({ product, onAddToCart }) => {
             <Fade in timeout={2500}>
             <Book product={product}/>
             </Fade>
-            {/* <CardMedia className={classes.media} image={product.media.source} title={product.name}/> */}
             <CardContent className={classes.BookInfo}>
                 <div className={classes.cardContent}>
                     <Typography variant="h4">{product.name}</Typography>
@@ -46,7 +45,6 @@ const Product = ({ product, onAddToCart }) => {
                     variant="outlined"
                     />
                     </FormControl>
-                    {/* <TextField id="qty-selector" label="Quantity" type="number" defaultValue="1" InputLabelProps={{ shrink: true, }} variant="outlined" className={classes.qtySelector}/> */}
                     <Button variant="contained" color="primary" aria-label="Add to Cart" onClick={() => onAddToCart(product.id, qty)}>
                         <AddShoppingCart /> <Typography variant="body2">Add to cart</Typography>
                     </Button>
@@ -54,7 +52,6 @@ const Product = ({ product, onAddToCart }) => {
                 </Paper>
                 </CardActions>
                 <Popup product={product} />
-                {/* <Typography dangerouslySetInnerHTML={{__html: description}} variant="body2" color="textSecondary" height="5em"></Typography> */}
             </CardContent>
         </Card>
         </Fade>

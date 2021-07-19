@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    padding: '10px',
   },
   Watermark: {
     margin: 'auto auto 0 auto',

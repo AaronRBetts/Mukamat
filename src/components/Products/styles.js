@@ -4,9 +4,9 @@ export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
-    boxShadow: '2px 5px 30px rgba(0,0,0,0.5)',
+    boxShadow: '2px 5px 40px rgba(0,0,0,0.3)',
     borderRadius: '10px',
-    padding: theme.spacing(3),
+    padding: '10px',
     maxWidth: '1280px',
     margin: 'auto',
   },

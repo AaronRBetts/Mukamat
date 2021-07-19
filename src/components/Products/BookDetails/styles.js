@@ -5,8 +5,8 @@ export default makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     boxShadow: '2px 5px 30px rgba(0,0,0,0.2)',
-    borderRadius: '10px',
-    padding: theme.spacing(3),
+    borderRadius: '5px',
+    padding: '10px',
     margin: 'auto',
   },
   root: {

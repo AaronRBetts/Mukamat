@@ -20,6 +20,7 @@ export default makeStyles(() => ({
         borderRadius: '10px',
         '& h4': {
             padding: '10px',
+            ["@media (max-width:800px)"]: { fontSize: '1.5rem' },
         },
         '& h6': {
             padding: '10px',
@@ -31,6 +32,7 @@ export default makeStyles(() => ({
         display: 'flex'
     },
     qtySelector: {
+        width: '100px',
         margin: 'auto 20px auto 0',
         '& button': {
             margin: 'auto',
