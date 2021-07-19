@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { commerce } from './lib/commerce';
-import { Products, Cart, Checkout, Hero, ProductPage } from './components';
+import { Products, Cart, Checkout, Hero } from './components';
 import { Switch, Route } from 'react-router-dom';
 import CartFloat from './components/CartFloat/CartFloat'
 import { Element } from 'react-scroll';
@@ -8,6 +8,8 @@ import { Element } from 'react-scroll';
 const App = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState({});
+    const [order, setOrder] = useState({});
+    const [errorMessage, setErrorMessage] = useState('');
 
     console.log(products)
 
@@ -45,6 +47,23 @@ const App = () => {
         setCart(cart);
     }
 
+    const refreshCart = async () => {
+        const {newCart} = await commerce.cart.refresh();
+        
+        setCart(newCart);
+    }
+
+    const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
+        try {
+            const incomingOrder = await commerce.checkout.capture(checkoutTokenId, newOrder);
+
+            setOrder(incomingOrder);
+            refreshCart();
+        } catch (error) {
+            setErrorMessage(error.data.error.message);
+        }
+    }
+
     useEffect(() => {
         fetchProducts();
         fetchCart();
@@ -67,7 +86,7 @@ const App = () => {
                 </Route>
                 {products.map((book) => (
                     <Route exact path={`/kirjamme/${book.permalink}`} key={book.id}>
-                        <Products products={products.filter(product => product.permalink == book.permalink)} onAddToCart={handleAddToCart}/>
+                        <Products products={products.filter(product => product.permalink === book.permalink)} onAddToCart={handleAddToCart}/>
                     </Route>
                 ))}
                 <Route exact path="/cart">
@@ -79,7 +98,7 @@ const App = () => {
                     />                    
                 </Route>
                 <Route exact path="/checkout">
-                    <Checkout cart={cart}/>
+                    <Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage}/>
                 </Route>
             </Switch>
     )

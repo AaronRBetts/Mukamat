@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Button, Fade } from '@material-ui/core';
 
 import useStyles from './styles';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Hero = () => {
     const classes = useStyles();
@@ -13,12 +14,10 @@ const Hero = () => {
             <div className={classes.HeroTitle}>
                 <Typography variant="h1">Mukamat</Typography>
                 <Typography variant="h4">Suomen ja englannin kielen oppima­teri­aalia erityisen tuen tarpeessa oleville oppilaille.</Typography>
-                <Button variant="contained" color="primary">Tutustu oppimateriaaleihimme</Button>
+                {/* <ListItem button variant="contained" component={ScrollLink} offset={-80} smooth={true} duration={500} to="kirjamme">Tutustu oppimateriaaleihimme</ListItem> */}
+                <Button variant="contained" color="primary" component={ScrollLink} offset={-80} smooth={true} duration={500} to="kirjamme">Tutustu oppimateriaaleihimme</Button>
             </div>
         </Fade>
-            {/* <Paper className={classes.ImageContainer}>
-                <Image cover src={HeroImage} className={classes.HeroImage} />
-            </Paper> */}
         </div>
         </Fade>
     )

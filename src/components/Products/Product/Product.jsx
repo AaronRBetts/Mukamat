@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardActions, Typography, Button, Fade, Paper, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core';
+import { Card, CardContent, CardActions, Typography, Button, Fade, Paper, InputLabel, MenuItem, FormControl, Select, TextField } from '@material-ui/core';
 import { AddShoppingCart } from '@material-ui/icons'
 // import { Link } from 'react-router-dom';
 import Book from './Book/Book'
@@ -34,25 +34,17 @@ const Product = ({ product, onAddToCart }) => {
                 <Paper className={classes.qtyWrapper}>
 
                     <FormControl variant="outlined" className={classes.qtySelector}>
-                        <InputLabel id="demo-simple-select-outlined-label">Quantity</InputLabel>
-                        <Select
-                        labelId="demo-simple-select-outlined-label"
-                        id="demo-simple-select-outlined"
-                        value={qty}
-                        onChange={handleChange}
-                        label="Quantity"
-                        >
-                        <MenuItem value={1}>1</MenuItem>
-                        <MenuItem value={2}>2</MenuItem>
-                        <MenuItem value={3}>3</MenuItem>
-                        <MenuItem value={4}>4</MenuItem>
-                        <MenuItem value={5}>5</MenuItem>
-                        <MenuItem value={6}>6</MenuItem>
-                        <MenuItem value={7}>7</MenuItem>
-                        <MenuItem value={8}>8</MenuItem>
-                        <MenuItem value={9}>9</MenuItem>
-                        <MenuItem value={10}>10</MenuItem>
-                        </Select>
+                    <TextField
+                    id="outlined-number"
+                    label="Number"
+                    type="number"
+                    value={qty}
+                    onChange={handleChange}
+                    InputLabelProps={{
+                        shrink: true,
+                    }}
+                    variant="outlined"
+                    />
                     </FormControl>
                     {/* <TextField id="qty-selector" label="Quantity" type="number" defaultValue="1" InputLabelProps={{ shrink: true, }} variant="outlined" className={classes.qtySelector}/> */}
                     <Button variant="contained" color="primary" aria-label="Add to Cart" onClick={() => onAddToCart(product.id, qty)}>

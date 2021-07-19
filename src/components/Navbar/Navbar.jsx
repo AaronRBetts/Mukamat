@@ -1,9 +1,7 @@
 import React from 'react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -76,7 +74,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Routes = []
 
 function Navbar(props) {
   const { window } = props;
@@ -91,7 +88,6 @@ function Navbar(props) {
   const drawer = (
     <div>
       <Typography variant="h5" className={classes.DrawerLogo}>Mukamat Oy</Typography>
-      {/* <div className={classes.toolbar} /> */}
       <Divider />
       <List>
           <ListItem button component={Link} to="/">
@@ -113,7 +109,7 @@ function Navbar(props) {
           </ListItem>
       </List>
       <Divider />
-      <List>
+      {/* <List>
           <ListItem button component={Link} to="/about">
             <ListItemIcon><EmojiPeopleIcon /></ListItemIcon>
             <ListItemText primary={'About us'} />
@@ -130,10 +126,8 @@ function Navbar(props) {
             <ListItemIcon><MailIcon /></ListItemIcon>
             <ListItemText primary={'Contact'} />
           </ListItem>
-      </List>
-      <Box className={classes.SiteInfo}>
-        <Typography variant="body2" className={classes.Watermark}>Kirjat: Birgit Saatsi</Typography>
-      </Box>
+      </List> */}
+      
             
     </div>
   );
