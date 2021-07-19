@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardActions, Typography, Button, Fade, Paper, InputLabel, MenuItem, FormControl, Select, TextField } from '@material-ui/core';
 import { AddShoppingCart } from '@material-ui/icons'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Book from './Book/Book'
 import Popup from '../../Popup/Popup'
 
@@ -51,7 +51,10 @@ const Product = ({ product, onAddToCart }) => {
 
                 </Paper>
                 </CardActions>
-                <Popup product={product} />
+                
+          <Button component={Link} to={`/kirjamme/${product.permalink}`} variant="contained" color="primary">
+            Näytä Lisää
+          </Button>
             </CardContent>
         </Card>
         </Fade>

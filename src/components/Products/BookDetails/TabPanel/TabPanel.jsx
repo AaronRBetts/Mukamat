@@ -53,6 +53,15 @@ const useStyles = makeStyles((theme) => ({
   },
   Card: {
       padding: '10px'
+  },
+  labels: {
+      '& button': {
+          padding: '0',
+          minWidth: '0',
+      },
+      '& span': {
+        ["@media (max-width:800px)"]: { fontSize: '0.7rem' },
+      }
   }
 }));
 
@@ -72,7 +81,7 @@ export default function FullWidthTabs({products}) {
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
-        <Tabs
+        <Tabs className={classes.labels}
           value={value}
           onChange={handleChange}
           indicatorColor="primary"
