@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     borderRadius: '10px',
     padding: theme.spacing(3),
     maxWidth: '1280px',
-    margin: 'auto',
+    margin: '64px auto 0',
   },
   root: {
     flexGrow: 1,

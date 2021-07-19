@@ -1,9 +1,8 @@
 import React from 'react';
-import { Card, CardContent, CardActions, Typography, Button, Fade, Paper, InputLabel, MenuItem, FormControl, Select, TextField } from '@material-ui/core';
+import { Card, CardContent, CardActions, Typography, Button, Fade, Paper, FormControl, TextField } from '@material-ui/core';
 import { AddShoppingCart } from '@material-ui/icons'
 import { Link } from 'react-router-dom';
 import Book from './Book/Book'
-import Popup from '../../Popup/Popup'
 
 import useStyles from './styles';
 
