@@ -955,7 +955,6 @@ const BookDetails = ({products, onAddToCart}) => {
                     variant="outlined"
                     />
                     </FormControl>
-                    {/* <TextField id="qty-selector" label="Quantity" type="number" defaultValue="1" InputLabelProps={{ shrink: true, }} variant="outlined" className={classes.qtySelector}/> */}
                     <Button size="large" variant="contained" color="primary" aria-label="Add to Cart" onClick={() => onAddToCart(products[0].id, qty)}>
                         <AddShoppingCart /> <Typography variant="body2">Add to cart</Typography>
                     </Button>

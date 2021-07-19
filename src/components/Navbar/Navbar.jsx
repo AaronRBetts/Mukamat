@@ -3,7 +3,6 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
-import Box from '@material-ui/core/Box';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
@@ -16,14 +15,11 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
-import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 import MenuBookIcon from '@material-ui/icons/MenuBook'
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import LocalShippingIcon from '@material-ui/icons/LocalShipping';
-import MailIcon from '@material-ui/icons/Mail';
-import GavelIcon from '@material-ui/icons/Gavel';
+import Logo from './Logo'
 import App from '../../App'
 
 const drawerWidth = 240;
@@ -40,10 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     [theme.breakpoints.up('sm')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-      background: '#ffa801',
-      color: '#1e272e'
+      height: '0'
     },
   },
   DrawerLogo: {
@@ -70,8 +63,7 @@ const useStyles = makeStyles((theme) => ({
   SiteInfo: {
     display: 'flex',
     height: '100%',
-
-  }
+  },
 }));
 
 
@@ -87,7 +79,7 @@ function Navbar(props) {
 
   const drawer = (
     <div>
-      <Typography variant="h5" className={classes.DrawerLogo}>Mukamat Oy</Typography>
+      <Typography variant="h5" className={classes.DrawerLogo} component={Link} to="/"><Logo /></Typography>
       <Divider />
       <List>
           <ListItem button component={Link} to="/">
@@ -127,8 +119,6 @@ function Navbar(props) {
             <ListItemText primary={'Contact'} />
           </ListItem>
       </List> */}
-      
-            
     </div>
   );
 
@@ -139,7 +129,7 @@ function Navbar(props) {
       <Router>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
+        <Toolbar classes={classes.toolBar}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -149,9 +139,6 @@ function Navbar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Mukamat
-          </Typography>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
@@ -185,7 +172,7 @@ function Navbar(props) {
         </Hidden>
       </nav>
       <main className={classes.content}>
-        <div className={classes.toolbar} />
+
         <App />
       </main>
     </Router>
