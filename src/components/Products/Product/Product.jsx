@@ -52,9 +52,9 @@ const Product = ({ product, onAddToCart }) => {
                 </Paper>
                 </CardActions>
                 
-          <Button component={Link} to={`/kirjamme/${product.permalink}`} variant="contained" color="primary">
-            Näytä Lisää
-          </Button>
+            <Button component={Link} to={`/kirjamme/${product.permalink}`} variant="contained" fullWidth color="primary">
+                Näytä Lisää
+            </Button>
             </CardContent>
         </Card>
         </Fade>

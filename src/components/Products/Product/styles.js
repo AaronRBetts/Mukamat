@@ -47,5 +47,5 @@ export default makeStyles(() => ({
             textDecoration: 'none',
             padding: '10px',
         },
-    }
+    },
 }));
