@@ -48,4 +48,9 @@ export default makeStyles(() => ({
             padding: '10px',
         },
     },
+    isbn: {
+        margin: '0.5em',
+        color: 'white',
+        fontSize: '0.9em'
+    }
 }));

@@ -5,7 +5,6 @@ import useStyles from './styles';
 
 const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
     const classes = useStyles();
-    console.log(item)
 
     return (
         <TableRow key={item.name}>

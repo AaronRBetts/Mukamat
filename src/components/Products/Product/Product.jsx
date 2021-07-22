@@ -9,10 +9,11 @@ import useStyles from './styles';
 const Product = ({ product, onAddToCart }) => {
     const classes = useStyles();
     const [qty, setQty] = React.useState(1);
-  
+
     const handleChange = (event) => {
-      setQty(event.target.value);
-    };
+        setQty(event.target.value);
+      };
+
 
     return (
         <Fade in timeout={1500}>
@@ -20,6 +21,7 @@ const Product = ({ product, onAddToCart }) => {
             <Fade in timeout={2500}>
             <Book product={product}/>
             </Fade>
+            <Typography variant="body2" className={classes.isbn}>{product.isbn}</Typography>
             <CardContent className={classes.BookInfo}>
                 <div className={classes.cardContent}>
                     <Typography variant="h4">{product.name}</Typography>
