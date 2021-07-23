@@ -1,6 +1,6 @@
 import React from 'react'
 import { AddShoppingCart } from '@material-ui/icons'
-import { Grid, Typography, Card, Button, Fade, CardActions, Paper, FormControl, TextField } from '@material-ui/core';
+import { Grid, Typography, Card, Button, Fade, CardActions, Paper, FormControl, TextField, Divider } from '@material-ui/core';
 import Book from '../Product/Book/Book'
 import useStyles from './styles'
 import TabPanel from './TabPanel/TabPanel'
@@ -36,6 +36,7 @@ const BookDetails = ({products, onAddToCart}) => {
         <Typography variant="body2">{products[0].isbn}</Typography>
         <Typography variant="h6" gutterBottom>{products[0].price.formatted_with_symbol}</Typography>
         <Typography variant="body2" gutterBottom>{products[0].beforeTax}</Typography>
+        <Divider />
         <Typography variant="body1" gutterBottom dangerouslySetInnerHTML={{__html: products[0].description}}>
         </Typography>
                 <CardActions disableSpacing className={classes.cardActions}>
