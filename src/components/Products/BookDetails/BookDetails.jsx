@@ -35,7 +35,8 @@ const BookDetails = ({products, onAddToCart}) => {
         <Typography variant="h2">{products[0].name}</Typography>
         <Typography variant="body2">{products[0].isbn}</Typography>
         <Typography variant="h6" gutterBottom>{products[0].price.formatted_with_symbol}</Typography>
-        <Typography variant="body2" gutterBottom dangerouslySetInnerHTML={{__html: products[0].description}}>
+        <Typography variant="body2" gutterBottom>{products[0].beforeTax}</Typography>
+        <Typography variant="body1" gutterBottom dangerouslySetInnerHTML={{__html: products[0].description}}>
         </Typography>
                 <CardActions disableSpacing className={classes.cardActions}>
                     
@@ -64,7 +65,7 @@ const BookDetails = ({products, onAddToCart}) => {
 
     </Card>
         <TabPanel products={products} />
-        <Typography variant="body2" gutterBottom dangerouslySetInnerHTML={{__html: disclaimer}}></Typography>
+        {(products[0].permalink === "matti" || products[0].permalink === "vesseli") ? <Typography variant="body2" gutterBottom dangerouslySetInnerHTML={{__html: disclaimer}}></Typography>: ''}
     </Grid>
     </Fade>
     )
