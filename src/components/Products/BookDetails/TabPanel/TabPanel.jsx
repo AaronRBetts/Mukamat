@@ -22,7 +22,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          <div>{children}</div>
         </Box>
       )}
     </div>
@@ -100,32 +100,30 @@ export default function FullWidthTabs({products}) {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-        <Grid container>
-                {products[0].type.map((product, key) => {
-                    return (
+          <Grid container>
+                  {products[0].type.map((product, key) => {
+                      return (
 
-                            <Grid item xs={12} md={6} lg={4} className={classes.Card} key={key}>
+                              <Grid item xs={12} md={6} lg={4} className={classes.Card} key={key}>
 
-                            {product.imageSrc ? <img alt="book page example" className={classes.image} src={product.imageSrc}/> : ''}
+                              {product.imageSrc ? <img alt="book page example" className={classes.image} src={product.imageSrc}/> : ''}
 
-                                <Typography variant="body1" dangerouslySetInnerHTML={{__html: product.details}}>
-                                    {/* {product.details} */}
-                                </Typography>
-                            {product.extra ? <Typography variant="body1" gutterBottom dangerouslySetInnerHTML={{__html: product.extra}} /> : ''}
-                            </Grid>
+                                  <div dangerouslySetInnerHTML={{__html: product.details}} />
+                              {product.extra ? <div dangerouslySetInnerHTML={{__html: product.extra}} /> : ''}
+                              </Grid>
 
-                    )
+                      )
 
-                })}
-        </Grid>
+                  })}
+          </Grid>
         </TabPanel>
         {products[0].audience ? 
         <TabPanel value={value} index={1} dir={theme.direction}>
-            <Typography variant="body1" gutterBottom dangerouslySetInnerHTML={{__html: products[0].audience}} />
+            <div dangerouslySetInnerHTML={{__html: products[0].audience}} />
         </TabPanel> : ''}
         {products[0].teachingGuide ? 
         <TabPanel value={value} index={2} dir={theme.direction}>
-            <Typography variant="body1" gutterBottom dangerouslySetInnerHTML={{__html: products[0].teachingGuide}} />
+            <div dangerouslySetInnerHTML={{__html: products[0].teachingGuide}} />
         </TabPanel> : ''}
       </SwipeableViews>
     </div>

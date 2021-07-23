@@ -41,9 +41,8 @@ const Popup = ({product}) => {
           <DialogContentText
             id="scroll-dialog-description"
             ref={descriptionElementRef}
-            tabIndex={-1}
+            tabIndex={-1} dangerouslySetInnerHTML={{__html: product.description}} 
           >
-              <Typography dangerouslySetInnerHTML={{__html: product.description}} variant="body2" color="textSecondary" height="5em"></Typography>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
