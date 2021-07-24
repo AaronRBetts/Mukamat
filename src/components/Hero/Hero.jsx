@@ -1,7 +1,7 @@
 import React from 'react';
-import { Typography, Button, Fade } from '@material-ui/core';
-
+import { Typography, Button, Fade, CardMedia } from '@material-ui/core';
 import useStyles from './styles';
+import bgImage from '../../images/Herobg3.png'
 import { Link as ScrollLink } from 'react-scroll';
 
 const Hero = () => {
@@ -18,6 +18,10 @@ const Hero = () => {
                 <Button variant="contained" color="primary" component={ScrollLink} offset={-80} smooth={true} duration={500} to="kirjamme">Tutustu oppimateriaaleihimme</Button>
             </div>
         </Fade>
+            <Fade in timeout={1500}>
+            <CardMedia className={classes.media} component="img"
+        image={bgImage} />
+            </Fade>
         </div>
         </Fade>
     )

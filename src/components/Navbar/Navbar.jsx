@@ -64,6 +64,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     height: '100%',
   },
+  navIcon: {
+    color: '#3c40c6'
+  }
 }));
 
 
@@ -83,7 +86,7 @@ function Navbar(props) {
       <Divider />
       <List>
           <ListItem button component={Link} to="/">
-            <ListItemIcon><HomeIcon /></ListItemIcon>
+            <ListItemIcon className={classes.navIcon}><HomeIcon /></ListItemIcon>
             <ListItemText primary={'Home'} />
           </ListItem>
           {/* <ListItem button component={ScrollLink} offset={-80} smooth={true} duration={500} to="kirjamme">
@@ -92,11 +95,11 @@ function Navbar(props) {
               <ListItemText primary={'Kirjamme'} />
           </ListItem> */}
           <ListItem button component={Link} to="/kirjamme">
-            <ListItemIcon><MenuBookIcon /></ListItemIcon>
+            <ListItemIcon className={classes.navIcon}><MenuBookIcon /></ListItemIcon>
             <ListItemText primary={'Kirjamme'} />
           </ListItem>
           <ListItem button component={Link} to="/cart">
-            <ListItemIcon><ShoppingCartIcon /></ListItemIcon>
+            <ListItemIcon className={classes.navIcon}><ShoppingCartIcon /></ListItemIcon>
             <ListItemText primary={'Checkout'} />
           </ListItem>
       </List>

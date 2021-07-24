@@ -1,5 +1,4 @@
 import { makeStyles } from '@material-ui/core/styles';
-import Image from '../../images/Herobg3.png'
 
 export default makeStyles((theme) => ({
     HeroSection: {
@@ -9,12 +8,9 @@ export default makeStyles((theme) => ({
         justifyContent: 'space-evenly',
         height: '720px',
         overflow: 'hidden',/* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
-        backgroundImage: `url(${Image})`,
-        backgroundSize: 'contain', 
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'top right', 
     },
     HeroTitle: {
+        zIndex: '10',
         borderRadius: '0 20px 20px 0',
         padding: '10px',
         background: '#fafafa',
@@ -38,15 +34,11 @@ export default makeStyles((theme) => ({
         },
 
     },
-    ImageContainer: {
-        zIndex: '-1',
-        right: '0',
-        top: '0',
+    media: {
+        zIndex: '1',
         position: 'absolute',
-        height: 'auto',
-        width: '1280px',
-    },
-    HeroImage: {
+        overflow: 'hidden',
+        width: '80%',
     },
     Watermark: {
         padding: '5px 10px',
