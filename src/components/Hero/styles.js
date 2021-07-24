@@ -11,13 +11,14 @@ export default makeStyles((theme) => ({
     },
     HeroTitle: {
         zIndex: '10',
-        borderRadius: '0 20px 20px 0',
+        borderRadius: '10px',
         padding: '10px',
         background: '#fafafa',
         margin: '100px auto auto 0',
         flexWrap: 'wrap',
         maxWidth: '400px',
         paddingLeft: '10px',
+        boxShadow: '0px 0px 30px rgba(0,0,0,0.3)',
         '& h1': {
             lineHeight: '0.8',
             fontSize: '3em',
@@ -37,6 +38,7 @@ export default makeStyles((theme) => ({
     media: {
         zIndex: '1',
         position: 'absolute',
+        left: '10vw',
         overflow: 'hidden',
         width: '80%',
     },
