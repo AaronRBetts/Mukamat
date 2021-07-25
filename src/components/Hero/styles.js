@@ -36,7 +36,7 @@ export default makeStyles((theme) => ({
 
     },
     media: {
-        zIndex: '1',
+        zIndex: '-1',
         position: 'absolute',
         left: '10vw',
         overflow: 'hidden',

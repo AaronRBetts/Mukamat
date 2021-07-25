@@ -6,9 +6,6 @@ export default makeStyles(() => ({
         background: 'linear-gradient(135deg, #C56CD6 0%,#3425AF 100%);',
         boxShadow: '5px 5px 10px rgba(0,0,0,0.5)',
         padding: '0',
-        '& *': {
-            // color: '#fff',
-        }
     },
     cardActions: {
         display: 'flex',
@@ -52,5 +49,10 @@ export default makeStyles(() => ({
         margin: '0.5em',
         color: 'white',
         fontSize: '0.9em'
+    },
+    prices: {
+        textAlign: 'right',
+        marginLeft: 'auto',
+        padding: '10px',
     }
 }));

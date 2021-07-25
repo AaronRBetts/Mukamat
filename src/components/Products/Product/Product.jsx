@@ -25,9 +25,14 @@ const Product = ({ product, onAddToCart }) => {
             <CardContent className={classes.BookInfo}>
                 <div className={classes.cardContent}>
                     <Typography variant="h4">{product.name}</Typography>
-                    <Typography variant="h6" >
+                    <div className={classes.prices}>
+                    <Typography variant="body1" >
                         {product.price.formatted_with_symbol}
                     </Typography>
+                    <Typography variant="body2" className={classes.taxPrice}>
+                        {product.beforeTax}
+                    </Typography>
+                    </div>
                 </div>
                 <CardActions disableSpacing className={classes.cardActions}>
                     
