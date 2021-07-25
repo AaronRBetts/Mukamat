@@ -15,7 +15,7 @@ export default makeStyles(() => ({
         display: 'flex',
         // background: 'rgba(0,0,0,0.5)',
         borderRadius: '10px',
-        '& h4': {
+        '& h5': {
             padding: '10px',
             ["@media (max-width:800px)"]: { fontSize: '1.5rem' },
         },

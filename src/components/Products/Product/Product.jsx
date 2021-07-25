@@ -24,7 +24,7 @@ const Product = ({ product, onAddToCart }) => {
             <Typography variant="body2" className={classes.isbn}>{product.isbn}</Typography>
             <CardContent className={classes.BookInfo}>
                 <div className={classes.cardContent}>
-                    <Typography variant="h4">{product.name}</Typography>
+                    <Typography variant="h5">{product.name}</Typography>
                     <div className={classes.prices}>
                     <Typography variant="body1" >
                         {product.price.formatted_with_symbol}
