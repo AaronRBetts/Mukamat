@@ -65,7 +65,11 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
   },
   navIcon: {
-    color: '#3c40c6'
+    color: '#3c40c6',
+    marginLeft: '2em',
+  },
+  linkItem: {
+    textAlign: 'right'
   }
 }));
 
@@ -85,22 +89,22 @@ function Navbar(props) {
       <Typography variant="h5" className={classes.DrawerLogo} component={Link} to="/"><Logo /></Typography>
       <Divider />
       <List>
-          <ListItem button component={Link} to="/">
-            <ListItemIcon className={classes.navIcon}><HomeIcon /></ListItemIcon>
+          <ListItem className={classes.linkItem} button component={Link} to="/">
             <ListItemText primary={'Home'} />
+            <ListItemIcon className={classes.navIcon}><HomeIcon /></ListItemIcon>
           </ListItem>
-          {/* <ListItem button component={ScrollLink} offset={-80} smooth={true} duration={500} to="kirjamme">
+          {/* <ListItem className={classes.LinkItem} button component={ScrollLink} offset={-80} smooth={true} duration={500} to="kirjamme">
             
               <ListItemIcon><MenuBookIcon /></ListItemIcon>
               <ListItemText primary={'Kirjamme'} />
           </ListItem> */}
-          <ListItem button component={Link} to="/kirjamme">
-            <ListItemIcon className={classes.navIcon}><MenuBookIcon /></ListItemIcon>
+          <ListItem className={classes.linkItem} button component={Link} to="/kirjamme">
             <ListItemText primary={'Kirjamme'} />
+            <ListItemIcon className={classes.navIcon}><MenuBookIcon /></ListItemIcon>
           </ListItem>
-          <ListItem button component={Link} to="/cart">
-            <ListItemIcon className={classes.navIcon}><ShoppingCartIcon /></ListItemIcon>
+          <ListItem className={classes.linkItem} button component={Link} to="/cart">
             <ListItemText primary={'Checkout'} />
+            <ListItemIcon className={classes.navIcon}><ShoppingCartIcon /></ListItemIcon>
           </ListItem>
       </List>
       <Divider />

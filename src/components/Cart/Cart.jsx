@@ -23,7 +23,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
 
     const FilledCart = () => (
         
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} className={classes.paper}>
         <Table className={classes.table} aria-label="simple table">
           <TableHead>
             <TableRow>

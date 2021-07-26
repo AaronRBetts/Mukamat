@@ -38,9 +38,10 @@ export default makeStyles((theme) => ({
     media: {
         zIndex: '-1',
         position: 'absolute',
-        left: '10vw',
         overflow: 'hidden',
         width: '80%',
+        maxWidth: '1280px',
+        left: '10vw',
     },
     Watermark: {
         padding: '5px 10px',

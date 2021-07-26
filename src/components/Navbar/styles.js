@@ -50,6 +50,7 @@ export default makeStyles((theme) => ({
     padding: '10px'
   },
   navLinks: {
+    textAlign: 'right',
     textDecoration: 'underline 0px #fff',
     color: '#000',
     margin: '0 20px',
