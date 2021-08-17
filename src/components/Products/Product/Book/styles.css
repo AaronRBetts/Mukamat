@@ -40,8 +40,20 @@ ul {
 
 .book {
 	position: relative;
-	width: 160px; 
+	width: 160px;
 	height: 220px;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.bookV {
+	position: relative;
+	width: 220px; 
+	height: 160px;
 	-webkit-perspective: 1000px;
 	-moz-perspective: 1000px;
 	perspective: 1000px;
@@ -613,4 +625,8 @@ ul {
 .ribbon::after{
 	right: -20px;
 	border-right: 20px solid transparent;
+}
+
+.binder {
+	margin-left: -30px;
 }

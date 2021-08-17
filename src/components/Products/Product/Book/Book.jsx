@@ -2,11 +2,12 @@
 import React from 'react';
 import {Popup} from '../../../index'
 import './styles.css'
+import Overlay from '../../../../images/binder.png'
 
 const Book = ({product}) => {
+	console.log(product)
 
     return (
-            <div className="component">
 				<ul className="align">
 					<li>
 						<figure className='book'>
@@ -14,10 +15,7 @@ const Book = ({product}) => {
 
 							<ul className='hardcover_front'>
 								<li style={{backgroundImage: `url(${product.media.source})`}}>
-									<div className="coverDesign">
-										{/* <h1>CSS</h1>
-										<p>BOOK</p> */}
-									</div>
+									<img className='binder' src={Overlay}/>
 								</li>
 								<li></li>
 							</ul>
@@ -45,7 +43,6 @@ const Book = ({product}) => {
 						</figure>
 					</li>
 				</ul>
-			</div>
     )
 }
 

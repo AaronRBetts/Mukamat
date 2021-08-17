@@ -694,7 +694,7 @@ const Products = ({ products, onAddToCart }) => {
               imageSrc: 'https://mukamat.fi/wp-content/uploads/2020/01/tandem.jpg',
       },
       {
-          details: '',
+          details: ``,
           imageSrc: 'https://mukamat.fi/wp-content/uploads/2020/01/playeng_colours2.jpg',
   },
           ],
