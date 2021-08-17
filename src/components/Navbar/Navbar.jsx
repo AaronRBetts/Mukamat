@@ -17,6 +17,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuBookIcon from '@material-ui/icons/MenuBook'
 import PersonPinIcon from '@material-ui/icons/PersonPin'
+import MailIcon from '@material-ui/icons/Mail'
+import PhoneIcon from '@material-ui/icons/Phone'
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -113,6 +115,16 @@ function Navbar(props) {
           </ListItem>
       </List>
       <Divider />
+      <List>
+          <ListItem className={classes.linkItem}>
+            <ListItemIcon className={classes.footerIcon}><MailIcon /></ListItemIcon>
+            <Typography className={classes.footerText} variant="subtitle2">birgit.saatsi@mukamat.fi</Typography>
+          </ListItem>
+          <ListItem className={classes.linkItem}>
+            <ListItemIcon className={classes.footerIcon}><PhoneIcon /></ListItemIcon>
+            <Typography className={classes.footerText} variant="subtitle2">050-3451712</Typography>
+          </ListItem>
+      </List>
       {/* <List>
           <ListItem button component={Link} to="/about">
             <ListItemIcon><EmojiPeopleIcon /></ListItemIcon>
