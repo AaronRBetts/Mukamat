@@ -6,10 +6,7 @@ import Author from '../../images/Author.jpg'
 const About = () => {
     const classes = useStyles();
     return (
-        <Container className={classes.about} id="tekijät">
-            <Container>
-
-            </Container>
+        <Container container className={classes.about} id="tekijät">
         <Container className={classes.header} lg={6} sm={12}>
             <Typography variant="h3">Birgit Saatsi</Typography>
             <Typography variant="subtitle2">Erityisluokanopettaja</Typography>

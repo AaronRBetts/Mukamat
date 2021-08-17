@@ -13,9 +13,13 @@ export default makeStyles((theme) => ({
   },
   header: {
       display: 'inline',
-      width: '400px'
+      width: 'auto',
+      margin: '10px auto auto 10px'
   },
   media: {
-      width: '100px'
+      width: '100px',
+      margin: '10px',
+      borderRadius: '50%',
+      boxShadow: '5px 5px 20px rgba(0,0,0,0.3)'
   }
 }));

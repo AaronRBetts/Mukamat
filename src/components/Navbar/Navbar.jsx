@@ -16,6 +16,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuBookIcon from '@material-ui/icons/MenuBook'
+import PersonPinIcon from '@material-ui/icons/PersonPin'
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -108,7 +109,7 @@ function Navbar(props) {
           </ListItem>
           <ListItem className={classes.linkItem} button component={Link} to="/tekijät">
             <ListItemText primary={'Tekijät'} />
-            <ListItemIcon className={classes.navIcon}><ShoppingCartIcon /></ListItemIcon>
+            <ListItemIcon className={classes.navIcon}><PersonPinIcon /></ListItemIcon>
           </ListItem>
       </List>
       <Divider />

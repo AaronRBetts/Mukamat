@@ -84,9 +84,7 @@ const App = () => {
                     <Products products={products} onAddToCart={handleAddToCart}/>
                 </Route>
                 <Route exact path="/tekijät">
-                    <Element name="about">
                         <About />
-                    </Element>
                 </Route>
                 {products.map((book) => (
                     <Route exact path={`/kirjamme/${book.permalink}`} key={book.id}>
