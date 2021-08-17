@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { commerce } from './lib/commerce';
-import { Products, Cart, Checkout, Hero } from './components';
+import { Products, Cart, Checkout, Hero, About } from './components';
 import { Switch, Route } from 'react-router-dom';
 import CartFloat from './components/CartFloat/CartFloat'
 import { Element } from 'react-scroll';
@@ -82,6 +82,11 @@ const App = () => {
                 <Route exact path="/kirjamme">
                 <CartFloat totalItems={cart.total_items}/>
                     <Products products={products} onAddToCart={handleAddToCart}/>
+                </Route>
+                <Route exact path="/tekijät">
+                    <Element name="about">
+                        <About />
+                    </Element>
                 </Route>
                 {products.map((book) => (
                     <Route exact path={`/kirjamme/${book.permalink}`} key={book.id}>

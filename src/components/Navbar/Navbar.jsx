@@ -106,6 +106,10 @@ function Navbar(props) {
             <ListItemText primary={'Checkout'} />
             <ListItemIcon className={classes.navIcon}><ShoppingCartIcon /></ListItemIcon>
           </ListItem>
+          <ListItem className={classes.linkItem} button component={Link} to="/tekijät">
+            <ListItemText primary={'Tekijät'} />
+            <ListItemIcon className={classes.navIcon}><ShoppingCartIcon /></ListItemIcon>
+          </ListItem>
       </List>
       <Divider />
       {/* <List>
