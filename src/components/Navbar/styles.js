@@ -17,10 +17,11 @@ export default makeStyles((theme) => ({
     },
   },
   toolbar: {
-    height: '0'
+    height: '0',
   },
   root: {
     flexGrow: 1,
+    background: '#240046',
   },
   menuButton: {
     marginRight: theme.spacing(2),

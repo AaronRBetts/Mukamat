@@ -13,7 +13,7 @@ export default makeStyles((theme) => ({
         zIndex: '10',
         borderRadius: '10px',
         padding: '10px',
-        background: '#fafafa',
+        background: '#fff',
         margin: '100px auto auto 0',
         flexWrap: 'wrap',
         maxWidth: '400px',

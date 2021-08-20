@@ -28,7 +28,7 @@ const Popup = ({product}) => {
 
   return (
     <div>
-      <Button fullWidth size="large" variant="contained" color="primary" onClick={handleClickOpen('paper')}>Näytä lisää</Button>
+      <Button fullWidth size="large" variant="outlined" color="primary" onClick={handleClickOpen('paper')}>Näytä lisää</Button>
       <Dialog
         open={open}
         onClose={handleClose}

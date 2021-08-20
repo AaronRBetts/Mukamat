@@ -5,7 +5,7 @@ import './styles.css'
 import Overlay from '../../../../images/binder.png'
 
 const Book = ({product}) => {
-
+	console.log(product)
     return (
 				<ul className="align">
 					<li>

@@ -105,8 +105,6 @@ export default function FullWidthTabs({products}) {
 
                               <Grid item xs={12} md={6} lg={4} className={classes.Card} key={key}>
 
-                              {product.imageSrc ? <img alt="book page example" className={classes.image} src={product.imageSrc}/> : ''}
-
                                   <div dangerouslySetInnerHTML={{__html: product.details}} />
                               {product.extra ? <div dangerouslySetInnerHTML={{__html: product.extra}} /> : ''}
                               </Grid>
