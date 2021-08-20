@@ -2,6 +2,7 @@ import React from 'react'
 import { AddShoppingCart } from '@material-ui/icons'
 import { Grid, Typography, Card, Button, Fade, CardActions, Paper, FormControl, TextField, Divider } from '@material-ui/core';
 import Book from '../Product/Book/Book'
+import { Gallery } from '../../../components'
 import useStyles from './styles'
 import TabPanel from './TabPanel/TabPanel'
 
@@ -62,7 +63,7 @@ const BookDetails = ({products, onAddToCart}) => {
 
                 </Paper>
                 </CardActions>
-        
+        <Gallery product={products[0]} />
 
     </Card>
         <TabPanel products={products} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { Gallery } from '../../components';
 
 
 const Popup = ({product}) => {
@@ -37,6 +38,7 @@ const Popup = ({product}) => {
         aria-describedby="scroll-dialog-description"
       >
         <DialogTitle id="scroll-dialog-title">{product.name}</DialogTitle>
+        <Gallery product={product} />
         <DialogContent dividers={scroll === 'paper'}>
           <DialogContentText
             id="scroll-dialog-description"

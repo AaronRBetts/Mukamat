@@ -8,6 +8,7 @@ export default makeStyles((theme) => ({
         justifyContent: 'space-evenly',
         height: '720px',
         overflow: 'hidden',/* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
+        ["@media (max-width:1100px)"]: { height: '400px' },
     },
     HeroTitle: {
         zIndex: '10',
