@@ -5,10 +5,7 @@ export default makeStyles((theme) => ({
         marginTop: '64px',
         display: 'flex',
         flexWrap: 'wrap',
-        justifyContent: 'space-evenly',
-        height: '720px',
-        overflow: 'hidden',/* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
-        ["@media (max-width:1100px)"]: { height: '400px' },
+        justifyContent: 'space-evenly',/* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
     },
     HeroTitle: {
         zIndex: '10',
@@ -51,13 +48,13 @@ export default makeStyles((theme) => ({
         ["@media (max-width:1200px)"]: { height: '400px' },
     },
     mediaCard: {
-        boxShadow: '2px 5px 30px rgba(0,0,0,0.2)',
+        boxShadow: '2px 2px 30px rgba(0,0,0,0.4)',
         borderRadius: '5px',
         overflow: 'hidden',
+        background: 'none',
     },
     Watermark: {
         padding: '5px 10px',
-        background: '#fff',
         boxShadow: '5px 5px 20px rgba(0,0,0,0.5)',
         margin: 'auto 10vw 20px 0'
     }

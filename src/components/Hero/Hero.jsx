@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Button, Fade, CardMedia, Card } from '@material-ui/core';
+import { Typography, Button, Fade, CardMedia, Paper } from '@material-ui/core';
 import useStyles from './styles';
 import bgImage from '../../images/Group1.png'
 import { Link as ScrollLink } from 'react-scroll';
@@ -19,10 +19,10 @@ const Hero = () => {
             </div>
         </Fade>
             <Fade in timeout={1500}>
-                <Card>
-            <CardMedia className={classes.media} component="img"
-        image={bgImage} />
-        </Card>
+                <Paper className={classes.mediaCard}>
+                    <CardMedia className={classes.media} component="img"
+                image={bgImage} />
+                </Paper>
             </Fade>
         </div>
         </Fade>

@@ -13,7 +13,7 @@ const Book = ({product}) => {
 
 							<ul className='hardcover_front'>
 								<li style={{backgroundImage: `url(${product.media.source})`}}>
-									<img className='binder' src={Overlay}/>
+									{product.name === 'Lukukirja' ? '' : product.name === 'Play in English' ? '' : <img className='binder' src={Overlay}/>}
 								</li>
 								<li></li>
 							</ul>
