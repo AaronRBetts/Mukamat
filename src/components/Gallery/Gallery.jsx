@@ -19,7 +19,11 @@ const Gallery = ({ product }) => {
 
     createImagesArray(product)
 
-    return <ImageGallery items={images} showPlayButton={false} showThumbnails={false} showBullets={true} />;
+    return <ImageGallery items={images} 
+    showPlayButton={false} 
+    showThumbnails={false} 
+    showBullets={true} 
+    autoPlay={true} />;
 }
 
 export default Gallery

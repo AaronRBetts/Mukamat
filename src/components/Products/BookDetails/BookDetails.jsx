@@ -1,7 +1,7 @@
 import React from 'react'
 import { AddShoppingCart } from '@material-ui/icons'
 import { Grid, Typography, Card, Button, Fade, CardActions, Paper, FormControl, TextField, Divider } from '@material-ui/core';
-import Book from '../Product/Book/Book'
+// import Book from '../Product/Book/Book'
 import { Gallery } from '../../../components'
 import useStyles from './styles'
 import TabPanel from './TabPanel/TabPanel'
@@ -31,7 +31,6 @@ const BookDetails = ({products, onAddToCart}) => {
 
         <Fade in timeout={1500}>
         <Grid container spacing={4}>
-        <Book product={products[0]}/>
         <Card className={classes.content} sm={12} md={6}>
         <Typography variant="h2">{products[0].name}</Typography>
         <Typography variant="body2">{products[0].isbn}</Typography>
