@@ -77,12 +77,6 @@ const useStyles = makeStyles((theme) => ({
   linkItem: {
     textAlign: 'right'
   },
-  drawerContainer: {
-    height: 'auto',
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-evenly'
-  }
 }));
 
 
