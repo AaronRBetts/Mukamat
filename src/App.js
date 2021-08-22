@@ -83,7 +83,7 @@ const App = () => {
                 <CartFloat totalItems={cart.total_items}/>
                     <Products products={products} onAddToCart={handleAddToCart}/>
                 </Route>
-                <Route exact path="/tekijät">
+                <Route exact path="/tekijä">
                         <About />
                 </Route>
                 {products.map((book) => (

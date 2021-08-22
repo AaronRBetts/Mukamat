@@ -51,8 +51,8 @@ const Product = ({ product, onAddToCart }) => {
                     variant="outlined"
                     />
                     </FormControl>
-                    <Button variant="contained" color="primary" aria-label="Add to Cart" onClick={() => onAddToCart(product.id, qty)}>
-                        <AddShoppingCart /> <Typography variant="body2">Add to cart</Typography>
+                    <Button variant="contained" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(product.id, qty)}>
+                        <AddShoppingCart /> <Typography variant="body2">Lisää ostoskoriin</Typography>
                     </Button>
 
                 </Paper>

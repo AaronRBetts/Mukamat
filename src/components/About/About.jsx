@@ -10,7 +10,7 @@ const About = () => {
         <Container className={classes.header} lg={6} sm={12}>
             <Typography variant="h3">Birgit Saatsi</Typography>
             <Typography variant="subtitle2">Erityisluokanopettaja</Typography>
-            <Typography variant="subtitle2">Owner & Author - Mukamat Oy</Typography>
+            <Typography variant="subtitle2">Omistaja ja Tekijä - Mukamat Oy</Typography>
         </Container>
             <CardMedia className={classes.media} component="img"
         image={Author} />

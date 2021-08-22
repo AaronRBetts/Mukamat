@@ -16,8 +16,8 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
 
     const EmptyCart = () => (
         <Typography variant="subtitle1">
-            You have no items in your cart.
-            <Link to="/" className={classes.link}> Browse the store.</Link>
+            Sinulla ei ole valituna tuotteita ostoskoriin.
+            <Link to="/" className={classes.link}> Jatka Ostoksiasi</Link>
         </Typography>
     )
 
@@ -28,9 +28,9 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
           <TableHead>
             <TableRow>
               <TableCell>Kirja</TableCell>
-              <TableCell align="right">Qty</TableCell>
-              <TableCell align="right">each</TableCell>
-              <TableCell align="right">subtotal</TableCell>
+              <TableCell align="right">Kpl</TableCell>
+              <TableCell align="right">Hinta/Kpl</TableCell>
+              <TableCell align="right">Yhteensä</TableCell>
               <TableCell align="right"></TableCell>
             </TableRow>
           </TableHead>
@@ -42,11 +42,11 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
         </Table>
             <div className={classes.cardDetails}>
                 <Typography variant="h4">
-                    Total: { cart.subtotal.formatted_with_symbol }
+                Yhteensä: { cart.subtotal.formatted_with_symbol }
                 </Typography>
                 <div>
-                    <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Empty Cart</Button>
-                    <Button component={Link} to="/checkout" className={classes.checkoutButton} size="large" type="button" variant="contained" color="primary">Checkout</Button>
+                    <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Tyhjenna Ostoskori</Button>
+                    <Button component={Link} to="/checkout" className={classes.checkoutButton} size="large" type="button" variant="contained" color="primary">Maksu</Button>
                 </div>
             </div>
             {/* <Grid container spacing={3}>
@@ -64,7 +64,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
     return (
         <Container>
             <div className={classes.toolbar} />
-            <Typography className={classes.title} variant="h3" gutterBottom>Your Shopping Cart</Typography>
+            <Typography className={classes.title} variant="h3" gutterBottom>Ostoskori</Typography>
             { !cart.line_items.length ? <EmptyCart /> : <FilledCart /> }
         </Container>
     )

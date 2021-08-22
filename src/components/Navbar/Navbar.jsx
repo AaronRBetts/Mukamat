@@ -93,7 +93,7 @@ function Navbar(props) {
       <Divider />
       <List>
           <ListItem className={classes.linkItem} button component={Link} to="/">
-            <ListItemText primary={'Home'} />
+            <ListItemText primary={'Etusivu'} />
             <ListItemIcon className={classes.navIcon}><HomeIcon /></ListItemIcon>
           </ListItem>
           {/* <ListItem className={classes.LinkItem} button component={ScrollLink} offset={-80} smooth={true} duration={500} to="kirjamme">
@@ -106,7 +106,7 @@ function Navbar(props) {
             <ListItemIcon className={classes.navIcon}><MenuBookIcon /></ListItemIcon>
           </ListItem>
           <ListItem className={classes.linkItem} button component={Link} to="/cart">
-            <ListItemText primary={'Checkout'} />
+            <ListItemText primary={'Ostoskori'} />
             <ListItemIcon className={classes.navIcon}><ShoppingCartIcon /></ListItemIcon>
           </ListItem>
           <ListItem className={classes.linkItem} button component={Link} to="/tekijä">
