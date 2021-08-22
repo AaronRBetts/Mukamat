@@ -24,12 +24,14 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Logo from './Logo'
 import App from '../../App'
+import bgImage from '../../images/geometry2.png'
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    backgroundImage: `url(${bgImage})`,
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
@@ -55,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
+    justifyContent: "space-evenly"
   },
   content: {
     flexGrow: 1,
@@ -73,6 +76,12 @@ const useStyles = makeStyles((theme) => ({
   },
   linkItem: {
     textAlign: 'right'
+  },
+  drawerContainer: {
+    height: 'auto',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly'
   }
 }));
 
@@ -88,7 +97,7 @@ function Navbar(props) {
   };
 
   const drawer = (
-    <div>
+    <div className={classes.drawerContainer}>
       <Typography variant="h5" className={classes.DrawerLogo} component={Link} to="/"><Logo /></Typography>
       <Divider />
       <List>
@@ -153,7 +162,7 @@ function Navbar(props) {
       <Router>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar classes={classes.toolBar}>
+        <Toolbar className={classes.toolBar}>
           <IconButton
             color="inherit"
             aria-label="open drawer"

@@ -22,6 +22,7 @@ export default makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     background: '#240046',
+    width: '1200px'
   },
   menuButton: {
     marginRight: theme.spacing(2),

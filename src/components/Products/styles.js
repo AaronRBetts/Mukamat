@@ -9,6 +9,7 @@ export default makeStyles((theme) => ({
     padding: theme.spacing(3),
     maxWidth: '1280px',
     margin: '64px auto 0',
+    background: 'white'
   },
   root: {
     flexGrow: 1,
