@@ -13,7 +13,7 @@ const Gallery = ({ product }) => {
                 original: image.url, 
                 thumbnail: image.url, 
                 originalHeight: '600px',
-                thumbnailHeight: '100px'})
+                thumbnailHeight: '50px'})
         ))
     }
 
@@ -21,7 +21,7 @@ const Gallery = ({ product }) => {
 
     console.log(images)
 
-    return <ImageGallery items={images} showPlayButton={false} />;
+    return <ImageGallery items={images} showPlayButton={false} showThumbnails={false} showBullets={true} />;
 }
 
 export default Gallery
