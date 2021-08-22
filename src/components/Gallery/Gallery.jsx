@@ -19,8 +19,6 @@ const Gallery = ({ product }) => {
 
     createImagesArray(product)
 
-    console.log(images)
-
     return <ImageGallery items={images} showPlayButton={false} showThumbnails={false} showBullets={true} />;
 }
 
