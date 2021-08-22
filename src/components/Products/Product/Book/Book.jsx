@@ -3,17 +3,18 @@ import React from 'react';
 import {Popup} from '../../../index'
 import './styles.css'
 import Overlay from '../../../../images/binder.png'
+import OverlayV from '../../../../images/binderV.png'
 
 const Book = ({product}) => {
     return (
 				<ul className="align">
 					<li>
-						<figure className='book'>
+						<figure className={product.name === 'Matkaan' ? 'book vertical' : 'book'}>
 
 
 							<ul className='hardcover_front'>
 								<li style={{backgroundImage: `url(${product.media.source})`}}>
-									{product.name === 'Lukukirja' ? '' : product.name === 'Play in English' ? '' : <img className='binder' src={Overlay}/>}
+									{product.name === 'Lukukirja' ? '' : product.name === 'Play in English' ? '' : <img className='binder' src={ product.name === 'Matkaan' ? OverlayV : Overlay}/>}
 								</li>
 								<li></li>
 							</ul>
