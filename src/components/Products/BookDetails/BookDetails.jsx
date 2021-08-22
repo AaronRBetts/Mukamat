@@ -32,7 +32,7 @@ const BookDetails = ({products, onAddToCart}) => {
         <Fade in timeout={1500}>
         <Grid container spacing={4}>
         <Book product={products[0]}/>
-        <Card className={classes.content} sm={12} md={8}>
+        <Card className={classes.content} sm={12} md={6}>
         <Typography variant="h2">{products[0].name}</Typography>
         <Typography variant="body2">{products[0].isbn}</Typography>
         <Typography variant="h6" gutterBottom>{products[0].price.formatted_with_symbol}</Typography>
@@ -47,7 +47,7 @@ const BookDetails = ({products, onAddToCart}) => {
                     <FormControl variant="outlined" className={classes.qtySelector}>
                     <TextField
                     id="outlined-number"
-                    label="Number"
+                    label="Numero"
                     type="number"
                     value={qty}
                     onChange={handleChange}
@@ -63,8 +63,10 @@ const BookDetails = ({products, onAddToCart}) => {
 
                 </Paper>
                 </CardActions>
-        <Gallery product={products[0]} />
 
+    </Card>
+        <Card className={classes.content} sm={12} md={6}>
+        <Gallery product={products[0]} sm={12} md={4} />
     </Card>
         <TabPanel products={products} />
         {(products[0].permalink === "matti" || products[0].permalink === "vesseli") ? <Typography variant="body2" gutterBottom dangerouslySetInnerHTML={{__html: disclaimer}}></Typography>: ''}

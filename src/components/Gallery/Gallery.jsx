@@ -12,7 +12,7 @@ const Gallery = ({ product }) => {
             images.push({
                 original: image.url, 
                 thumbnail: image.url, 
-                originalHeight: '600px',
+                originalHeight: '500px',
                 thumbnailHeight: '50px'})
         ))
     }

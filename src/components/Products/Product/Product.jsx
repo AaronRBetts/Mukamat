@@ -41,7 +41,7 @@ const Product = ({ product, onAddToCart }) => {
                     <FormControl variant="outlined" className={classes.qtySelector}>
                     <TextField
                     id="outlined-number"
-                    label="Number"
+                    label="Numero"
                     type="number"
                     value={qty}
                     onChange={handleChange}

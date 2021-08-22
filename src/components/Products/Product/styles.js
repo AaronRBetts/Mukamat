@@ -26,7 +26,8 @@ export default makeStyles(() => ({
     },
     qtyWrapper: {
         padding: '10px',
-        display: 'flex'
+        display: 'flex',
+        margin: '10px'
     },
     qtySelector: {
         width: '100px',
