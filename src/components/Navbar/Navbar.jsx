@@ -96,8 +96,8 @@ function Navbar(props) {
       <Divider />
       <List>
           <ListItem className={classes.linkItem} button component={Link} to="/">
-            <ListItemText primary={'Etusivu'} />
             <ListItemIcon className={classes.navIcon}><HomeIcon /></ListItemIcon>
+            <ListItemText primary={'Etusivu'} />
           </ListItem>
           {/* <ListItem className={classes.LinkItem} button component={ScrollLink} offset={-80} smooth={true} duration={500} to="kirjamme">
             
@@ -105,16 +105,16 @@ function Navbar(props) {
               <ListItemText primary={'Kirjamme'} />
           </ListItem> */}
           <ListItem className={classes.linkItem} button component={Link} to="/kirjamme">
-            <ListItemText primary={'Kirjamme'} />
             <ListItemIcon className={classes.navIcon}><MenuBookIcon /></ListItemIcon>
+            <ListItemText primary={'Kirjamme'} />
           </ListItem>
           <ListItem className={classes.linkItem} button component={Link} to="/cart">
-            <ListItemText primary={'Ostoskori'} />
             <ListItemIcon className={classes.navIcon}><ShoppingCartIcon /></ListItemIcon>
+            <ListItemText primary={'Ostoskori'} />
           </ListItem>
           <ListItem className={classes.linkItem} button component={Link} to="/tekijä">
-            <ListItemText primary={'Tekijä'} />
             <ListItemIcon className={classes.navIcon}><PersonPinIcon /></ListItemIcon>
+            <ListItemText primary={'Tekijä'} />
           </ListItem>
       </List>
       <Divider />
@@ -126,6 +126,15 @@ function Navbar(props) {
           <ListItem className={classes.linkItem}>
             <ListItemIcon className={classes.footerIcon}><PhoneIcon /></ListItemIcon>
             <Typography className={classes.footerText} variant="subtitle2">050-3451712</Typography>
+          </ListItem>
+      </List>
+      <Divider />
+      <List>
+          <ListItem className={classes.linkItem} button component={Link} to="/privacy_policy">
+            <ListItemText primary={'Privacy Policy'} />
+          </ListItem>
+          <ListItem className={classes.linkItem} button component={Link} to="/toimitus">
+            <ListItemText primary={'Toimitus'} />
           </ListItem>
       </List>
       {/* <List>

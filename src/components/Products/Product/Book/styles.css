@@ -53,9 +53,6 @@ ul {
 
 .vertical {
 	top: 100px;
-	-webkit-perspective: 1000px;
-	-moz-perspective: 1000px;
-	perspective: 1000px;
 	width: 260px; 
 	height: 140px;
 }

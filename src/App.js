@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { commerce } from './lib/commerce';
-import { Products, Cart, Checkout, Hero, About } from './components';
+import { Products, Cart, Checkout, Hero, About, Privacy, Shipping } from './components';
 import { Switch, Route } from 'react-router-dom';
 import CartFloat from './components/CartFloat/CartFloat'
 import { Element } from 'react-scroll';
@@ -101,6 +101,12 @@ const App = () => {
                 </Route>
                 <Route exact path="/checkout">
                     <Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage}/>
+                </Route>
+                <Route exact path="/privacy_policy">
+                    <Privacy />
+                </Route>
+                <Route exact path="/toimitus">
+                    <Shipping />
                 </Route>
             </Switch>
     )
