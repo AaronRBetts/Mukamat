@@ -3,106 +3,72 @@ import React from 'react'
 
 const Privacy = () => {
     return (
-        <Container container id="tekijät">
-            <div class="page-width">
-  <h1 class="small--text-center">Tietosuojaseloste</h1>
-  <div class="content-block">
-    <div class="rte rte--indented-images">
-      <p><strong>Tietosuojaseloste&nbsp;</strong></p>
-<p>&nbsp;</p>
-<p><strong>Henkilökohtainen tieto mitä keräämme sisältää</strong>&nbsp;</p>
-<p><span>Keräämme tietoja asiakassuhteen hoitamista varten.</span>&nbsp;</p>
-<p>&nbsp;Keräämme nimesi, sähköpostisi, puhelinnumerosi, osoitteesi sekä maksuun käytettävän kortin tiedot.</p>
-<p>&nbsp;</p>
-<p>Keräämme tietoa asioinnistasi kaupassamme. Keräämämme tiedot sisältävät mm.&nbsp; mitä tuotteita katselit kaupassa. mihin aikaan kävit kaupassa, mitä nettisivua käytit yms.</p>
-<p>Keräämme tietoa muokataksemme sivua sinulle sopivaksi ja opitimoidaksemme sivun. Tietoa kerääntyy automaattisesti avatessasi sivun.</p>
-<p>&nbsp;</p>
-<p>Lisää tietosuojaselosteestamme löydät alapuolelta englanniksi.</p>
-<p>&nbsp;&nbsp;</p>
-<p><u>Device information</u></p>
+        <Container container id="Privacy">
+          <h1>Privacy Policy for Mukamat Oy</h1>
+
+<p>At Mukamat, accessible from Mukamat.fi, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Mukamat and how we use it.</p>
+
+<p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us. Our Privacy Policy was generated with the help of <a href="https://www.gdprprivacynotice.com/">GDPR Privacy Policy Generator from GDPRPrivacyNotice.com</a></p>
+
+<h2>General Data Protection Regulation (GDPR)</h2>
+<p>We are a Data Controller of your information.</p>
+
+<p>Mukamat Oy legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Information we collect and the specific context in which we collect the information:</p>
 <ul>
-<li>
-<strong>Examples of Personal Information collected:</strong><span>&nbsp;</span>version of web browser, IP address, time zone, cookie information, what sites or products you view, search terms, and how you interact with the Site.</li>
-<li>
-<strong>Purpose of collection:</strong><span>&nbsp;</span>to load the Site accurately for you, and to perform analytics on Site usage to optimize our Site.</li>
-<li>
-<strong>Source of collection:</strong><span>&nbsp;</span>Collected automatically when you access our Site using cookies, log files, web beacons, tags, or pixels.</li>
-<li>
-<strong>Disclosure for a business purpose:</strong><span>&nbsp;</span>shared with our processor Shopify<u>Order information</u>
-</li>
+    <li>Mukamat Oy needs to perform a contract with you</li>
+    <li>You have given Mukamat Oy permission to do so</li>
+    <li>Processing your personal information is in Mukamat Oy legitimate interests</li>
+    <li>Mukamat Oy needs to comply with the law</li>
 </ul>
+  
+<p>Mukamat Oy will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.</p>
+
+<p>If you are a resident of the European Economic Area (EEA), you have certain data protection rights. If you wish to be informed what Personal Information we hold about you and if you want it to be removed from our systems, please contact us.</p>
+<p>In certain circumstances, you have the following data protection rights:</p>
 <ul>
-<li>
-<strong>Examples of Personal Information collected:</strong><span>&nbsp;</span>name, billing address, shipping address, payment information (including credit card numbers, email address, and phone number.</li>
-<li>
-<strong>Purpose of collection:</strong><span>&nbsp;</span>to provide products or services to you to fulfill our contract, to process your payment information, arrange for shipping, and provide you with invoices and/or order confirmations, communicate with you, screen our orders for potential risk or fraud, and when in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.</li>
-<li>
-<strong>Source of collection:</strong><span>&nbsp;</span>collected from you.</li>
-<li>
-<strong>Disclosure for a business purpose:</strong><span>&nbsp;</span>shared with our processor Shopify</li>
-</ul>
-<p><u>Customer support information</u></p>
-<ul>
-<li>
-<strong>Purpose of collection:</strong><span>&nbsp;</span>to provide customer support.</li>
-<li>
-<strong>Source of collection:</strong><span>&nbsp;</span>collected from you.</li>
+    <li>The right to access, update or to delete the information we have on you.</li>
+    <li>The right of rectification.</li> 
+    <li>The right to object.</li>
+    <li>The right of restriction.</li>
+    <li>The right to data portability</li>
+    <li>The right to withdraw consent</li>
 </ul>
 
-<p>Additionally, you can opt out of some of these services by visiting the Digital Advertising Alliance’s opt-out portal at:<span>&nbsp;</span><a href="http://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">http://optout.aboutads.info/</a>.</p>
-<h1>Using Personal Information</h1>
-<p>We use your personal Information to provide our services to you, which includes: offering products for sale, processing payments, shipping and fulfillment of your order, and keeping you up to date on new products, services, and offers.</p>
-<h2>Lawful basis</h2>
-<p>Pursuant to the General Data Protection Regulation (“GDPR”), if you are a resident of the European Economic Area (“EEA”), we process your personal information under the following lawful bases:</p>
-<ul>
-<li>Your consent;</li>
-<li>The performance of the contract between you and the Site;</li>
-<li>Compliance with our legal obligations;</li>
-<li>To protect your vital interests;</li>
-<li>To perform a task carried out in the public interest;</li>
-<li>For our legitimate interests, which do not override your fundamental rights and freedoms.</li>
-</ul>
-<h2>Retention</h2>
-<p>When you place an order through the Site, we will retain your Personal Information for our records unless and until you ask us to erase this information. For more information on your right of erasure, please see the ‘Your rights’ section below.</p>
-<h2>Automatic decision-making</h2>
-<p>If you are a resident of the EEA, you have the right to object to processing based solely on automated decision-making (which includes profiling), when that decision-making has a legal effect on you or otherwise significantly affects you.</p>
-<p>We<span>&nbsp;</span><i>do not</i>&nbsp;engage in fully automated decision-making that has a legal or otherwise significant effect using customer data.</p>
-<p>Our processor Shopify uses limited automated decision-making to prevent fraud that does not have a legal or otherwise significant effect on you.</p>
-<p>Services that include elements of automated decision-making include:</p>
-<ul>
-<li>Temporary denylist of IP addresses associated with repeated failed transactions. This denylist persists for a small number of hours.</li>
-<li>Temporary denylist of credit cards associated with denylisted IP addresses. This denylist persists for a small number of days.</li>
-</ul>
-<ul></ul>
-<h1>Your rights</h1>
-<h2>GDPR</h2>
-<p>If you are a resident of the EEA, you have the right to access the Personal Information we hold about you, to port it to a new service, and to ask that your Personal Information be corrected, updated, or erased. If you would like to exercise these rights, please contact us through the contact information below</p>
-<p>Your Personal Information will be initially processed in Ireland and then will be transferred outside of Europe for storage and further processing, including to Canada and the United States. For more information on how data transfers comply with the GDPR, see Shopify’s GDPR Whitepaper:<span>&nbsp;</span><a href="https://help.shopify.com/en/manual/your-account/privacy/GDPR" target="_blank" rel="noopener noreferrer">https://help.shopify.com/en/manual/your-account/privacy/GDPR</a>.</p>
-<h1>Cookies</h1>
-<p>A cookie is a small amount of information that’s downloaded to your computer or device when you visit our Site. We use a number of different cookies, including functional, performance, advertising, and social media or content cookies. Cookies make your browsing experience better by allowing the website to remember your actions and preferences (such as login and region selection). This means you don’t have to re-enter this information each time you return to the site or browse from one page to another. Cookies also provide information on how people use the website, for instance whether it’s their first time visiting or if they are a frequent visitor.</p>
-<p>We use the following cookies to optimize your experience on our Site and to provide our services.</p>
-<h2>Cookies Necessary for the Functioning of the Store</h2>
+<h2>Log Files</h2>
 
-<p><br/>The length of time that a cookie remains on your computer or mobile device depends on whether it is a “persistent” or “session” cookie. Session cookies last until you stop browsing and persistent cookies last until they expire or are deleted. Most of the cookies we use are persistent and will expire between 30 minutes and two years from the date they are downloaded to your device.</p>
-<p>You can control and manage cookies in various ways. Please keep in mind that removing or blocking cookies can negatively impact your user experience and parts of our website may no longer be fully accessible.</p>
-<p>Most browsers automatically accept cookies, but you can choose whether or not to accept cookies through your browser controls, often found in your browser’s “Tools” or “Preferences” menu. For more information on how to modify your browser settings or how to block, manage or filter cookies can be found in your browser’s help file or through such sites as<span>&nbsp;</span><a href="https://diatarrat.myshopify.com/admin/settings/www.allaboutcookies.org" target="_blank" rel="noopener noreferrer">www.allaboutcookies.org</a>.</p>
-<p>Additionally, please note that blocking cookies may not completely prevent how we share information with third parties such as our advertising partners. To exercise your rights or opt-out of certain uses of your information by these parties, please follow the instructions in the “Behavioural Advertising” section above.</p>
-<h2>Do Not Track</h2>
-<p>Please note that because there is no consistent industry understanding of how to respond to “Do Not Track” signals, we do not alter our data collection and usage practices when we detect such a signal from your browser.</p>
-<h1>Changes</h1>
-<p>We may update this Privacy Policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal, or regulatory reasons.</p>
-<h1>Contact</h1>
-<p>For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at&nbsp;birgit.saatsi@mukamat.fi&nbsp;or by mail using the details provided below:</p>
-<p>Koivutie 5, 31300 Ylöjärvi, Finland</p>
-<span>Last updated:&nbsp;</span><i>24/08/2021</i><span></span>
-<p>If you are not satisfied with our response to your complaint, you have the right to lodge your complaint with the relevant data protection authority. You can contact your local data protection authority, or our supervisory authority here:&nbsp;</p>
-<p>https://tietosuoja.fi/en/office-of-the-data-protection-ombudsman</p>
-    </div>
-  </div>
+<p>Mukamat follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
 
-  <div id="shopify-section-featured-products-subsection" class="shopify-section">
-</div>
-</div>
+
+
+
+<h2>Privacy Policies</h2>
+
+<p>You may consult this list to find the Privacy Policy for each of the advertising partners of Mukamat.</p>
+
+<p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on Mukamat, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
+
+<p>Note that Mukamat has no access to or control over these cookies that are used by third-party advertisers.</p>
+
+<h2>Third Party Privacy Policies</h2>
+
+<p>Mukamat's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. </p>
+
+<p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.</p>
+
+<h2>Children's Information</h2>
+
+<p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+
+<p>Mukamat does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+
+<h2>Online Privacy Policy Only</h2>
+
+<p>Our Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in Mukamat. This policy is not applicable to any information collected offline or via channels other than this website.</p>
+
+<h2>Consent</h2>
+
+<p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+        
         </Container>
     )
 }
