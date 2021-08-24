@@ -4,7 +4,7 @@ import React from 'react'
 const Shipping = () => {
     return (
         <Container container id="tekijät">
-          <div class="content-block">
+          <div class="content-block" style={{marginTop: '100px'}}>
     <div class="rte rte--indented-images">
       <div data-v-103e71f6="" class="answer-one">
 <header class="entry-header">
