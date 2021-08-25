@@ -8,6 +8,10 @@ export default makeStyles((theme) => ({
         justifyContent: 'space-evenly',/* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
     },
     HeroTitle: {
+        position: 'absolute',
+        top: '30vh',
+        left: '340px',
+        zIndex: '1',
         zIndex: '10',
         borderRadius: '10px',
         padding: '10px',
@@ -16,8 +20,9 @@ export default makeStyles((theme) => ({
         flexWrap: 'wrap',
         maxWidth: '400px',
         paddingLeft: '10px',
-        boxShadow: '0px 0px 30px rgba(0,0,0,0.3)',
-        ["@media (min-width:900px)"]: { display: 'none' },
+        // boxShadow: '0px 0px 30px rgba(0,0,0,0.3)',
+        ["@media (max-width:1200px)"]: { 
+            position: 'initial', },
         '& h1': {
             lineHeight: '0.8',
             fontSize: '3em',
@@ -40,15 +45,15 @@ export default makeStyles((theme) => ({
         // overflow: 'hidden',
         // width: '80%',
         // maxWidth: '1280px',
-        height: '720px',
-        width: 'auto',
+        height: '60vh',
         left: '240px',
+        overflow: 'hidden',
         ["@media (max-width:900px)"]: { display: 'none' },
         ["@media (max-width:1400px)"]: { height: '600px' },
         ["@media (max-width:1200px)"]: { height: '400px' },
     },
     mediaCard: {
-        boxShadow: '2px 2px 30px rgba(0,0,0,0.4)',
+        boxShadow: 'none',
         borderRadius: '5px',
         overflow: 'hidden',
         background: 'none',
