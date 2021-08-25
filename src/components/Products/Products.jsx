@@ -8,7 +8,6 @@ const Products = ({ products, onAddToCart }) => {
     const classes = useStyles();
 
 
-
     const tabDetails = [
         {
             id: "prod_VPvL5zNOG5AQkX",

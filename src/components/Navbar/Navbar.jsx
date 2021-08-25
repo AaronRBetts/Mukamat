@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
+import Accordion from '@material-ui/core/Accordion';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
@@ -21,12 +22,15 @@ import MailIcon from '@material-ui/icons/Mail'
 import PhoneIcon from '@material-ui/icons/Phone'
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Logo from './Logo'
 import App from '../../App'
 import bgImage from '../../images/geometry2.png'
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,11 +44,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
+    background: 'linear-gradient(155deg, #3425AF -50%, #C56CD6 150%)',
     [theme.breakpoints.up('sm')]: {
       height: '0'
     },
   },
   DrawerLogo: {
+    height: '210px',
     padding: '10px'
   },
   menuButton: {
@@ -75,8 +81,17 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '2em',
   },
   linkItem: {
-    textAlign: 'right'
+    fontSize: '0.8rem'
   },
+  bookTitle: {
+    fontSize: '0.6rem'
+  },
+  Accordion: {
+    padding: '0'
+  },
+  mobileLogo: {
+
+  }
 }));
 
 
@@ -92,9 +107,74 @@ function Navbar(props) {
 
   const drawer = (
     <div className={classes.drawerContainer}>
+      <List>
       <Typography variant="h5" className={classes.DrawerLogo} component={Link} to="/"><Logo /></Typography>
       <Divider />
-      <List>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography className={classes.heading}>Kirjamme</Typography>
+            </AccordionSummary>
+            <AccordionDetails className={classes.Accordion}>
+              <List>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/vesseli">
+                  
+                  Vesseli
+                </ListItem>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/Matilda">
+                  
+                  Matilda
+                </ListItem>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/Mukamatti">
+                  
+                  Mukamatti
+                </ListItem>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/Matti">
+                  
+                  Matti
+                </ListItem>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/Lukukirja">
+                  
+                  Lukukirja
+                </ListItem>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/Kirjaintaulu">
+                  
+                  Kirjaintaulut
+                </ListItem>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/Kirjaintaulut-and-kirjaintaulukirja">
+                  
+                  Kirjaintaulut & Kirjaintaulukirja
+                </ListItem>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/Play-in-English">
+                  
+                  Play in English
+                </ListItem>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/Step-by-step">
+                  
+                  Step by step
+                </ListItem>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/Matkaan">
+                  
+                  Matkaan
+                </ListItem>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/pikku-matin-mukavat-peli-1">
+                  
+                  Pikku-matin-mukavat-peli-1 (S)
+                </ListItem>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/pikku-matin-mukavat-peli-1-suuraakkoset">
+                  
+                  Pikku matin mukavat peli 1 (P)
+                </ListItem>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/pikku-matin-mukavat-peli-2">
+                  
+                  Pikku matin mukavat peli 2
+                </ListItem>
+              </List>
+            </AccordionDetails>
+          </Accordion>
           <ListItem className={classes.linkItem} button component={Link} to="/">
             <ListItemIcon className={classes.navIcon}><HomeIcon /></ListItemIcon>
             <ListItemText primary={'Etusivu'} />
@@ -104,24 +184,16 @@ function Navbar(props) {
               <ListItemIcon><MenuBookIcon /></ListItemIcon>
               <ListItemText primary={'Kirjamme'} />
           </ListItem> */}
-          <ListItem className={classes.linkItem} button component={Link} to="/kirjamme">
-            <ListItemIcon className={classes.navIcon}><MenuBookIcon /></ListItemIcon>
-            <ListItemText primary={'Kirjamme'} />
-          </ListItem>
           <ListItem className={classes.linkItem} button component={Link} to="/cart">
             <ListItemIcon className={classes.navIcon}><ShoppingCartIcon /></ListItemIcon>
             <ListItemText primary={'Ostoskori'} />
-          </ListItem>
-          <ListItem className={classes.linkItem} button component={Link} to="/tekijä">
-            <ListItemIcon className={classes.navIcon}><PersonPinIcon /></ListItemIcon>
-            <ListItemText primary={'Tekijä'} />
           </ListItem>
       </List>
       <Divider />
       <List>
           <ListItem className={classes.linkItem}>
             <ListItemIcon className={classes.footerIcon}><MailIcon /></ListItemIcon>
-            <Typography className={classes.footerText} variant="subtitle2">birgit.saatsi@mukamat.fi</Typography>
+            <Typography className={classes.footerText} variant="subtitle2">mukamat@gmail.com</Typography>
           </ListItem>
           <ListItem className={classes.linkItem}>
             <ListItemIcon className={classes.footerIcon}><PhoneIcon /></ListItemIcon>
@@ -131,10 +203,10 @@ function Navbar(props) {
       <Divider />
       <List>
           <ListItem className={classes.linkItem} button component={Link} to="/privacy_policy">
-            <ListItemText primary={'Privacy Policy'} />
+            Privacy Policy
           </ListItem>
           <ListItem className={classes.linkItem} button component={Link} to="/toimitus">
-            <ListItemText primary={'Toimitus'} />
+            Toimitus
           </ListItem>
       </List>
       {/* <List>
@@ -175,6 +247,7 @@ function Navbar(props) {
           >
             <MenuIcon />
           </IconButton>
+          <Logo  className={classes.mobileLogo}/>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">

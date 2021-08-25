@@ -32,41 +32,42 @@ const BookDetails = ({products, onAddToCart}) => {
         <Fade in timeout={1500}>
         <Grid container spacing={4}>
         <Card className={classes.content} sm={12} md={6}>
-        <Typography variant="h2">{products[0].name}</Typography>
-        <Typography variant="body2">{products[0].isbn}</Typography>
-        <Typography variant="h6" gutterBottom>{products[0].price.formatted_with_symbol}</Typography>
-        <Typography variant="body2" gutterBottom>{products[0].beforeTax}</Typography>
-        <Divider />
-        <Typography variant="body1" gutterBottom dangerouslySetInnerHTML={{__html: products[0].description}}>
-        </Typography>
-                <CardActions disableSpacing className={classes.cardActions}>
-                    
+            <Typography variant="h4">{products[0].name}</Typography>
+            <Divider />
+                <Typography variant="body2">{products[0].isbn}</Typography>
+                <Typography variant="h6" gutterBottom>{products[0].price.formatted_with_symbol}</Typography>
+                <Typography variant="body2" gutterBottom>{products[0].beforeTax}</Typography>
+            <Divider />
+            <Typography variant="body1" gutterBottom dangerouslySetInnerHTML={{__html: products[0].description}}>
+            </Typography>
+            <CardActions disableSpacing className={classes.cardActions}>
+                
                 <Paper className={classes.qtyWrapper}>
 
-                    <FormControl variant="outlined" className={classes.qtySelector}>
-                    <TextField
-                    id="outlined-number"
-                    label="Numero"
-                    type="number"
-                    value={qty}
-                    onChange={handleChange}
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                    variant="outlined"
-                    />
-                    </FormControl>
-                    <Button size="large" variant="contained" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(products[0].id, qty)}>
-                        <AddShoppingCart /> <Typography variant="body2">Lisää ostoskoriin</Typography>
-                    </Button>
+                <FormControl variant="outlined" className={classes.qtySelector}>
+                <TextField
+                id="outlined-number"
+                label="Numero"
+                type="number"
+                value={qty}
+                onChange={handleChange}
+                InputLabelProps={{
+                    shrink: true,
+                }}
+                variant="outlined"
+                />
+                </FormControl>
+                <Button size="large" variant="contained" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(products[0].id, qty)}>
+                    <AddShoppingCart /> <Typography variant="body2">Lisää ostoskoriin</Typography>
+                </Button>
 
-                </Paper>
-                </CardActions>
+            </Paper>
+        </CardActions>
 
-    </Card>
-        <Card className={classes.content} sm={12} md={6}>
-        <Gallery product={products[0]} sm={12} md={4} />
-    </Card>
+        </Card>
+            <Card className={classes.content} sm={12} md={6}>
+            <Gallery product={products[0]} sm={12} md={4} />
+        </Card>
         <TabPanel products={products} />
         {(products[0].permalink === "matti" || products[0].permalink === "vesseli") ? <Typography variant="body2" gutterBottom dangerouslySetInnerHTML={{__html: disclaimer}}></Typography>: ''}
     </Grid>

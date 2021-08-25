@@ -18,10 +18,10 @@ const Shipping = () => {
 <div class="wpb_text_column wpb_content_element ">
 <div class="wpb_wrapper">
 <p><strong>Yleistä</strong></p>
-<p>Mukamat&nbsp;y-tunnus 3196304-5 myy tuotteita täysi-ikäisille henkilöille Suomessa. Alle 18-vuotiaalta vaaditaan huoltajan suostumus. Tilaamalla tuotteita hyväksyt toimitusehdot.</p>
+{/* <p>Mukamat&nbsp;y-tunnus 3196304-5 myy tuotteita täysi-ikäisille henkilöille Suomessa. Alle 18-vuotiaalta vaaditaan huoltajan suostumus. Tilaamalla tuotteita hyväksyt toimitusehdot.</p> */}
 <p>Verkkokaupan tuotteiden tiedot ja hinnat on esitelty kunkin tuotteen esittelyn yhteydessä. Tuotteiden hinnat sisältävät arvonlisäveron.&nbsp;</p>
 <p>Verkkokaupan yhteystiedot:</p>
-<p>Sähköposti:&nbsp;birgit.saatsi@mukamat.fi<br />Postiosoite:&nbsp;Koivutie 5, 31300 Ylöjärvi, Finland</p>
+<p>Sähköposti:&nbsp;mukamat@gmail.com<br />Postiosoite:&nbsp;Koivutie 5, 31300 Ylöjärvi, Finland</p>
 <p>&nbsp;</p>
 <p><strong>Tilaaminen</strong></p>
 <p>Voit tilata tuotteita verkkokaupassa siirtämällä niitä ostoskoriin, vahvistamalla tilauksen ja maksamalla ostoskorin sisällön valitsemassasi maksupalvelussa. Tehdessäsi tilauksen hyväksyt nämä toimitusehdot, tuotteiden hinnat sekä toimituskulut. Tilaamisen jälkeen saat tilausvahvistuksen sähköpostiisi. Tilausvahvistuksesta ilmenevät tilatut tuotteet sekä hinta.</p>
@@ -34,7 +34,7 @@ const Shipping = () => {
 <p>Tuotteet lähetetään Postin kirjelähetyksenä.</p>
 <p>&nbsp;</p>
 <p><strong>Tilauksen peruuttaminen ja palautusoikeus</strong></p>
-<p>Ennen tilauksen toimitusta tilauksen voi peruuttaa kirjallisella ilmoituksella sähköpostiosoitteeseen&nbsp;birgit.saatsi@mukamat.fi.</p>
+<p>Ennen tilauksen toimitusta tilauksen voi peruuttaa kirjallisella ilmoituksella sähköpostiosoitteeseen&nbsp;mukamat@gmail.com.</p>
 <p>Jo toimitetun tuotteen oston voit perua palauttamalla tuotteen, sillä asiakkaalla on aina kuluttajansuojalain mukainen 14 vuorokauden palautusoikeus. Olethan yhteydessä minuun ennen palauttamista lähettämällä viestiä sähköpostitse.&nbsp; Palautuksesta aiheutuvan postimaksun maksaa asiakas.</p>
 <p>Tuotteen tulee olla avaamaton, käyttämätön ja alkuperäisessä paketissaan.&nbsp;</p>
 <p>Palauta tuotteet alla olevaan osoitteeseen:</p>
