@@ -16,6 +16,7 @@ export default makeStyles((theme) => ({
         borderRadius: '10px',
         padding: '10px',
         background: '#fff',
+        boxShadow: '5px 5px 30px rgba(0,0,0,0.3)',
         margin: 'auto',
         flexWrap: 'wrap',
         maxWidth: '400px',

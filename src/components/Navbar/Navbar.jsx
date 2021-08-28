@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
       width: drawerWidth,
       flexShrink: 0,
     },
+    boxShadow: '5px 5px 30px rgba(0,0,0,0.3)',
   },
   appBar: {
     [theme.breakpoints.up('sm')]: {
