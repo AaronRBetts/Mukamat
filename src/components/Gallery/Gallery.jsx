@@ -23,7 +23,7 @@ const Gallery = ({ product }) => {
     showPlayButton={false} 
     showThumbnails={false} 
     showBullets={true} 
-    autoPlay={true} />;
+    autoPlay={false} />;
 }
 
 export default Gallery

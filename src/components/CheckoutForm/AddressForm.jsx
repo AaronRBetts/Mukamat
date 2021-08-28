@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { InputLabel, Select, MenuItem, Button, Grid, Typography } from '@material-ui/core';
+import { InputLabel, Select, MenuItem, Button, Grid, Typography, Divider } from '@material-ui/core';
 import { useForm, FormProvider } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
@@ -11,6 +11,7 @@ const AddressForm = ({ checkoutToken, next }) => {
   const [shippingCountry, setShippingCountry] = useState('');
   const [shippingSubdivisions, setShippingSubdivisions] = useState([]);
   const [shippingSubdivision, setShippingSubdivision] = useState('');
+  const [billingSubdivision, setBillingSubdivision] = useState('');
   const [shippingOptions, setShippingOptions] = useState([]);
   const [shippingOption, setShippingOption] = useState('');
   const methods = useForm();
@@ -39,6 +40,7 @@ const AddressForm = ({ checkoutToken, next }) => {
 
     setShippingSubdivisions(subdivisions);
     setShippingSubdivision(Object.keys(subdivisions)[0]);
+    setBillingSubdivision(Object.keys(subdivisions)[0]);
   };
 
   const fetchShippingOptions = async (checkoutTokenId, country, stateProvince = null) => {
@@ -51,18 +53,19 @@ const AddressForm = ({ checkoutToken, next }) => {
 
   return (
     <>
-      <Typography variant="h6" gutterBottom>Shipping address</Typography>
+      <Typography variant="h6" gutterBottom>Asiakkaan tiedot</Typography>
       <FormProvider {...methods}>
-        <form onSubmit={methods.handleSubmit((data) => next({ ...data, shippingCountry, shippingSubdivision, shippingOption }))}>
+        <form onSubmit={methods.handleSubmit((data) => next({ ...data, shippingCountry, shippingSubdivision, shippingOption, billingSubdivision }))}>
           <Grid container spacing={3}>
-            <FormInput required name="firstName" label="First name" />
-            <FormInput required name="lastName" label="Last name" />
-            <FormInput required name="address1" label="Address line 1" />
-            <FormInput required name="email" label="Email" />
-            <FormInput required name="city" label="City" />
-            <FormInput required name="zip" label="Zip / Postal code" />
+            <FormInput required name="firstName" label="Etunimi" />
+            <FormInput required name="lastName" label="Sukunimi" />
+            <FormInput required name="address1" label="Osoite" />
+            <FormInput required name="phone" label="Puhelinnumero" />
+            <FormInput required name="email" label="Sähköposti" />
+            <FormInput required name="city" label="Kaupinki" />
+            <FormInput required name="zip" label="Postinumero" />
             <Grid item xs={12} sm={6}>
-              <InputLabel>Shipping Country</InputLabel>
+              <InputLabel>Maa</InputLabel>
               <Select value={shippingCountry} fullWidth onChange={(e) => setShippingCountry(e.target.value)}>
                 {Object.entries(shippingCountries).map(([code, name]) => ({ id: code, label: name })).map((item) => (
                   <MenuItem key={item.id} value={item.id}>
@@ -72,7 +75,7 @@ const AddressForm = ({ checkoutToken, next }) => {
               </Select>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <InputLabel>Shipping Subdivision</InputLabel>
+              <InputLabel>toimituksen alaosasto</InputLabel>
               <Select value={shippingSubdivision} fullWidth onChange={(e) => setShippingSubdivision(e.target.value)}>
                 {Object.entries(shippingSubdivisions).map(([code, name]) => ({ id: code, label: name })).map((item) => (
                   <MenuItem key={item.id} value={item.id}>
@@ -90,6 +93,27 @@ const AddressForm = ({ checkoutToken, next }) => {
                   </MenuItem>
                 ))}
               </Select>
+            </Grid>
+          <Divider />
+            <Typography variant="h6" gutterBottom>Laskutuksen tiedot</Typography>
+          <Grid container spacing={3}>
+            <FormInput required name="billingFirstName" label="Etunimi" />
+            <FormInput required name="billingLastName" label="Sukunimi" />
+            <FormInput required name="billingAddress1" label="Osoite" />
+            <FormInput required name="billingPhone" label="Puhelinnumero" />
+            <FormInput required name="billingEmail" label="Sähköposti" />
+            <FormInput required name="billingCity" label="Kaupinki" />
+            <FormInput required name="billingZip" label="Postinumero" />
+            <Grid item xs={12} sm={6}>
+              <InputLabel>toimituksen alaosasto</InputLabel>
+              <Select value={billingSubdivision} fullWidth onChange={(e) => setBillingSubdivision(e.target.value)}>
+                {Object.entries(shippingSubdivisions).map(([code, name]) => ({ id: code, label: name })).map((item) => (
+                  <MenuItem key={item.id} value={item.id}>
+                    {item.label}
+                  </MenuItem>
+                ))}
+              </Select>
+            </Grid>
             </Grid>
           </Grid>
           <br />

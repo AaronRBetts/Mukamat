@@ -2,7 +2,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(() => ({
   media: {
-    height: '90px',
+    width: '50px',
+    height: '80px',
   },
   cardContent: {
     display: 'flex',
@@ -12,8 +13,15 @@ export default makeStyles(() => ({
     justifyContent: 'space-between',
   },
   buttons: {
+    display: 'grid',
+    textAlign: 'center',
+  },
+  button: {
+    fontSize: '4rem',
+  },
+  quantity: {
+    marginLeft: 'auto',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-end',
-  },
+  }
 }));

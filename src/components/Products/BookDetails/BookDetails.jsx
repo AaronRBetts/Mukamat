@@ -45,27 +45,27 @@ const BookDetails = ({products, onAddToCart}) => {
                 <Paper className={classes.qtyWrapper}>
 
                 <FormControl variant="outlined" className={classes.qtySelector}>
-                <TextField
-                id="outlined-number"
-                label="Numero"
-                type="number"
-                value={qty}
-                onChange={handleChange}
-                InputLabelProps={{
-                    shrink: true,
-                }}
-                variant="outlined"
-                />
-                </FormControl>
-                <Button size="large" variant="contained" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(products[0].id, qty)}>
-                    <AddShoppingCart /> <Typography variant="body2">Lisää ostoskoriin</Typography>
-                </Button>
+                    <TextField
+                    id="outlined-number"
+                    label="Numero"
+                    type="number"
+                    value={qty}
+                    onChange={handleChange}
+                    InputLabelProps={{
+                        shrink: true,
+                    }}
+                    variant="outlined"
+                    />
+                    </FormControl>
+                    <Button size="large" variant="contained" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(products[0].id, qty)}>
+                        <AddShoppingCart /> <Typography variant="body2">Lisää ostoskoriin</Typography>
+                    </Button>
 
-            </Paper>
-        </CardActions>
+                </Paper>
+            </CardActions>
 
         </Card>
-            <Card className={classes.content} sm={12} md={6}>
+        <Card className={classes.content} sm={12} md={6}>
             <Gallery product={products[0]} sm={12} md={4} />
         </Card>
         <TabPanel products={products} />

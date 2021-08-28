@@ -44,14 +44,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
-    background: 'linear-gradient(155deg, #3425AF -50%, #C56CD6 150%)',
     [theme.breakpoints.up('sm')]: {
       height: '0'
     },
   },
   DrawerLogo: {
     height: '210px',
-    padding: '10px'
+    padding: '10px',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -63,6 +62,11 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
+    background: "rgba(255,255,255,1)",
+
+    [theme.breakpoints.down('sm')]: {
+      background: "rgba(255,255,255,1)",
+    },
   },
   content: {
     flexGrow: 1,
@@ -86,9 +90,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '0.6rem'
   },
   Accordion: {
-    padding: '0'
+    padding: '0',
   },
   mobileLogo: {
+
 
   }
 }));
@@ -246,7 +251,7 @@ function Navbar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Logo  className={classes.mobileLogo}/>
+          <Logo className={classes.mobileLogo}/>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">

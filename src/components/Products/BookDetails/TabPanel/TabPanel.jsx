@@ -51,7 +51,9 @@ const useStyles = makeStyles((theme) => ({
       width: '100%'
   },
   Card: {
-      padding: '10px'
+    margin: 'auto',
+      padding: '10px',
+      maxWidth: '500px'
   },
   labels: {
       '& button': {
@@ -103,10 +105,10 @@ export default function FullWidthTabs({products}) {
                   {products[0].type.map((product, key) => {
                       return (
 
-                              <Grid item xs={12} md={6} lg={4} className={classes.Card} key={key}>
+                              <Grid item xs={12} className={classes.Card} key={key}>
 
-                                  <div dangerouslySetInnerHTML={{__html: product.details}} />
-                              {product.extra ? <div dangerouslySetInnerHTML={{__html: product.extra}} /> : ''}
+                                  <Grid className={classes.Card}  dangerouslySetInnerHTML={{__html: product.details}} />
+                              {product.extra ? <Grid className={classes.Card}  dangerouslySetInnerHTML={{__html: product.extra}} /> : ''}
                               </Grid>
 
                       )

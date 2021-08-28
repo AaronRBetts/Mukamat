@@ -14,7 +14,7 @@ const Book = ({product}) => {
 
 							<ul className='hardcover_front'>
 								<li style={{backgroundImage: `url(${product.media.source})`}}>
-									{product.name === 'Lukukirja' ? '' : product.name === 'Play in English' ? '' : product.name === 'Kirjaintaulut' ? '' : product.name === 'Kirjaintaulut-&-kirjaintaulukirja' ? '' : <img className='binder' src={ product.name === 'Matkaan' ? OverlayV : Overlay}/>}
+									{product.name === 'Lukukirja' ? '' : product.name === 'Play in English' ? '' : product.name === 'Kirjaintaulut' ? '' : product.name === 'Kirjaintaulut & kirjaintaulukirja' ? '' : <img className='binder' src={ product.name === 'Matkaan' ? OverlayV : Overlay}/>}
 								</li>
 								<li></li>
 							</ul>

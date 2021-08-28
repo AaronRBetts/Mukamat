@@ -23,7 +23,20 @@ const PaymentForm = ({ checkoutToken, nextStep, backStep, shippingData, onCaptur
       const orderData = {
         line_items: checkoutToken.live.line_items,
         customer: { firstname: shippingData.firstName, lastname: shippingData.lastName, email: shippingData.email },
-        shipping: { name: 'Domestic', street: shippingData.address1, town_city: shippingData.city, county_state: shippingData.shippingSubdivision, postal_zip_code: shippingData.zip, country: shippingData.shippingCountry },
+        shipping: { 
+          name: 'Domestic', 
+          street: shippingData.address1, 
+          town_city: shippingData.city, 
+          county_state: shippingData.shippingSubdivision, 
+          postal_zip_code: shippingData.zip, 
+          country: shippingData.shippingCountry },
+        billing: { 
+          name: `${shippingData.billingFirstName} ${shippingData.billingLastName}`, 
+          street: shippingData.billingAddress1, 
+          town_city: shippingData.billingCity, 
+          postal_zip_code: shippingData.billingZip, 
+          county_state: shippingData.billingSubdivision, 
+          country: shippingData.shippingCountry },
         fulfillment: { shipping_method: shippingData.shippingOption },
         payment: {
           gateway: 'stripe',

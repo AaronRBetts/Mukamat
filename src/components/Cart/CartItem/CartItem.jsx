@@ -9,19 +9,20 @@ const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
     return (
         <TableRow key={item.name}>
           <TableCell component="th" scope="row">
-            {item.name}
+            {item.name}<CardMedia image={item.media.source} alt={item.name} className={classes.media}/>
           </TableCell>
           <TableCell align="right">
-                 <div className={classes.buttons}>
-                     <IconButton onClick={() => onUpdateCartQty(item.id, item.quantity - 1)}><RemoveCircle style={{ color: 'red' }} /></IconButton>
-                     <Typography>{item.quantity}</Typography>
-                     <IconButton onClick={() => onUpdateCartQty(item.id, item.quantity + 1)}><AddCircle style={{ color: 'green' }}/></IconButton>
+                 <div className={classes.quantity}>
+                     <Typography>{item.quantity}</Typography>                   
+                  <div className={classes.buttons}>
+                      <IconButton className={classes.button} onClick={() => onUpdateCartQty(item.id, item.quantity + 1)}><AddCircle style={{ color: 'green', fontSize: '2rem' }}/></IconButton>
+                      <IconButton className={classes.button} onClick={() => onUpdateCartQty(item.id, item.quantity - 1)}><RemoveCircle style={{ color: 'red', fontSize: '2rem' }} /></IconButton>
+                  </div>
                  </div>
             </TableCell>
           <TableCell align="right">{item.price.formatted_with_symbol}
             </TableCell>
           <TableCell align="right">{item.line_total.formatted_with_symbol}</TableCell>
-          <TableCell align="right"><CardMedia image={item.media.source} alt={item.name} className={classes.media}/></TableCell>
         </TableRow>
         // <Card>
         //     <CardMedia image={item.media.source} alt={item.name} className={classes.media}/>
