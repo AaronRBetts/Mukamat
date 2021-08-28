@@ -81,8 +81,13 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
   },
   navIcon: {
-    color: '#3c40c6',
-    marginLeft: '2em',
+    '& svg': {
+      color: '#ffdd59',
+      borderRadius: '50%',
+      background: '#3c40c6',
+      padding: '5px',
+      boxShadow: '2px 2px 10px rgb(0 0 0 / 70%), inset 10px 10px 20px rgb(255 255 255 / 20%)',
+    },
   },
   linkItem: {
     fontSize: '0.8rem'
@@ -93,9 +98,8 @@ const useStyles = makeStyles((theme) => ({
   Accordion: {
     padding: '0',
   },
-  mobileLogo: {
-
-
+  footerIcon: {
+    color: '#CE9FFC'
   }
 }));
 
@@ -197,11 +201,11 @@ function Navbar(props) {
       <Divider />
       <List>
           <ListItem className={classes.linkItem}>
-            <ListItemIcon className={classes.footerIcon}><MailIcon /></ListItemIcon>
+            <ListItemIcon><MailIcon className={classes.footerIcon} /></ListItemIcon>
             <Typography className={classes.footerText} variant="subtitle2">mukamat@gmail.com</Typography>
           </ListItem>
           <ListItem className={classes.linkItem}>
-            <ListItemIcon className={classes.footerIcon}><PhoneIcon /></ListItemIcon>
+            <ListItemIcon><PhoneIcon className={classes.footerIcon} /></ListItemIcon>
             <Typography className={classes.footerText} variant="subtitle2">050-3451712</Typography>
           </ListItem>
       </List>

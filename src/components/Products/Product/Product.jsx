@@ -51,14 +51,14 @@ const Product = ({ product, onAddToCart }) => {
                     variant="outlined"
                     />
                     </FormControl>
-                    <Button variant="contained" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(product.id, qty)}>
+                    <Button style={{color: '#ffdd59'}} variant="contained" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(product.id, qty)}>
                         <AddShoppingCart /> <Typography variant="body2">Lisää ostoskoriin</Typography>
                     </Button>
 
                 </Paper>
                 </CardActions>
                 
-            <Button component={Link} to={`/kirjamme/${product.permalink}`} variant="contained" fullWidth color="primary">
+            <Button className={classes.seeMore} component={Link} to={`/kirjamme/${product.permalink}`} variant="contained" fullWidth color="primary">
                 Näytä Lisää
             </Button>
             </CardContent>

@@ -10,6 +10,7 @@ export default makeStyles(() => ({
     cardActions: {
         display: 'flex',
         justifyContent: 'space-between',
+        color: '#ffdd59'
     },
     cardContent: {
         display: 'flex',
@@ -55,5 +56,8 @@ export default makeStyles(() => ({
         textAlign: 'right',
         marginLeft: 'auto',
         padding: '10px',
+    },
+    seeMore: {
+        color: '#ffdd59'
     }
 }));
