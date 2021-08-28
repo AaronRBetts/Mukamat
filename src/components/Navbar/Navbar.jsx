@@ -17,7 +17,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuBookIcon from '@material-ui/icons/MenuBook'
-import PersonPinIcon from '@material-ui/icons/PersonPin'
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople'
 import MailIcon from '@material-ui/icons/Mail'
 import PhoneIcon from '@material-ui/icons/Phone'
 import Toolbar from '@material-ui/core/Toolbar';
@@ -129,10 +129,18 @@ function Navbar(props) {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography className={classes.heading}>Kirjamme</Typography>
+              
+          <ListItem className={classes.linkItem}>
+            <ListItemIcon className={classes.navIcon}><MenuBookIcon /></ListItemIcon>
+            <ListItemText primary={'Kirjamme'} />
+          </ListItem>
             </AccordionSummary>
             <AccordionDetails className={classes.Accordion}>
               <List>
+                <ListItem className={classes.linkItem} button component={Link} to="/kirjamme">
+                  Kaikki kirjat
+                </ListItem>
+                <Divider/>
                 <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/vesseli">
                   
                   Vesseli
@@ -200,6 +208,10 @@ function Navbar(props) {
           <ListItem className={classes.linkItem} button component={Link} to="/cart">
             <ListItemIcon className={classes.navIcon}><ShoppingCartIcon /></ListItemIcon>
             <ListItemText primary={'Ostoskori'} />
+          </ListItem>          
+          <ListItem className={classes.linkItem} button component={Link} to="/tekijä">
+            <ListItemIcon className={classes.navIcon}><EmojiPeopleIcon /></ListItemIcon>
+            <ListItemText primary={'Tekijä'} />
           </ListItem>
       </List>
       <Divider />
