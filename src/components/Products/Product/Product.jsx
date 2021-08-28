@@ -30,7 +30,7 @@ const Product = ({ product, onAddToCart }) => {
                         {product.price.formatted_with_symbol}
                     </Typography>
                     <Typography variant="body2" className={classes.taxPrice}>
-                        {product.beforeTax}
+                        {product.beforeTax + product.taxString}
                     </Typography>
                     </div>
                 </div>

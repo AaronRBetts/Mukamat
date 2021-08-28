@@ -28,10 +28,9 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
           <TableHead>
             <TableRow>
               <TableCell>Kirja</TableCell>
-              <TableCell align="right">Kpl</TableCell>
-              <TableCell align="right">Hinta/Kpl</TableCell>
-              <TableCell align="right">Yhteensä</TableCell>
-              <TableCell align="right"></TableCell>
+              <TableCell align="left">Kpl</TableCell>
+              <TableCell align="left">Hinta/Kpl</TableCell>
+              <TableCell align="left">Yhteensä</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -41,12 +40,12 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
           </TableBody>
         </Table>
             <div className={classes.cardDetails}>
-                <Typography variant="h4">
+                <Typography variant="h6">
                 Yhteensä: { cart.subtotal.formatted_with_symbol }
                 </Typography>
-                <div>
-                    <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Tyhjenna Ostoskori</Button>
-                    <Button component={Link} to="/checkout" className={classes.checkoutButton} size="large" type="button" variant="contained" color="primary">Maksu</Button>
+                <div style={{display: "grid"}}>
+                    <Button className={classes.emptyButton} type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Tyhjenna Ostoskori</Button>
+                    <Button component={Link} to="/checkout" className={classes.checkoutButton} type="button" variant="contained" color="primary">Maksu</Button>
                 </div>
             </div>
             {/* <Grid container spacing={3}>
@@ -64,7 +63,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
     return (
         <Container>
             <div className={classes.toolbar} />
-            <Typography className={classes.title} variant="h3" gutterBottom>Ostoskori</Typography>
+            <Typography className={classes.title} variant="h4" gutterBottom>Ostoskori</Typography>
             { !cart.line_items.length ? <EmptyCart /> : <FilledCart /> }
         </Container>
     )

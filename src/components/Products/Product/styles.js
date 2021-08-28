@@ -10,7 +10,6 @@ export default makeStyles(() => ({
     cardActions: {
         display: 'flex',
         justifyContent: 'space-between',
-        color: '#ffdd59'
     },
     cardContent: {
         display: 'flex',

@@ -6,25 +6,30 @@ export default makeStyles((theme) => ({
     marginTop: '5%',
   },
   emptyButton: {
-      marginBottom: '5px',
+    margin: '3px',
     [theme.breakpoints.up('xs')]: {
-      marginRight: '20px',
     },
   },
   checkoutButton: {
-    minWidth: '150px',
-    marginBottom: '5px',
+    margin: '3px',
   },
   link: {
     textDecoration: 'none',
   },
   cardDetails: {
     display: 'flex',
-    marginTop: '10%',
     width: '100%',
     justifyContent: 'space-between',
+    '& h6': {
+      margin: 'auto'
+    }
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
+  },
+  table: {
+    '& th' : {
+      padding: '4px'
+    }
   }
 }));

@@ -96,6 +96,7 @@ const AddressForm = ({ checkoutToken, next }) => {
             </Grid>
           <Divider />
             <Typography variant="h6" gutterBottom>Laskutuksen tiedot</Typography>
+            <br />
           <Grid container spacing={3}>
             <FormInput required name="billingFirstName" label="Etunimi" />
             <FormInput required name="billingLastName" label="Sukunimi" />

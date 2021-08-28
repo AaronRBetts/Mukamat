@@ -37,7 +37,6 @@ export default makeStyles((theme) => ({
         },
         '& button': {
             margin: '10px 20px 0 0',
-            color: '#ffdd59',
         },
 
     },

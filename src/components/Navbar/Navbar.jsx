@@ -100,6 +100,10 @@ const useStyles = makeStyles((theme) => ({
   },
   footerIcon: {
     color: '#CE9FFC'
+  },
+  mobileLogo: {
+    overflow: 'hidden',
+    width: '100px'
   }
 }));
 
