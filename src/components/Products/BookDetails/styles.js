@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     boxShadow: '2px 5px 30px rgba(0,0,0,0.2)',
     borderRadius: '5px',
     padding: '10px',
-    margin: 'auto 10px',
+    margin: '10px 10px',
   },
   root: {
     flexGrow: 1,
