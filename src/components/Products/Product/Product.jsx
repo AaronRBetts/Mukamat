@@ -10,7 +10,6 @@ const Product = ({ product, onAddToCart }) => {
     const classes = useStyles();
     const [qty, setQty] = React.useState(1);
 
-    console.log(product)
     const handleChange = (event) => {
         setQty(event.target.value);
       };

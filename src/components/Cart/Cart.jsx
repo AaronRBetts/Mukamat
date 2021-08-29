@@ -11,8 +11,9 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import CartItem from './CartItem/CartItem'
 
-const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart }) => {
+const Cart = ({ products, cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart }) => {
     const classes = useStyles();
+
 
     const EmptyCart = () => (
         <Typography variant="subtitle1">
@@ -36,7 +37,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
           </TableHead>
           <TableBody>
             {cart.line_items.map((item) => (
-                <CartItem key={item.id} item={item} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} />
+                <CartItem product={products.filter(product => product.name === item.name)} key={item.id} item={item} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} />
             ))}
           </TableBody>
         </Table>

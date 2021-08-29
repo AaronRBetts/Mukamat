@@ -18,7 +18,6 @@ const PaymentForm = ({ checkoutToken, nextStep, backStep, shippingData, onCaptur
       `
     ))
 
-    console.log(products)
 
   const handleSubmit = async (event, elements, stripe) => {
     event.preventDefault();

@@ -2,15 +2,18 @@ import React from 'react'
 import { Typography, IconButton, CardMedia, TableRow, TableCell, Button, CardActions } from '@material-ui/core';
 import {AddCircle, RemoveCircle } from '@material-ui/icons/';
 import useStyles from './styles';
+import Book from '../../Products/Product/Book/Book'
 
-const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
+const CartItem = ({ product, item, onUpdateCartQty, onRemoveFromCart }) => {
     const classes = useStyles();
+
 
     return (
       <>
       <TableRow key={item.name} className={classes.row}>
         <TableCell>
           {item.name}<CardMedia image={item.media.source} alt={item.name} className={classes.media}/>
+          {/* <Book product={product}/> */}
         </TableCell>
         <TableCell align="left">
                <div className={classes.quantity}>

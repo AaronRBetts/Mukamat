@@ -9,7 +9,6 @@ import TabPanel from './TabPanel/TabPanel'
 const BookDetails = ({products, onAddToCart}) => {
     const classes = useStyles();
 
-    console.log(products)
 
     const [qty, setQty] = React.useState(1);
   

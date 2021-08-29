@@ -60,7 +60,7 @@ const AddressForm = ({ checkoutToken, next }) => {
             <FormInput required name="firstName" label="Etunimi" />
             <FormInput required name="lastName" label="Sukunimi" />
             <FormInput required name="address1" label="Osoite" />
-            <FormInput  name="phone" label="Puhelinnumero" />
+            <FormInput name="phone" label="Puhelinnumero" />
             <FormInput required name="email" label="Sähköposti" />
             <FormInput required name="city" label="Kaupinki" />
             <FormInput required name="zip" label="Postinumero" />
