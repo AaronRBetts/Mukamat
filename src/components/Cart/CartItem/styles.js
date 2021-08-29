@@ -31,6 +31,5 @@ export default makeStyles(() => ({
     alignItems: 'center',
   },
   row: {
-    alignItems: 'center'
-  }
+  },
 }));

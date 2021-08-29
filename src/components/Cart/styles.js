@@ -16,7 +16,7 @@ export default makeStyles((theme) => ({
   link: {
     textDecoration: 'none',
   },
-  cardDetails: {
+  cartDetails: {
     display: 'flex',
     width: '100%',
     justifyContent: 'space-between',
@@ -25,11 +25,12 @@ export default makeStyles((theme) => ({
     }
   },
   paper: {
-    padding: theme.spacing(1),
+    padding: theme.spacing(2),
   },
   table: {
     '& th' : {
-      padding: '4px'
+      padding: '4px',
+      fontWeight: '800'
     }
   }
 }));

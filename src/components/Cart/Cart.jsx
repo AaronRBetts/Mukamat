@@ -31,6 +31,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
               <TableCell align="left">Kpl</TableCell>
               <TableCell align="left">Hinta/Kpl</TableCell>
               <TableCell align="left">Yhteensä</TableCell>
+              <TableCell align="left"></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -39,7 +40,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
             ))}
           </TableBody>
         </Table>
-            <div className={classes.cardDetails}>
+            <div className={classes.cartDetails}>
                 <Typography variant="h6">
                 Yhteensä: { cart.subtotal.formatted_with_symbol }
                 </Typography>

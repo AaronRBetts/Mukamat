@@ -9,6 +9,8 @@ import TabPanel from './TabPanel/TabPanel'
 const BookDetails = ({products, onAddToCart}) => {
     const classes = useStyles();
 
+    console.log(products)
+
     const [qty, setQty] = React.useState(1);
   
     const handleChange = (event) => {
@@ -33,10 +35,10 @@ const BookDetails = ({products, onAddToCart}) => {
         <Grid container spacing={4}>
         <Card className={classes.content} sm={12} md={6}>
             <Typography variant="h4">{products[0].name}</Typography>
-            <Divider />
                 <Typography variant="body2">{products[0].isbn}</Typography>
+            <Divider />
                 <Typography variant="h6" gutterBottom>{products[0].price.formatted_with_symbol}</Typography>
-                <Typography variant="body2" gutterBottom>{products[0].beforeTax}</Typography>
+                <Typography variant="body2" gutterBottom>{`€${products[0].beforeTax} +${products[0].tax}% ALV`}</Typography>
             <Divider />
             <Typography variant="body1" gutterBottom dangerouslySetInnerHTML={{__html: products[0].description}}>
             </Typography>

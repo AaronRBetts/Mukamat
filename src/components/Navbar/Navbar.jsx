@@ -129,7 +129,6 @@ function Navbar(props) {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              
           <ListItem className={classes.linkItem}>
             <ListItemIcon className={classes.navIcon}><MenuBookIcon /></ListItemIcon>
             <ListItemText primary={'Kirjamme'} />

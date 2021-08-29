@@ -7,11 +7,12 @@ import AddressForm from '../AddressForm';
 import PaymentForm from '../PaymentForm';
 import useStyles from './styles';
 
-const steps = ['Shipping address', 'Payment details'];
+const steps = ['Tiedot', 'Maksu'];
 
 const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
   const [checkoutToken, setCheckoutToken] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
+  const [emailOrdered, setEmailOrdered] = useState(false);
   const [shippingData, setShippingData] = useState({});
   const classes = useStyles();
   const history = useHistory();
@@ -40,6 +41,10 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
     nextStep();
   };
 
+  const emailOrder = () => {
+    setEmailOrdered(true)
+  }
+
   let Confirmation = () => (order.customer ? (
     <>
       <div>
@@ -56,10 +61,18 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
     </div>
   ));
 
+  let EmailSent = () => (
+    <>
+        <Typography variant="h5">Thank you for your purchase! An invoice will be created and sent to your email</Typography>
+      <br />
+      <Button component={Link} variant="outlined" type="button" to="/">Back to home</Button>
+    </>
+  )
+
   if (error) {
     Confirmation = () => (
       <>
-        <Typography variant="h5">Error: {error}</Typography>
+        <Typography variant="h5">Order failed, please contact the site owner: {error}</Typography>
         <br />
         <Button component={Link} variant="outlined" type="button" to="/">Back to home</Button>
       </>
@@ -68,7 +81,7 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
 
   const Form = () => (activeStep === 0
     ? <AddressForm checkoutToken={checkoutToken} nextStep={nextStep} setShippingData={setShippingData} next={next} />
-    : <PaymentForm checkoutToken={checkoutToken} nextStep={nextStep} backStep={backStep} shippingData={shippingData} onCaptureCheckout={onCaptureCheckout} />);
+    : <PaymentForm checkoutToken={checkoutToken} nextStep={nextStep} backStep={backStep} shippingData={shippingData} onCaptureCheckout={onCaptureCheckout} emailOrder={emailOrder} />);
 
   return (
     <>
@@ -76,7 +89,7 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
       <div className={classes.toolbar} />
       <main className={classes.layout}>
         <Paper className={classes.paper}>
-          <Typography variant="h4" align="center">Checkout</Typography>
+          <Typography variant="h4" align="center">Osto</Typography>
           <Stepper activeStep={activeStep} className={classes.stepper}>
             {steps.map((label) => (
               <Step key={label}>
@@ -84,7 +97,7 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
               </Step>
             ))}
           </Stepper>
-          {activeStep === steps.length ? <Confirmation /> : checkoutToken && <Form />}
+          {activeStep === steps.length ? emailOrdered ? <EmailSent /> : <Confirmation /> : checkoutToken && <Form />}
         </Paper>
       </main>
     </>

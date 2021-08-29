@@ -10,6 +10,7 @@ const Product = ({ product, onAddToCart }) => {
     const classes = useStyles();
     const [qty, setQty] = React.useState(1);
 
+    console.log(product)
     const handleChange = (event) => {
         setQty(event.target.value);
       };
@@ -30,7 +31,7 @@ const Product = ({ product, onAddToCart }) => {
                         {product.price.formatted_with_symbol}
                     </Typography>
                     <Typography variant="body2" className={classes.taxPrice}>
-                        {product.beforeTax + product.taxString}
+                        {`€${product.beforeTax} +${product.tax}% ALV`}
                     </Typography>
                     </div>
                 </div>

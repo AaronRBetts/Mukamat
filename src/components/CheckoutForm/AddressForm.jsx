@@ -60,7 +60,7 @@ const AddressForm = ({ checkoutToken, next }) => {
             <FormInput required name="firstName" label="Etunimi" />
             <FormInput required name="lastName" label="Sukunimi" />
             <FormInput required name="address1" label="Osoite" />
-            <FormInput required name="phone" label="Puhelinnumero" />
+            <FormInput  name="phone" label="Puhelinnumero" />
             <FormInput required name="email" label="Sähköposti" />
             <FormInput required name="city" label="Kaupinki" />
             <FormInput required name="zip" label="Postinumero" />
@@ -85,7 +85,7 @@ const AddressForm = ({ checkoutToken, next }) => {
               </Select>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <InputLabel>Shipping Options</InputLabel>
+              <InputLabel>Toimitus vaihtoehdot</InputLabel>
               <Select value={shippingOption} fullWidth onChange={(e) => setShippingOption(e.target.value)}>
                 {shippingOptions.map((sO) => ({ id: sO.id, label: `${sO.description} - (${sO.price.formatted_with_symbol})` })).map((item) => (
                   <MenuItem key={item.id} value={item.id}>
@@ -94,17 +94,19 @@ const AddressForm = ({ checkoutToken, next }) => {
                 ))}
               </Select>
             </Grid>
+          </Grid>
+          <br />
+          <br />
           <Divider />
-            <Typography variant="h6" gutterBottom>Laskutuksen tiedot</Typography>
-            <br />
+          <Typography variant="h6" gutterBottom>Laskutuksen tiedot</Typography>
           <Grid container spacing={3}>
-            <FormInput required name="billingFirstName" label="Etunimi" />
-            <FormInput required name="billingLastName" label="Sukunimi" />
-            <FormInput required name="billingAddress1" label="Osoite" />
-            <FormInput required name="billingPhone" label="Puhelinnumero" />
-            <FormInput required name="billingEmail" label="Sähköposti" />
-            <FormInput required name="billingCity" label="Kaupinki" />
-            <FormInput required name="billingZip" label="Postinumero" />
+            <FormInput name="billingFirstName" label="Etunimi" />
+            <FormInput name="billingLastName" label="Sukunimi" />
+            <FormInput name="billingAddress1" label="Osoite" />
+            <FormInput name="billingPhone" label="Puhelinnumero" />
+            <FormInput name="billingEmail" label="Sähköposti" />
+            <FormInput name="billingCity" label="Kaupinki" />
+            <FormInput name="billingZip" label="Postinumero" />
             <Grid item xs={12} sm={6}>
               <InputLabel>toimituksen alaosasto</InputLabel>
               <Select value={billingSubdivision} fullWidth onChange={(e) => setBillingSubdivision(e.target.value)}>
@@ -114,7 +116,6 @@ const AddressForm = ({ checkoutToken, next }) => {
                   </MenuItem>
                 ))}
               </Select>
-            </Grid>
             </Grid>
           </Grid>
           <br />
