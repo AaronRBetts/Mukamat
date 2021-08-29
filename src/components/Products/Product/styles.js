@@ -15,11 +15,13 @@ export default makeStyles(() => ({
         display: 'flex',
         // background: 'rgba(0,0,0,0.5)',
         borderRadius: '10px',
-        '& h5': {
+        '& h4': {
             padding: '10px',
-            ["@media (max-width:800px)"]: { fontSize: '1.5rem' },
+            fontWeight: '500',
+            ["@media (max-width:800px)"]: { fontSize: '1.4rem' },
         },
         '& h6': {
+            color: '#ccc',
             padding: '10px',
             marginLeft: 'auto',
         }

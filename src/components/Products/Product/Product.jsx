@@ -25,7 +25,7 @@ const Product = ({ product, onAddToCart }) => {
             <Typography variant="body2" className={classes.isbn}>{product.isbn}</Typography>
             <CardContent className={classes.BookInfo}>
                 <div className={classes.cardContent}>
-                    <Typography variant="h5">{product.name}</Typography>
+                    <Typography variant="h4">{product.name}</Typography>
                     <div className={classes.prices}>
                     <Typography variant="body1" >
                         {product.price.formatted_with_symbol}
@@ -52,8 +52,8 @@ const Product = ({ product, onAddToCart }) => {
                     variant="outlined"
                     />
                     </FormControl>
-                    <Button style={{color: '#ffdd59'}} variant="contained" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(product.id, qty)}>
-                        <AddShoppingCart /> <Typography variant="body2">Lisää ostoskoriin</Typography>
+                    <Button style={{color: '#ffdd59'}} variant="contained" size="small" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(product.id, qty)}>
+                        <AddShoppingCart />Lisää ostoskoriin
                     </Button>
 
                 </Paper>

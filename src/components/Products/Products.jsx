@@ -13,7 +13,7 @@ const Products = ({ products, onAddToCart }) => {
             id: "prod_VPvL5zNOG5AQkX",
             order: 3,
             tax: 10,
-            beforeTax: 28.64,
+            beforeTax: '28.64',
             bookName: 'vesseli',
             isbn: 'ISBN 978-952-93-8211-8',
             type: [
@@ -102,7 +102,7 @@ const Products = ({ products, onAddToCart }) => {
           id: "prod_mOVKl4E7MwprRP",
           order: 1,
           tax: 10,
-          beforeTax: 24.09,
+          beforeTax: '24.09',
           bookName: 'matti',
           isbn: 'ISBN 978-951-98149-1-9',
           type: [
@@ -194,7 +194,7 @@ const Products = ({ products, onAddToCart }) => {
           id: "prod_9BAmwJj7QweXdn",
           order: 2,
           tax: 10,
-          beforeTax: 24.09,
+          beforeTax: '24.09',
           bookName: 'mukamatti',
           isbn: 'ISBN 978-951-98149-0-2',
           type: [
@@ -274,7 +274,7 @@ const Products = ({ products, onAddToCart }) => {
           id: "prod_nPEVlNX70oa7dM",
           order: 4,
           tax: 10,
-          beforeTax: 25.00,
+          beforeTax: '25.00',
           bookName: 'matilda',
           isbn: 'ISBN 951-98149-3-0',
           type: [
@@ -412,7 +412,7 @@ const Products = ({ products, onAddToCart }) => {
           id: "prod_9BAmwJyrkMleXd",
           order: 5,
           tax: 10,
-          beforeTax: 34.09,
+          beforeTax: '34.09',
           bookName: 'lukukirja',
           isbn: 'ISBN 978-952-92-4192-7',
           type: [
@@ -473,7 +473,7 @@ const Products = ({ products, onAddToCart }) => {
           id: "prod_4WJvlKpR6JwbYV",
           order: 7,
           tax: 0,
-          beforeTax: 65,
+          beforeTax: '65',         
           bookName: 'Kirjaintaulu',
           type: [
               {
@@ -507,8 +507,8 @@ const Products = ({ products, onAddToCart }) => {
       {
           id: "prod_zkK6oL9Q065Xn0",
           order: 8,
-          tax: '',
-          beforeTax: '',
+          tax: '0',
+          beforeTax: '65',
           bookName: 'kirjantaulu-and-kirjaintaulukirja',
           isbn: '',
           type: [
@@ -560,7 +560,7 @@ const Products = ({ products, onAddToCart }) => {
           id: "prod_DWy4oG4EMP56Jx",
           order: 10,
           tax: 0,
-          beforeTax: 90,
+          beforeTax: '90',
           bookName: 'play-in-english',
           isbn: '',
           type: [
@@ -710,7 +710,7 @@ const Products = ({ products, onAddToCart }) => {
           id: "prod_bWZ3l89bZBwkpE",
           order: 9,
           tax: 10,
-          beforeTax: 190.91,
+          beforeTax: '190.91',
           bookName: 'step-by-step',
           isbn: '',
           type: [
@@ -763,7 +763,7 @@ const Products = ({ products, onAddToCart }) => {
       {
           id: "prod_QG375vRMOr5rMO",
           order: 6,
-          tax: '€ +10% ALV',
+          tax: '10',
           beforeTax: '25.50',
           bookName: 'matkaan',
           isbn: 'ISBN 978-951-98149-4-0',
@@ -820,8 +820,8 @@ const Products = ({ products, onAddToCart }) => {
       {
           id: "prod_VPvL5z3RE3lAQk",
           order: 11,
-          tax: 24,
-          beforeTax: 72.58,
+          tax: '24',
+          beforeTax: '72.58',
           bookName: "Pikku-Matin mukavat - peli I (pienaakkoset)",
           isbn: '',
           type: [
@@ -946,7 +946,7 @@ const Products = ({ products, onAddToCart }) => {
       {
           id: "prod_O3bR5XBPQkwnzd",
           order: 12,
-          tax: '€ +24% ALV',
+          tax: '24',
           beforeTax: '72.58',
           bookName: "Pikku-Matin mukavat - peli 1 (suuraakkoset)",
           isbn: '',
@@ -1072,8 +1072,8 @@ const Products = ({ products, onAddToCart }) => {
       {
           id: "prod_RyWOwmd7V9lnEa",
           order: 13,
-          tax: 24,
-          beforeTax: 72.58,
+          tax: '24',
+          beforeTax: '72.58',
           bookName: "Pikku-Matin mukavat - peli 2",
           isbn: '',
           type: [

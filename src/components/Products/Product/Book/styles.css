@@ -53,8 +53,8 @@ ul {
 
 .vertical {
 	top: 100px;
-	width: 260px; 
-	height: 140px;
+	width: 230px; 
+	height: 130px;
 }
 
 .vertical li {
@@ -627,5 +627,5 @@ ul {
 }
 
 .binder {
-	margin-left: -30px;
+	margin-left: -15px;
 }
