@@ -9,7 +9,7 @@ import useStyles from './styles';
 
 const steps = ['Tiedot', 'Maksu'];
 
-const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
+const Checkout = ({ products, cart, onCaptureCheckout, order, error, refreshCart }) => {
   const [checkoutToken, setCheckoutToken] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
   const [emailOrdered, setEmailOrdered] = useState(false);
@@ -43,6 +43,7 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
 
   const emailOrder = () => {
     setEmailOrdered(true)
+    refreshCart();
   }
 
   let Confirmation = () => (order.customer ? (

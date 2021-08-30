@@ -7,20 +7,26 @@ import Book from '../../Products/Product/Book/Book'
 const CartItem = ({ product, item, onUpdateCartQty, onRemoveFromCart }) => {
     const classes = useStyles();
 
+    
+
+    console.log(product)
 
     return (
       <>
       <TableRow key={item.name} className={classes.row}>
         <TableCell>
-          {item.name}<CardMedia image={item.media.source} alt={item.name} className={classes.media}/>
-          {/* <Book product={product}/> */}
+          {item.name}
+          { window.innerWidth < 1000 ? 
+          <CardMedia image={item.media.source} alt={item.name} className={classes.media}/> : 
+          <Book product={product[0]} className={classes.book}/> }
         </TableCell>
         <TableCell align="left">
                <div className={classes.quantity}>
                    <Typography>{item.quantity}</Typography>
                </div>
           </TableCell>
-        <TableCell align="left">{item.price.formatted_with_symbol}
+        <TableCell align="left"><Typography variant="body1">{item.price.formatted_with_symbol}</Typography>
+        <Typography variant="caption">{`(€${product[0].beforeTax} +${product[0].tax}% ALV)`}</Typography>
           </TableCell>
         <TableCell align="left">{item.line_total.formatted_with_symbol}</TableCell>
         <TableCell align="left">

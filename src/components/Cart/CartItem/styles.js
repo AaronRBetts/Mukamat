@@ -30,6 +30,7 @@ export default makeStyles(() => ({
     display: 'flex',
     alignItems: 'center',
   },
-  row: {
+  book: {
+    ["@media (max-width:900px)"]: { display: 'none' },
   },
 }));

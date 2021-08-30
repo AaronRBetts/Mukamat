@@ -4,6 +4,7 @@ import { Products, Cart, Checkout, Hero, About, Privacy, Shipping } from './comp
 import { Switch, Route } from 'react-router-dom';
 import CartFloat from './components/CartFloat/CartFloat'
 import { Element } from 'react-scroll';
+import { AdditionalFields } from './components/AdditionalFields/AdditionalFields';
 
 const App = () => {
     const [products, setProducts] = useState([]);
@@ -15,7 +16,15 @@ const App = () => {
     const fetchProducts = async () => {
         const { data } = await commerce.products.list();
 
-        setProducts(data);
+        //merge local products object array with API products object array
+        function mergeArrayObjects(productsArray, AdditionalFields) {
+    
+            return productsArray.map((product, i) => {
+                return Object.assign({}, product, AdditionalFields[AdditionalFields.findIndex(book => book.id === product.id)])
+            })
+        }
+        
+        setProducts(mergeArrayObjects(data, AdditionalFields));
     }
 
     const fetchCart = async () => {
@@ -101,7 +110,8 @@ const App = () => {
                     />
                 </Route>
                 <Route exact path="/checkout">
-                    <Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage}/>
+                    <Checkout products={products} cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage}
+                    refreshCart={refreshCart}/>
                 </Route>
                 <Route exact path="/privacy_policy">
                     <Privacy />
