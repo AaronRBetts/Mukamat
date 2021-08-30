@@ -3,7 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
-import Accordion from '@material-ui/core/Accordion';
+import { withStyles } from '@material-ui/core/styles';
+import MuiAccordion from '@material-ui/core/Accordion';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
@@ -22,8 +23,8 @@ import MailIcon from '@material-ui/icons/Mail'
 import PhoneIcon from '@material-ui/icons/Phone'
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
+import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
+import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Logo from './Logo'
@@ -95,17 +96,54 @@ const useStyles = makeStyles((theme) => ({
   bookTitle: {
     fontSize: '0.6rem'
   },
-  Accordion: {
-    padding: '0',
-  },
   footerIcon: {
     color: '#CE9FFC'
   },
   mobileLogo: {
     overflow: 'hidden',
-    width: '100px'
-  }
+    width: '100px',
+  },
 }));
+  
+const Accordion = withStyles({
+  root: {
+    padding: '0',
+    border: '1px solid rgba(0, 0, 0, .125)',
+    boxShadow: 'none',
+    '&:not(:last-child)': {
+      borderBottom: 0,
+    },
+    '&:before': {
+      display: 'none',
+    },
+    '&$expanded': {
+      margin: '0',
+    },
+  },
+  expanded: {},
+})(MuiAccordion);
+
+const AccordionSummary = withStyles({
+  root: {
+    marginBottom: -1,
+    minHeight: 56,
+    '&$expanded': {
+      minHeight: 56,
+    },
+  },
+  content: {
+    '&$expanded': {
+      margin: '12px 0',
+    },
+  },
+  expanded: {},
+})(MuiAccordionSummary);
+
+const AccordionDetails = withStyles((theme) => ({
+  root: {
+    padding: theme.spacing(1),
+  },
+}))(MuiAccordionDetails);
 
 
 function Navbar(props) {
@@ -123,15 +161,15 @@ function Navbar(props) {
       <List>
       <Typography variant="h5" className={classes.DrawerLogo} component={Link} to="/"><Logo /></Typography>
       <Divider />
-          <Accordion>
+          <Accordion className={classes.Accordion}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-          <ListItem className={classes.linkItem}>
+          <ListItem style={{padding: '0'}} className={classes.linkItem}>
             <ListItemIcon className={classes.navIcon}><MenuBookIcon /></ListItemIcon>
-            <ListItemText primary={'Kirjamme'} />
+            <Typography variant="body1">Kirjamme</Typography>
           </ListItem>
             </AccordionSummary>
             <AccordionDetails className={classes.Accordion}>
