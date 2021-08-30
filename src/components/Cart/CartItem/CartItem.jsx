@@ -27,12 +27,12 @@ const CartItem = ({ product, item, onUpdateCartQty, onRemoveFromCart }) => {
           </TableCell>
         <TableCell align="left">
           {/* <Typography variant="body1">{item.price.formatted_with_symbol}</Typography> */}
-        <ListItemText primary={item.price.formatted_with_symbol} secondary={`(€${product[0].beforeTax} +${product[0].tax}% ALV)`}/>
+        <ListItemText primary={item.price.formatted_with_symbol} secondary={`€${product[0].beforeTax} +${product[0].tax}% ALV`}/>
         {/* <Typography variant="caption">{`(€${product[0].beforeTax} +${product[0].tax}% ALV)`}</Typography> */}
           </TableCell>
         <TableCell align="left">
           {/* {item.line_total.formatted_with_symbol} */}
-        <ListItemText primary={item.line_total.formatted_with_symbol} secondary={`(€${product[0].beforeTax * item.quantity} +${product[0].tax}% ALV)`}/>
+        <ListItemText primary={item.line_total.formatted_with_symbol} secondary={`€${product[0].beforeTax * item.quantity} +${product[0].tax}% ALV`}/>
         </TableCell>
         <TableCell align="left">
           <CardActions className={classes.cardActions}>
