@@ -7,7 +7,7 @@ import Review from './Review';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
-const PaymentForm = ({ checkoutToken, nextStep, backStep, shippingData, onCaptureCheckout, emailOrder }) => {
+const PaymentForm = ({ library, checkoutToken, nextStep, backStep, shippingData, onCaptureCheckout, emailOrder }) => {
 
   const products = 
     checkoutToken.live.line_items.map((product, key) => (
@@ -84,7 +84,7 @@ const PaymentForm = ({ checkoutToken, nextStep, backStep, shippingData, onCaptur
 
   return (
     <>
-      <Review checkoutToken={checkoutToken} />
+      <Review products={library} checkoutToken={checkoutToken} />
       <Divider />
       <form id="contact-form">
         <Button variant="contained" fullWidth color="primary" onClick={(e) => handleOrder(e)}>Tilaa lasku</Button>

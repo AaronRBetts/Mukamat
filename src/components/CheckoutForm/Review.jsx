@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography, ListItem, ListItemText, List } from '@material-ui/core';
 
-const Review = ({checkoutToken}) => {
+const Review = ({products, checkoutToken}) => {
     return (
         <>
             <Typography variant="h6" gutterBottom>Tilauksen Yhteenveto</Typography>
@@ -10,6 +10,7 @@ const Review = ({checkoutToken}) => {
             <ListItem style={{padding: '10px 0'}} key={product.name}>
                 <ListItemText primary={product.name} secondary={`Kpl: ${product.quantity}`}/>
                 <Typography variant="body2">{product.line_total.formatted_with_symbol}</Typography>
+                <Typography variant="body2">{products.filter(item => product.id === item.id)[0].tax}</Typography>
             </ListItem>
         ))}
         <ListItem style={{padding: '10px 0'}}>

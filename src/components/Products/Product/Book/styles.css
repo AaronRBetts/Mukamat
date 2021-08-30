@@ -627,5 +627,9 @@ ul {
 }
 
 .binder {
+	margin-left: -25px;
+}
+
+.binderH {
 	margin-left: -15px;
 }
