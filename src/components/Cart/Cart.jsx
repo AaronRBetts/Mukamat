@@ -29,11 +29,11 @@ const Cart = ({ products, cart, handleUpdateCartQty, handleRemoveFromCart, handl
             <Table className={classes.table} aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell>Kirja</TableCell>
+                  <TableCell align="left">Kirja</TableCell>
                   <TableCell align="left">Kpl</TableCell>
                   <TableCell align="left">Hinta/Kpl</TableCell>
                   <TableCell align="left">Yhteensä</TableCell>
-                  <TableCell align="left"></TableCell>
+                  <TableCell style={{width: '225px'}} align="left"></TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>

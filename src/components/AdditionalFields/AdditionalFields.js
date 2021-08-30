@@ -3,7 +3,7 @@ export const AdditionalFields = [
         id: "prod_VPvL5zNOG5AQkX",
         order: 3,
         tax: 10,
-        beforeTax: '28.64',
+        beforeTax: '28.00',
         bookName: 'vesseli',
         isbn: 'ISBN 978-952-93-8211-8',
         type: [
@@ -463,7 +463,7 @@ export const AdditionalFields = [
       id: "prod_4WJvlKpR6JwbYV",
       order: 7,
       tax: 0,
-      beforeTax: '65',         
+      beforeTax: '65.00',         
       bookName: 'Kirjaintaulu',
       type: [
           {
@@ -498,7 +498,7 @@ export const AdditionalFields = [
       id: "prod_zkK6oL9Q065Xn0",
       order: 8,
       tax: '0',
-      beforeTax: '65',
+      beforeTax: '65.00',
       bookName: 'kirjantaulu-and-kirjaintaulukirja',
       isbn: '',
       type: [
@@ -550,7 +550,7 @@ export const AdditionalFields = [
       id: "prod_DWy4oG4EMP56Jx",
       order: 10,
       tax: 0,
-      beforeTax: '90',
+      beforeTax: '90.00',
       bookName: 'play-in-english',
       isbn: '',
       type: [

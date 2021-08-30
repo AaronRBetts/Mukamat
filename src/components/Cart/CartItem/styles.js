@@ -4,10 +4,12 @@ export default makeStyles(() => ({
   media: {
     width: '45px',
     height: '70px',
+    margin: '0'
   },
   cardContent: {
     display: 'flex',
     justifyContent: 'space-between',
+    minWidth: '30px'
   },
   cartActions: {
     justifyContent: 'space-between',
@@ -29,8 +31,5 @@ export default makeStyles(() => ({
     marginLeft: 'auto',
     display: 'flex',
     alignItems: 'center',
-  },
-  book: {
-    ["@media (max-width:900px)"]: { display: 'none' },
   },
 }));
