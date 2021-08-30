@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, IconButton, CardMedia, TableRow, TableCell, Button, CardActions } from '@material-ui/core';
+import { Typography, IconButton, CardMedia, TableRow, TableCell, Button, CardActions, ListItemText } from '@material-ui/core';
 import {AddCircle, RemoveCircle } from '@material-ui/icons/';
 import useStyles from './styles';
 import Book from '../../Products/Product/Book/Book'
@@ -25,10 +25,15 @@ const CartItem = ({ product, item, onUpdateCartQty, onRemoveFromCart }) => {
                    <Typography>{item.quantity}</Typography>
                </div>
           </TableCell>
-        <TableCell align="left"><Typography variant="body1">{item.price.formatted_with_symbol}</Typography>
-        <Typography variant="caption">{`(€${product[0].beforeTax} +${product[0].tax}% ALV)`}</Typography>
+        <TableCell align="left">
+          {/* <Typography variant="body1">{item.price.formatted_with_symbol}</Typography> */}
+        <ListItemText primary={item.price.formatted_with_symbol} secondary={`(€${product[0].beforeTax} +${product[0].tax}% ALV)`}/>
+        {/* <Typography variant="caption">{`(€${product[0].beforeTax} +${product[0].tax}% ALV)`}</Typography> */}
           </TableCell>
-        <TableCell align="left">{item.line_total.formatted_with_symbol}</TableCell>
+        <TableCell align="left">
+          {/* {item.line_total.formatted_with_symbol} */}
+        <ListItemText primary={item.line_total.formatted_with_symbol} secondary={`(€${product[0].beforeTax * item.quantity} +${product[0].tax}% ALV)`}/>
+        </TableCell>
         <TableCell align="left">
           <CardActions className={classes.cardActions}>
               <div className={classes.buttons}>
