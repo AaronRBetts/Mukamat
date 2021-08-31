@@ -2,8 +2,6 @@ import React from 'react'
 import { Typography, ListItem, ListItemText, List } from '@material-ui/core';
 
 const Review = ({products, checkoutToken, shippingPrice}) => {
-    console.log(checkoutToken.live.line_items)
-    console.log(products)
     
     const calculateTax = (taxFree, qty) => {
         return (taxFree * qty);

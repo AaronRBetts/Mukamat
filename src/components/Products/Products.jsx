@@ -6,7 +6,6 @@ import BookDetails from './BookDetails/BookDetails'
 
 const Products = ({ products, onAddToCart }) => {
     const classes = useStyles();
-    console.log(products)
 
     return(products.length === 1 ?
         <main className={classes.content} id="kirja">

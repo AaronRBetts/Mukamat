@@ -7,10 +7,6 @@ import Book from '../../Products/Product/Book/Book'
 const CartItem = ({ product, item, onUpdateCartQty, onRemoveFromCart }) => {
     const classes = useStyles();
 
-    
-
-    console.log(product)
-
     return (
       <>
       <TableRow key={item.name} className={classes.row}>
