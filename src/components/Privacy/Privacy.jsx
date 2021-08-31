@@ -3,7 +3,7 @@ import React from 'react'
 
 const Privacy = () => {
     return (
-        <Paper id="Privacy" style={{padding: '10px', margin: '64px auto 0', maxWidth: '800px'}}>
+        <Paper id="Privacy" style={{padding: '20px', margin: '64px auto 0', maxWidth: '800px'}}>
           <h1>Privacy Policy for Mukamat Oy</h1>
 
 <p>At Mukamat, accessible from Mukamat.fi, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Mukamat and how we use it.</p>

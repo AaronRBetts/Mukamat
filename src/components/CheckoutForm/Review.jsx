@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography, ListItem, ListItemText, List } from '@material-ui/core';
 
-const Review = ({products, checkoutToken}) => {
+const Review = ({products, checkoutToken, shippingPrice}) => {
     console.log(checkoutToken.live.line_items)
     console.log(products)
     
@@ -21,11 +21,15 @@ const Review = ({products, checkoutToken}) => {
                 secondary={`€${calculateTax(products.filter(item => product.product_id === item.id)[0].beforeTax, product.quantity)} + ${products.filter(item => product.product_id === item.id)[0].tax}% ALV`}/>
             </ListItem>
         ))}
+        <ListItem style={{padding: '10px 0'}} >
+            <ListItemText primary={`Shipping`}/>
+            <ListItemText align="right" primary={`€${shippingPrice.toFixed(2)}`}/>
+        </ListItem>
         <ListItem style={{padding: '10px 0'}}>
             <ListItemText primary="Total" />
-            <Typography variant="subtitle1" style={{fontWeight: 700}}>
-                {checkoutToken.live.subtotal.formatted_with_symbol}
-            </Typography>
+            <ListItemText align="right" style={{fontWeight: 700}} 
+            primary={`€${(checkoutToken.live.subtotal.raw + shippingPrice).toFixed(2)}`} 
+            />
         </ListItem>
             </List>
         </>

@@ -19,7 +19,7 @@ const Checkout = ({ shippingPrice, products, cart, onCaptureCheckout, order, err
 
   const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
   const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
-
+console.log(shippingPrice)
   useEffect(() => {
     if (cart.id) {
       const generateToken = async () => {

@@ -84,7 +84,7 @@ const PaymentForm = ({ shippingPrice, library, checkoutToken, nextStep, backStep
 
   return (
     <>
-      <Review products={library} checkoutToken={checkoutToken} />
+      <Review products={library} checkoutToken={checkoutToken} shippingPrice={shippingPrice} />
       <Divider />
       <form id="contact-form">
         <Button variant="contained" fullWidth color="primary" onClick={(e) => handleOrder(e)}>Tilaa lasku</Button>
