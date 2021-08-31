@@ -1,4 +1,4 @@
-import { Paper, Typography, Table, TableContainer, TableBody, makeStyles, TableCell, TableHead, TableRow } from '@material-ui/core';
+import { Paper, ListItemIcon, Typography, Table, List, ListItem, ListItemText, TableBody, makeStyles, TableCell, TableHead, TableRow } from '@material-ui/core';
 import React from 'react'
 
 const useStyles = makeStyles({
@@ -14,29 +14,69 @@ const Shipping = () => {
           <h1>Näin teet tilauksen</h1>
 
         <div class="tilausohjeet">
-          <Typography variant="h3">Tilausvaihtoehdot</Typography>
+          <Typography variant="h4" gutterBottom style={{marginTop: '50px', borderBottom: '1px solid #ccc'}}>Tilausvaihtoehdot</Typography>
         
           <h3>Tilaus internetistä</h3>
         
          Verkkokaupastamme tilaaminen on helppoa. Toimi seuraavasti:
-        
-          <ol>
-            <li>Valitse haluamasi tuote, merkitse kappalemäärä ja paina Lisää koriin -painiketta. Tuotteet siirtyvät tilauskoriin.</li>
-            <li>Painamalla Tee tilaus -painiketta siirryt tilauslomakkeelle. Tarkista vielä tilauskoriin lisäämäsi tuotteet: voit muuttaa niiden määrää tai poistaa tilauskorista tuotteita.</li>
-            <li>Täytä huolellisesti yhteystiedot. Tähdellä merkityt kohdat ovat pakollisia.</li>
-            <li>Kun olet täyttänyt tarvittavat kentät, klikkaa Lähetä tilaus -painiketta.</li>
-            <li>Lähetämme sähköpostiosoitteeseesi tilausvahvistuksen käsiteltyämme tilauksen.
-              Tilausvahvistuksessa annettuna päivänä postitamme tilauksen antamaasi osoitteeseen.
-            </li>
-            <li>Toimitamme laskun tilauslomakkeella valitsemallasi tavalla. Katso laskutusvaihtoehdot alla.</li>
-          </ol>
+      
+            <List>
+                <ListItem>
+                  <ListItemIcon>
+                    1
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Valitse haluamasi tuote, merkitse kappalemäärä ja paina Lisää koriin -painiketta. Tuotteet siirtyvät tilauskoriin."
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    2
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Painamalla Tee tilaus -painiketta siirryt tilauslomakkeelle. Tarkista vielä tilauskoriin lisäämäsi tuotteet: voit muuttaa niiden määrää tai poistaa tilauskorista tuotteita."
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    3
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Täytä huolellisesti yhteystiedot. Tähdellä merkityt kohdat ovat pakollisia."
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    4
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Kun olet täyttänyt tarvittavat kentät, klikkaa Lähetä tilaus -painiketta."
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    5
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Lähetämme sähköpostiosoitteeseesi tilausvahvistuksen käsiteltyämme tilauksen.
+                    Tilausvahvistuksessa annettuna päivänä postitamme tilauksen antamaasi osoitteeseen."
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    6
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Toimitamme laskun tilauslomakkeella valitsemallasi tavalla. Katso laskutusvaihtoehdot alla."
+                  />
+                </ListItem>
+            </List>
         
           <h3>Tilaus puhelimitse</h3>
           <p>Mikäli haluat asioida puhelimitse kanssamme, niin soita meille Suomen Lukkari Oy 040-5051936 tai Mukamat Oy 050-345 1712.</p>
         </div>
         
-        <TableContainer style={{padding: '10px', margin: '10px'}} component={Paper}>
-          <Typography variant="h3">Toimitustavat ja postituskulut</Typography>
+                  <Typography variant="h4" gutterBottom style={{marginTop: '50px', borderBottom: '1px solid #ccc'}}>Toimitustavat ja postituskulut</Typography>
         
           <h3>Kirje/paketti tilausosoitteeseen tai lähimpään postiin</h3>
           <p>Postitamme tuotteet halvinta postitustapaa käyttäen. Paketin lähetyskulut 
@@ -137,10 +177,8 @@ const Shipping = () => {
                 </TableRow>
             </TableBody>
         </Table>
-          </TableContainer>
         
-          <TableContainer style={{padding: '10px', margin: '10px'}} component={Paper}>
-          <Typography variant="h3">Laskutus</Typography>
+            <Typography variant="h4" gutterBottom style={{marginTop: '50px', borderBottom: '1px solid #ccc'}}>Laskutus</Typography>
           <p>Kaikissa laskuissaimme on 14 vrk maksuaikaa.</p>
           <h3>Lasku tuotteiden mukana</h3>
           <p>Lähetämme laskun tuotteiden mukana antamaasi osoitteeseen.</p>
@@ -180,9 +218,8 @@ const Shipping = () => {
             </TableRow>
             </TableBody>
         </Table>
-        </TableContainer>
         
-        <Typography variant="h3">Fair play!</Typography>
+        <Typography variant="h4" gutterBottom style={{marginTop: '50px', borderBottom: '1px solid #ccc'}}>Fair play!</Typography>
         <p>Emme laskuta erillisiä paketointi-, toimitus- tai pienlaskutuskuluja. Laskutamme vain tuotteista ja todellisista postituskuluista. 
           Pakkaamme pienet lähetykset Postin helposti-kuoriin ja isommat kirjeet harmaaseen voimapaperiin. Pahvilaatikkomme ovat kierrätyslaatikoita. Älkää yllättykö jos viinilaatikko sisältääkin oppikirjoja. Paketointikuluja ei ole siirretty tuotteiden hintaan. 
         </p>
