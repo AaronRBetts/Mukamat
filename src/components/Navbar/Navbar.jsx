@@ -268,7 +268,7 @@ function Navbar(props) {
             Privacy Policy
           </ListItem>
           <ListItem className={classes.linkItem} button component={Link} to="/toimitus">
-            Toimitus
+            Tilausohje
           </ListItem>
       </List>
       {/* <List>
