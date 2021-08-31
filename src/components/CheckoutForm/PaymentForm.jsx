@@ -7,7 +7,7 @@ import Review from './Review';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
-const PaymentForm = ({ library, checkoutToken, nextStep, backStep, shippingData, onCaptureCheckout, emailOrder }) => {
+const PaymentForm = ({ shippingPrice, library, checkoutToken, nextStep, backStep, shippingData, onCaptureCheckout, emailOrder }) => {
 
   const products = 
     checkoutToken.live.line_items.map((product, key) => (

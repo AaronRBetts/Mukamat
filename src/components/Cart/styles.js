@@ -20,7 +20,7 @@ export default makeStyles((theme) => ({
     display: 'flex',
     width: '100%',
     justifyContent: 'space-between',
-    '& h6': {
+    '& div': {
       margin: 'auto'
     }
   },

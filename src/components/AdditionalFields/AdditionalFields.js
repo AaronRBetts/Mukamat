@@ -754,7 +754,7 @@ export const AdditionalFields = [
       id: "prod_QG375vRMOr5rMO",
       order: 6,
       tax: '10',
-      beforeTax: '25.50',
+      beforeTax: '26.91',
       bookName: 'matkaan',
       isbn: 'ISBN 978-951-98149-4-0',
       type: [

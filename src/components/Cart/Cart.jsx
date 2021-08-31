@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Button } from '@material-ui/core';
+import { Container, Typography, Button, ListItemText } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import useStyles from './styles';
 import Table from '@material-ui/core/Table';
@@ -11,9 +11,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import CartItem from './CartItem/CartItem'
 
-const Cart = ({ products, cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart }) => {
+const Cart = ({ shippingPrice, products, cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart }) => {
     const classes = useStyles();
-
 
     const EmptyCart = () => (
         <Typography variant="subtitle1">
@@ -24,8 +23,6 @@ const Cart = ({ products, cart, handleUpdateCartQty, handleRemoveFromCart, handl
 
     const FilledCart = () => (
             <TableContainer component={Paper} className={classes.paper}>
-            {console.log(products)}
-            {console.log(cart.line_items)}
             <Table className={classes.table} aria-label="simple table">
               <TableHead>
                 <TableRow>
@@ -42,15 +39,17 @@ const Cart = ({ products, cart, handleUpdateCartQty, handleRemoveFromCart, handl
                 ))}
               </TableBody>
             </Table>
+            <Paper className={classes.paper}>
                 <div className={classes.cartDetails}>
-                    <Typography variant="h6">
-                    Yhteensä: { cart.subtotal.formatted_with_symbol }
-                    </Typography>
+                    <ListItemText primary={'Shipping:'} secondary={`€${shippingPrice}`}/>
+                    <ListItemText primary={'sub total:'} secondary={cart.subtotal.formatted_with_symbol}/>
+                    <ListItemText primary={'Yhteensä:'} secondary={`€${(shippingPrice + cart.subtotal.raw).toFixed(2)}`}/>
                     <div style={{display: "grid"}}>
                         <Button className={classes.emptyButton} type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Tyhjenna Ostoskori</Button>
                         <Button component={Link} to="/checkout" className={classes.checkoutButton} type="button" variant="contained" color="primary">Maksu</Button>
                     </div>
                 </div>
+                </Paper>
                 {/* <Grid container spacing={3}>
                     {cart.line_items.map((item) => (
                         <Grid item xs={12} sm={4} key={item.id}>

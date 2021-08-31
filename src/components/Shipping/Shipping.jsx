@@ -1,64 +1,196 @@
-import { Container, Typography, CardMedia } from '@material-ui/core';
+import { Paper, Typography, Table, TableContainer, TableBody, makeStyles, TableCell, TableHead, TableRow } from '@material-ui/core';
 import React from 'react'
 
+const useStyles = makeStyles({
+  table: {
+    minWidth: 650,
+  },
+});
+
 const Shipping = () => {
+  const classes = useStyles();
     return (
-        <Container container id="tekijät">
-          <div class="content-block" style={{marginTop: '100px'}}>
-    <div class="rte rte--indented-images">
-      <div data-v-103e71f6="" class="answer-one">
-<header class="entry-header">
-<h1 class="entry-title">Tilaus- ja toimitusehdot</h1>
-</header>
-<div class="entry-content">
-<div class="vc_row wpb_row vc_row-fluid">
-<div class="wpb_column vc_column_container vc_col-sm-12">
-<div class="vc_column-inner ">
-<div class="wpb_wrapper">
-<div class="wpb_text_column wpb_content_element ">
-<div class="wpb_wrapper">
-<p><strong>Yleistä</strong></p>
-{/* <p>Mukamat&nbsp;y-tunnus 3196304-5 myy tuotteita täysi-ikäisille henkilöille Suomessa. Alle 18-vuotiaalta vaaditaan huoltajan suostumus. Tilaamalla tuotteita hyväksyt toimitusehdot.</p> */}
-<p>Verkkokaupan tuotteiden tiedot ja hinnat on esitelty kunkin tuotteen esittelyn yhteydessä. Tuotteiden hinnat sisältävät arvonlisäveron.&nbsp;</p>
-<p>Verkkokaupan yhteystiedot:</p>
-<p>Sähköposti:&nbsp;mukamat@gmail.com<br />Postiosoite:&nbsp;Koivutie 5, 31300 Ylöjärvi, Finland</p>
-<p>&nbsp;</p>
-<p><strong>Tilaaminen</strong></p>
-<p>Voit tilata tuotteita verkkokaupassa siirtämällä niitä ostoskoriin, vahvistamalla tilauksen ja maksamalla ostoskorin sisällön valitsemassasi maksupalvelussa. Tehdessäsi tilauksen hyväksyt nämä toimitusehdot, tuotteiden hinnat sekä toimituskulut. Tilaamisen jälkeen saat tilausvahvistuksen sähköpostiisi. Tilausvahvistuksesta ilmenevät tilatut tuotteet sekä hinta.</p>
-<p>&nbsp;</p>
-<p><strong>Toimitusaika ja -kulut</strong></p>
-<p>Tilauksia postitetaan arkipäivisin, tuotteet lähetetään 1-3 arkipäivän kuluessa tilauksesta.</p>
-<p>Mikäli tuote on kadonnut tai vioittunut toimituksen aikana, tulee tästä ilmoittaa viipymättä, mutta kuitenkin 14 vuorokauden kuluessa verkkokaupalle.&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong>Toimitustavat</strong></p>
-<p>Tuotteet lähetetään Postin kirjelähetyksenä.</p>
-<p>&nbsp;</p>
-<p><strong>Tilauksen peruuttaminen ja palautusoikeus</strong></p>
-<p>Ennen tilauksen toimitusta tilauksen voi peruuttaa kirjallisella ilmoituksella sähköpostiosoitteeseen&nbsp;mukamat@gmail.com.</p>
-<p>Jo toimitetun tuotteen oston voit perua palauttamalla tuotteen, sillä asiakkaalla on aina kuluttajansuojalain mukainen 14 vuorokauden palautusoikeus. Olethan yhteydessä minuun ennen palauttamista lähettämällä viestiä sähköpostitse.&nbsp; Palautuksesta aiheutuvan postimaksun maksaa asiakas.</p>
-<p>Tuotteen tulee olla avaamaton, käyttämätön ja alkuperäisessä paketissaan.&nbsp;</p>
-<p>Palauta tuotteet alla olevaan osoitteeseen:</p>
-<p>Mukamat Oy / Birgit Saatsi</p>
-<p>Koivutie 5</p>
-<p>31300 Ylöjärvi</p>
-<p>&nbsp;</p>
-<h4>Vahingonkorvaukset ja vastuunrajoitus</h4>
-<p>Mikäli lähetys on vaurioitunut tai kadonnut kuljetuksessa, kannattaa tehdä ilmoitus noutopaikkaan. Mukamat ei vastaa toimituksessa mahdollisesti sattuneesta vahingosta tai hävinneistä lähetyksistä.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div data-v-103e71f6="" class="answer-six">
-<p>&nbsp;</p>
-</div>
-<div data-v-103e71f6="" class="answer-eight"></div>
-    </div>
-  </div>
-        </Container>
+        <Paper style={{padding: '10px'}} id="Tilausohje">
+          <h1>Näin teet tilauksen</h1>
+
+        <div class="tilausohjeet">
+          <Typography variant="h3">Tilausvaihtoehdot</Typography>
+        
+          <h3>Tilaus internetistä</h3>
+        
+         Verkkokaupastamme tilaaminen on helppoa. Toimi seuraavasti:
+        
+          <ol>
+            <li>Valitse haluamasi tuote, merkitse kappalemäärä ja paina Lisää koriin -painiketta. Tuotteet siirtyvät tilauskoriin.</li>
+            <li>Painamalla Tee tilaus -painiketta siirryt tilauslomakkeelle. Tarkista vielä tilauskoriin lisäämäsi tuotteet: voit muuttaa niiden määrää tai poistaa tilauskorista tuotteita.</li>
+            <li>Täytä huolellisesti yhteystiedot. Tähdellä merkityt kohdat ovat pakollisia.</li>
+            <li>Kun olet täyttänyt tarvittavat kentät, klikkaa Lähetä tilaus -painiketta.</li>
+            <li>Lähetämme sähköpostiosoitteeseesi tilausvahvistuksen käsiteltyämme tilauksen.
+              Tilausvahvistuksessa annettuna päivänä postitamme tilauksen antamaasi osoitteeseen.
+            </li>
+            <li>Toimitamme laskun tilauslomakkeella valitsemallasi tavalla. Katso laskutusvaihtoehdot alla.</li>
+          </ol>
+        
+          <h3>Tilaus puhelimitse</h3>
+          <p>Mikäli haluat asioida puhelimitse kanssamme, niin soita meille Suomen Lukkari Oy 040-5051936 tai Mukamat Oy 050-345 1712.</p>
+        </div>
+        
+        <TableContainer style={{padding: '10px', margin: '10px'}} component={Paper}>
+          <Typography variant="h3">Toimitustavat ja postituskulut</Typography>
+        
+          <h3>Kirje/paketti tilausosoitteeseen tai lähimpään postiin</h3>
+          <p>Postitamme tuotteet halvinta postitustapaa käyttäen. Paketin lähetyskulut 
+            ovat Postin voimassa olevan hinnoittelun mukaiset. Paketit voi ohjata postiin 
+            tai postin pakettiautomaatteihin.</p>
+            <Typography variant="h6">Kirjeet</Typography>
+          <Table class="hinnat">
+              <TableHead>
+                <TableRow class="otsikkorivi">
+                  <TableCell width="50%">Koko</TableCell>
+                  <TableCell>Veroton hinta</TableCell>
+                  <TableCell>Hinta</TableCell>
+                </TableRow>
+              </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>Helpostikuori A5</TableCell>
+                <TableCell>2,38€</TableCell>
+                <TableCell>2,95€</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Helpostikuori A4</TableCell>
+                <TableCell>3,95€</TableCell>
+                <TableCell>4,90€</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Kirjeet alle max 3 cm, max 2 kg</TableCell>
+                <TableCell>3,95€</TableCell>
+                <TableCell>4,90€</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+          <Typography variant="h6">Paketit</Typography>
+          <Table class="hinnat">
+              <TableHead>
+                <TableRow class="otsikkorivi">
+                  <TableCell width="50%">Koko</TableCell>
+                  <TableCell>Veroton hinta</TableCell>
+                  <TableCell>Hinta</TableCell>
+                </TableRow>
+              </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>Pienet paketit 11 x 36 x 60 cm</TableCell>
+                <TableCell>4,76€</TableCell>
+                <TableCell>5,90€</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Paketit 19 x 36 x 60 cm</TableCell>
+                <TableCell>6,37€</TableCell>
+                <TableCell>7,90€</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Suuret paketit 37 x 36 x 60 cm</TableCell>
+                <TableCell>8,79€</TableCell>
+                <TableCell>10,90€</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Lisäpalvelu: Ovelle-kuljetus</TableCell>
+                <TableCell>8,79€</TableCell>
+                <TableCell>10,90€</TableCell>
+              </TableRow>
+            </TableBody>
+        </Table>
+      <p>Päivyreiden tarkemmat kappalemäärään perustuvat postitushinnat löydät tuotekohtaisilta sivuilta.</p>
+        
+          <h3>Postin SmartPOST-pakettiautomaatti</h3>
+          <p>Lähetämme tilauksesi valitsemaansi smartPost-pakettiautomaattiin. Saat tekstiviestillä 
+            tiedon, kun paketti on noudettavissa. Pakettia säilytetään automaatissa seitsemän 
+            vuorokautta sen saapumisesta. Lisätietoa paketin vastaanottamisesta pakettiautomaattiin 
+            sekä automaattien sijainnit löydät <a href="https://support.posti.fi/fi/tyokalut/toimipisteet-ja-aukiolot.html?_ga=2.6240113.357833499.1553118821-867517416.1493464940&amp;_gac=1.54128346.1553118822.CjwKCAjwycfkBRAFEiwAnLX5IaPZroqPaH89O87X7QvKoWWdhUGhZXW6GrewM9oB8HTUTKG3dcuP7RoCVcQQAvD_BwE" target="_blank">Postin 
+            sivuilta</a>. </p>
+            <Typography variant="h6">SmartPOST-pakettiautomaatti</Typography>
+          <Table class="hinnat">
+              <TableHead>
+            <Typography></Typography>
+                <TableRow class="otsikkorivi">
+                  <TableCell width="50%">Koko</TableCell>
+                  <TableCell>Veroton hinta</TableCell>
+                  <TableCell>Hinta</TableCell>
+                </TableRow>
+              </TableHead>
+            <TableBody>
+                <TableRow>
+                  <TableCell>S 11*36*60cm</TableCell>
+                  <TableCell>4,76€</TableCell>
+                  <TableCell>5,90€</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>M 19*36*60 cm</TableCell>
+                  <TableCell>6,37€</TableCell>
+                  <TableCell>7,90€</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>L 37*36*60cm</TableCell>
+                  <TableCell>8,79€</TableCell>
+                  <TableCell>10,90€</TableCell>
+                </TableRow>
+            </TableBody>
+        </Table>
+          </TableContainer>
+        
+          <TableContainer style={{padding: '10px', margin: '10px'}} component={Paper}>
+          <Typography variant="h3">Laskutus</Typography>
+          <p>Kaikissa laskuissaimme on 14 vrk maksuaikaa.</p>
+          <h3>Lasku tuotteiden mukana</h3>
+          <p>Lähetämme laskun tuotteiden mukana antamaasi osoitteeseen.</p>
+        
+          <h3>Lasku laskutusosoitteeseen</h3>
+          <p>Laskun lähetämme erilliseen laskutusosoitteeseen.</p>
+        
+          <h3>Lasku pdf-tiedostona email-osoitteeseen</h3>
+          <p>Lähetämme laskun pdf-tiedostona antamaasi email-osoitteeseen.</p>
+        
+          <h3>Verkkolasku</h3>
+          <p>Verkkolaskun lähetämme antamaanne verkkolaskuosoitteseen. Verkkolaskun lähettäminen ei ole halpaa. 
+            Verkkolaskun tekemistä varten olemme maksaneet vuosittaisen verkkomaksun ylläpitomaksun kirjapito-ohjelmamme tekijälle. 
+            Lisäksi olemme avanneet pankkiin erillisen maksullisen maksuohjelman, josta pankki veloittaa isohkon aloitusmaksun, 
+            kuukausittaisen kuukausimaksun ja jokaisesta lähetetystä maksusta vielä erillisen lähetysmaksun. Näistä kulista huolimatta emme peri erillistä maksua verkkolaskusta. 
+          </p>
+            <Typography variant="h6">Laskutusvaihtoehtojen hinnat</Typography>
+          <Table class="hinnat">
+              <TableHead>
+            <TableRow>
+              <TableCell>Lasku tuotteiden mukana</TableCell>
+              <TableCell>0,00€</TableCell>
+            </TableRow>
+              </TableHead>
+            <TableBody>
+            <TableRow>
+              <TableCell>Erillinen laskutusosoite</TableCell>
+              <TableCell>0,00€</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Lasku pdf-tiedostona sähköpostiin</TableCell>
+              <TableCell>0,00€</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Verkkolasku</TableCell>
+              <TableCell>0,00€</TableCell>
+            </TableRow>
+            </TableBody>
+        </Table>
+        </TableContainer>
+        
+        <Typography variant="h3">Fair play!</Typography>
+        <p>Emme laskuta erillisiä paketointi-, toimitus- tai pienlaskutuskuluja. Laskutamme vain tuotteista ja todellisista postituskuluista. 
+          Pakkaamme pienet lähetykset Postin helposti-kuoriin ja isommat kirjeet harmaaseen voimapaperiin. Pahvilaatikkomme ovat kierrätyslaatikoita. Älkää yllättykö jos viinilaatikko sisältääkin oppikirjoja. Paketointikuluja ei ole siirretty tuotteiden hintaan. 
+        </p>
+        
+        <p><i>Palveluksessanne<br/>
+        Birgit Saatsi ja Jari Leinonen</i></p>
+          
+        </Paper>
     )
 }
 

@@ -11,6 +11,7 @@ const App = () => {
     const [cart, setCart] = useState({});
     const [order, setOrder] = useState({});
     const [errorMessage, setErrorMessage] = useState('');
+    const [shippingPrice, setShippingPrice] = useState(0);
 
 
     const fetchProducts = async () => {
@@ -72,10 +73,25 @@ const App = () => {
         }
     }
 
+    const calculateShippingPrice = (orderQty) => {
+        const qtySmContainers = orderQty % 20 < 10 ? 1 : 0;
+        const qtyMdContainers = (orderQty % 20 < 15 && !qtySmContainers) ? 1 : 0;
+        const qtyLgContainers = Math.floor((orderQty + 5) / 20);
+        console.log(`books: ${orderQty}
+        Large: ${qtyLgContainers} Medium: ${qtyMdContainers} Small: ${qtySmContainers}`)
+        
+        console.log(qtySmContainers * 5.9 + qtyMdContainers * 7.9 + qtyLgContainers * 10.9)
+        setShippingPrice(qtySmContainers * 5.9 + qtyMdContainers * 7.9 + qtyLgContainers * 10.9)
+    }
+
     useEffect(() => {
         fetchProducts();
         fetchCart();
     }, []);
+
+    useEffect(() => {
+        calculateShippingPrice(cart.total_items);
+    }, [cart]);
 
     return (
             <Switch>
@@ -102,6 +118,7 @@ const App = () => {
                 ))}
                 <Route exact path="/cart">
                     <Cart
+                    shippingPrice={shippingPrice}
                     products={products}
                     cart={cart}
                     handleUpdateCartQty={handleUpdateCartQty}
@@ -110,8 +127,12 @@ const App = () => {
                     />
                 </Route>
                 <Route exact path="/checkout">
-                    <Checkout products={products} cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage}
-                    refreshCart={refreshCart}/>
+                    <Checkout products={products} 
+                    cart={cart} order={order} 
+                    onCaptureCheckout={handleCaptureCheckout} 
+                    error={errorMessage}
+                    refreshCart={refreshCart}
+                    shippingPrice={shippingPrice}/>
                 </Route>
                 <Route exact path="/privacy_policy">
                     <Privacy />
