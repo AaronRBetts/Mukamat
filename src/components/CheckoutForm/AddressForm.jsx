@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { commerce } from '../../lib/commerce';
 import FormInput from './CustomTextField';
 
-const AddressForm = ({ checkoutToken, next }) => {
+const AddressForm = ({ shippingPrice, checkoutToken, next }) => {
   const [shippingCountries, setShippingCountries] = useState([]);
   const [shippingCountry, setShippingCountry] = useState('');
   const [shippingSubdivisions, setShippingSubdivisions] = useState([]);
@@ -87,7 +87,7 @@ const AddressForm = ({ checkoutToken, next }) => {
             <Grid item xs={12} sm={6}>
               <InputLabel>Toimitus vaihtoehdot</InputLabel>
               <Select value={shippingOption} fullWidth onChange={(e) => setShippingOption(e.target.value)}>
-                {shippingOptions.map((sO) => ({ id: sO.id, label: `${sO.description} - (${sO.price.formatted_with_symbol})` })).map((item) => (
+                {shippingOptions.map((sO) => ({ id: sO.id, label: `${sO.description} - €${shippingPrice.toFixed(2)}` })).map((item) => (
                   <MenuItem key={item.id} value={item.id}>
                     {item.label}
                   </MenuItem>
