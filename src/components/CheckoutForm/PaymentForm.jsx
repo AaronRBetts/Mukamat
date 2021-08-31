@@ -7,7 +7,7 @@ import Review from './Review';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
-const PaymentForm = ({ shippingPrice, library, checkoutToken, nextStep, backStep, shippingData, onCaptureCheckout, emailOrder }) => {
+const PaymentForm = ({ shippingPrice, library, checkoutToken, nextStep, backStep, shippingData, onCaptureCheckout, onEmailCheckout, emailOrder }) => {
 
   const products = 
     checkoutToken.live.line_items.map((product, key) => (
@@ -66,7 +66,7 @@ const PaymentForm = ({ shippingPrice, library, checkoutToken, nextStep, backStep
     }
   };
 
-  const handleOrder = (event) => {
+  const handleOrder = async (event) => {
     event.preventDefault();
 
     init("user_UlEkvyF6hcTIAJCk8jXLL");
@@ -78,6 +78,7 @@ const PaymentForm = ({ shippingPrice, library, checkoutToken, nextStep, backStep
       console.log('FAILED...', error);
     });
 
+    await onEmailCheckout();
     emailOrder();
     nextStep();
   }

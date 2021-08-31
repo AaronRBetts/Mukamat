@@ -74,6 +74,11 @@ const App = () => {
         }
     }
 
+    const handleEmailCheckout = () => {
+        handleEmptyCart();
+        refreshCart();
+    }
+
     const calculateShippingPrice = (orderQty) => {
         const qtySmContainers = orderQty % 20 < 10 ? 1 : 0;
         const qtyMdContainers = (orderQty % 20 < 15 && !qtySmContainers) ? 1 : 0;
@@ -92,13 +97,13 @@ const App = () => {
     }, []);
 
     useEffect(() => {
-        calculateShippingPrice(cart.total_items);
+        calculateShippingPrice(cart ? cart.total_items : 0)
     }, [cart]);
 
     return (
             <Switch>
                 <Route exact path="/">
-                <CartFloat totalItems={cart.total_items}/>
+                <CartFloat totalItems={cart ? cart.total_items : 0}/>
                     <Element name="home">
                         <Hero />
                     </Element>
@@ -107,7 +112,7 @@ const App = () => {
                     </Element>
                 </Route>
                 <Route exact path="/kirjamme">
-                <CartFloat totalItems={cart.total_items}/>
+                <CartFloat totalItems={cart ? cart.total_items : 0}/>
                     <Products products={products} onAddToCart={handleAddToCart}/>
                 </Route>
                 <Route exact path="/tekijä">
@@ -133,9 +138,8 @@ const App = () => {
                     cart={cart} order={order} 
                     onCaptureCheckout={handleCaptureCheckout} 
                     error={errorMessage}
-                    refreshCart={refreshCart}
-                    shippingPrice={shippingPrice}
-                    shippingContainers={shippingContainers}/>
+                    onEmailCheckout={handleEmailCheckout}
+                    shippingPrice={shippingPrice}/>
                 </Route>
                 <Route exact path="/privacy_policy">
                     <Privacy />

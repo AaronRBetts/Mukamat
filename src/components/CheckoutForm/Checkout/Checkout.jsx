@@ -9,7 +9,7 @@ import useStyles from './styles';
 
 const steps = ['Tiedot', 'Maksu'];
 
-const Checkout = ({ shippingPrice, products, cart, onCaptureCheckout, order, error, refreshCart, shippingContainers }) => {
+const Checkout = ({ shippingPrice, products, cart, onCaptureCheckout, order, error, onEmailCheckout }) => {
   const [checkoutToken, setCheckoutToken] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
   const [emailOrdered, setEmailOrdered] = useState(false);
@@ -20,7 +20,7 @@ const Checkout = ({ shippingPrice, products, cart, onCaptureCheckout, order, err
   const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
   const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
   useEffect(() => {
-    if (cart.id) {
+    if (cart) {
       const generateToken = async () => {
         try {
           const token = await commerce.checkout.generateToken(cart.id, { type: 'cart' });
@@ -42,7 +42,6 @@ const Checkout = ({ shippingPrice, products, cart, onCaptureCheckout, order, err
 
   const emailOrder = () => {
     setEmailOrdered(true)
-    refreshCart();
   }
 
   let Confirmation = () => (order.customer ? (
@@ -81,7 +80,7 @@ const Checkout = ({ shippingPrice, products, cart, onCaptureCheckout, order, err
 
   const Form = () => (activeStep === 0
     ? <AddressForm shippingPrice={shippingPrice} checkoutToken={checkoutToken} nextStep={nextStep} setShippingData={setShippingData} next={next} />
-    : <PaymentForm shippingPrice={shippingPrice} library={products} checkoutToken={checkoutToken} nextStep={nextStep} backStep={backStep} shippingData={shippingData} onCaptureCheckout={onCaptureCheckout} emailOrder={emailOrder} />);
+    : <PaymentForm shippingPrice={shippingPrice} library={products} checkoutToken={checkoutToken} nextStep={nextStep} backStep={backStep} shippingData={shippingData} onCaptureCheckout={onCaptureCheckout} onEmailCheckout={onEmailCheckout} emailOrder={emailOrder} />);
 
   return (
     <>
