@@ -10,7 +10,7 @@ const useStyles = makeStyles({
 const Shipping = () => {
   const classes = useStyles();
     return (
-        <Paper style={{padding: '10px'}} id="Tilausohje">
+        <Paper style={{padding: '10px', margin: '64px auto 0', maxWidth: '800px'}} id="Tilausohje">
           <h1>Näin teet tilauksen</h1>
 
         <div class="tilausohjeet">

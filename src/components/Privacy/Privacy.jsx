@@ -1,10 +1,10 @@
-import { Container, Typography, CardMedia } from '@material-ui/core';
+import { Paper, Typography, CardMedia } from '@material-ui/core';
 import React from 'react'
 
 const Privacy = () => {
     return (
-        <Container container id="Privacy">
-          <h1 style={{marginTop: '100px'}}>Privacy Policy for Mukamat Oy</h1>
+        <Paper id="Privacy" style={{padding: '10px', margin: '64px auto 0', maxWidth: '800px'}}>
+          <h1>Privacy Policy for Mukamat Oy</h1>
 
 <p>At Mukamat, accessible from Mukamat.fi, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Mukamat and how we use it.</p>
 
@@ -69,7 +69,7 @@ const Privacy = () => {
 
 <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
         
-        </Container>
+        </Paper>
     )
 }
 
