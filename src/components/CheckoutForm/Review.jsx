@@ -22,11 +22,11 @@ const Review = ({products, checkoutToken, shippingPrice}) => {
             </ListItem>
         ))}
         <ListItem style={{padding: '10px 0'}} >
-            <ListItemText primary={`Shipping`}/>
+            <ListItemText primary={`Toimitus`}/>
             <ListItemText align="right" primary={`€${shippingPrice.toFixed(2)}`}/>
         </ListItem>
         <ListItem style={{padding: '10px 0'}}>
-            <ListItemText primary="Total" />
+            <ListItemText primary="Yhteensä" />
             <ListItemText align="right" style={{fontWeight: 700}} 
             primary={`€${(checkoutToken.live.subtotal.raw + shippingPrice).toFixed(2)}`} 
             />

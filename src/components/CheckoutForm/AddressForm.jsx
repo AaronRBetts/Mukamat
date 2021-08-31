@@ -120,8 +120,8 @@ const AddressForm = ({ checkoutToken, next }) => {
           </Grid>
           <br />
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Button component={Link} variant="outlined" to="/cart">Back to Cart</Button>
-            <Button type="submit" variant="contained" color="primary">Next</Button>
+            <Button component={Link} variant="outlined" to="/cart" style={{width: 'auto'}}>Takaisin ostoskoriin</Button>
+            <Button type="submit" variant="contained" color="primary" style={{width: 'auto'}}>Seuraava</Button>
           </div>
         </form>
       </FormProvider>

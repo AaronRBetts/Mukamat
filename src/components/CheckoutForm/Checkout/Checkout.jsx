@@ -9,7 +9,7 @@ import useStyles from './styles';
 
 const steps = ['Tiedot', 'Maksu'];
 
-const Checkout = ({ shippingPrice, products, cart, onCaptureCheckout, order, error, refreshCart }) => {
+const Checkout = ({ shippingPrice, products, cart, onCaptureCheckout, order, error, refreshCart, shippingContainers }) => {
   const [checkoutToken, setCheckoutToken] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
   const [emailOrdered, setEmailOrdered] = useState(false);
@@ -19,7 +19,6 @@ const Checkout = ({ shippingPrice, products, cart, onCaptureCheckout, order, err
 
   const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
   const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
-console.log(shippingPrice)
   useEffect(() => {
     if (cart.id) {
       const generateToken = async () => {
@@ -49,12 +48,12 @@ console.log(shippingPrice)
   let Confirmation = () => (order.customer ? (
     <>
       <div>
-        <Typography variant="h5">Thank you for your purchase, {order.customer.firstname} {order.customer.lastname}!</Typography>
+        <Typography variant="h5">Kiitos tilauksestasi, {order.customer.firstname} {order.customer.lastname}!</Typography>
         <Divider className={classes.divider} />
-        <Typography variant="subtitle2">Order ref: {order.customer_reference}</Typography>
+        <Typography variant="subtitle2">Tilaus numero: {order.customer_reference}</Typography>
       </div>
       <br />
-      <Button component={Link} variant="outlined" type="button" to="/">Back to home</Button>
+      <Button component={Link} variant="outlined" type="button" to="/">Takaisin etusivulle</Button>
     </>
   ) : (
     <div className={classes.spinner}>
@@ -64,18 +63,18 @@ console.log(shippingPrice)
 
   let EmailSent = () => (
     <>
-        <Typography variant="h5">Thank you for your purchase! An invoice will be created and sent to your email</Typography>
+        <Typography variant="h5">Kiitos tilauksestasi! Lähetämme laskun sähköpostitse.</Typography>
       <br />
-      <Button component={Link} variant="outlined" type="button" to="/">Back to home</Button>
+      <Button component={Link} variant="outlined" type="button" to="/">Takaisin etusivulle</Button>
     </>
   )
 
   if (error) {
     Confirmation = () => (
       <>
-        <Typography variant="h5">Order failed, please contact the site owner: {error}</Typography>
+        <Typography variant="h5">Tilaus epaonnistui, ota yhteyttä puhelimitse tai sähköpostilla.</Typography>
         <br />
-        <Button component={Link} variant="outlined" type="button" to="/">Back to home</Button>
+        <Button component={Link} variant="outlined" type="button" to="/">Takaisin etusivulle</Button>
       </>
     );
   }

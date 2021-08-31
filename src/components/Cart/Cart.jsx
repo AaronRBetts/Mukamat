@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Button, ListItemText } from '@material-ui/core';
+import { Container, Typography, Button, ListItemText, Fade } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import useStyles from './styles';
 import Table from '@material-ui/core/Table';
@@ -41,8 +41,8 @@ const Cart = ({ shippingPrice, products, cart, handleUpdateCartQty, handleRemove
             </Table>
             <Paper className={classes.paper}>
                 <div className={classes.cartDetails}>
-                    <ListItemText primary={'Shipping:'} secondary={`€${shippingPrice}`}/>
-                    <ListItemText primary={'sub total:'} secondary={cart.subtotal.formatted_with_symbol}/>
+                    <ListItemText primary={'Toimitus:'} secondary={`€${shippingPrice.toFixed(2)}`}/>
+                    <ListItemText primary={'Tuotteiden hinta:'} secondary={cart.subtotal.formatted_with_symbol}/>
                     <ListItemText primary={'Yhteensä:'} secondary={`€${(shippingPrice + cart.subtotal.raw).toFixed(2)}`}/>
                     <div style={{display: "grid"}}>
                         <Button className={classes.emptyButton} type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Tyhjenna Ostoskori</Button>
