@@ -22,7 +22,8 @@ export default makeStyles((theme) => ({
     justifyContent: 'space-between',
     '& div': {
       margin: 'auto'
-    }
+    },
+    flexWrap: 'wrap'
   },
   paper: {
     padding: theme.spacing(2),

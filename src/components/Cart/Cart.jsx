@@ -41,9 +41,9 @@ const Cart = ({ shippingPrice, products, cart, handleUpdateCartQty, handleRemove
             </Table>
             <Paper className={classes.paper}>
                 <div className={classes.cartDetails}>
-                    <ListItemText primary={'Toimitus:'} secondary={`€${shippingPrice.toFixed(2)}`}/>
-                    <ListItemText primary={'Tuotteiden hinta:'} secondary={cart.subtotal.formatted_with_symbol}/>
-                    <ListItemText primary={'Yhteensä:'} secondary={`€${(shippingPrice + cart.subtotal.raw).toFixed(2)}`}/>
+                    <ListItemText style={{padding: '5px'}} primary={'Toimitus:'} secondary={`€${shippingPrice.toFixed(2)}`}/>
+                    <ListItemText style={{padding: '5px'}} primary={'Tuotteiden hinta:'} secondary={cart.subtotal.formatted_with_symbol}/>
+                    <ListItemText style={{padding: '5px'}} primary={'Yhteensä:'} secondary={`€${(shippingPrice + cart.subtotal.raw).toFixed(2)}`}/>
                     <div style={{display: "grid"}}>
                         <Button className={classes.emptyButton} type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Tyhjenna Ostoskori</Button>
                         <Button component={Link} to="/checkout" className={classes.checkoutButton} type="button" variant="contained" color="primary">Maksu</Button>
