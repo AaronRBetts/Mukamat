@@ -255,7 +255,7 @@ function Navbar(props) {
       <List>
           <ListItem className={classes.linkItem}>
             <ListItemIcon><MailIcon className={classes.footerIcon} /></ListItemIcon>
-            <Typography className={classes.footerText} variant="subtitle2">mukamat@gmail.com</Typography>
+            <Typography className={classes.footerText} variant="subtitle2">birgit.saatsi@mukamat.fi</Typography>
           </ListItem>
           <ListItem className={classes.linkItem}>
             <ListItemIcon><PhoneIcon className={classes.footerIcon} /></ListItemIcon>

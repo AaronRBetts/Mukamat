@@ -128,7 +128,7 @@ const PaymentForm = ({ shippingPrice, library, checkoutToken, nextStep, backStep
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <Button variant="outlined" onClick={backStep}>Takaisin</Button>
               <Button type="submit" variant="contained" disabled={!stripe} color="primary">
-                Maksa {checkoutToken.live.subtotal.formatted_with_symbol}
+                {`Maksa €${(checkoutToken.live.subtotal.raw + shippingPrice).toFixed(2)}`}
               </Button>
             </div>
           </form>
