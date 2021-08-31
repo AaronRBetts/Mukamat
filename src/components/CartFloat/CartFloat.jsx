@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconButton, Badge } from '@material-ui/core';
+import { IconButton, Badge, ListItem, ListItemText, Button } from '@material-ui/core';
 import { ShoppingCart } from '@material-ui/icons';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -13,11 +13,11 @@ const CartFloat = ({ totalItems }) => {
         <>
                 {location.pathname !== ('/cart' || 'checkout') && (
                     <div className={classes.button}>
-                        <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
                             <Badge badgeContent={totalItems} color="secondary">
-                                <ShoppingCart />
+                                <Button component={Link} to="/cart" variant="contained" color="primary" aria-label="Show cart items" style={{color: '#ffdd59'}}>
+                                    <ShoppingCart style={{marginRight: '10px'}} /> Ostoskori
+                                </Button>
                             </Badge>
-                        </IconButton>
                     </div>
                 )}
         </>

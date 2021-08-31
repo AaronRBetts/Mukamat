@@ -23,6 +23,7 @@ const Cart = ({ shippingPrice, products, cart, handleUpdateCartQty, handleRemove
 
     const FilledCart = () => (
             <TableContainer component={Paper} className={classes.paper}>
+                <Fade in out timeout={1500}>
             <Table className={classes.table} aria-label="simple table">
               <TableHead>
                 <TableRow>
@@ -39,6 +40,8 @@ const Cart = ({ shippingPrice, products, cart, handleUpdateCartQty, handleRemove
                 ))}
               </TableBody>
             </Table>
+
+                </Fade>
             <Paper className={classes.paper}>
                 <div className={classes.cartDetails}>
                     <ListItemText style={{padding: '5px'}} primary={'Toimitus:'} secondary={`€${shippingPrice.toFixed(2)}`}/>

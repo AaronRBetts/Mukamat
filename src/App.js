@@ -103,7 +103,7 @@ const App = () => {
     return (
             <Switch>
                 <Route exact path="/">
-                <CartFloat totalItems={cart ? cart.total_items : 0}/>
+                    <CartFloat totalItems={cart ? cart.total_items : 0}/>
                     <Element name="home">
                         <Hero />
                     </Element>
@@ -112,14 +112,15 @@ const App = () => {
                     </Element>
                 </Route>
                 <Route exact path="/kirjamme">
-                <CartFloat totalItems={cart ? cart.total_items : 0}/>
+                    <CartFloat totalItems={cart ? cart.total_items : 0}/>
                     <Products products={products} onAddToCart={handleAddToCart}/>
                 </Route>
                 <Route exact path="/tekijä">
-                        <About />
+                    <About />
                 </Route>
                 {products.map((book) => (
                     <Route exact path={`/kirjamme/${book.permalink}`} key={book.id}>
+                        <CartFloat totalItems={cart ? cart.total_items : 0}/>
                         <Products products={products.filter(product => product.permalink === book.permalink)} onAddToCart={handleAddToCart}/>
                     </Route>
                 ))}
