@@ -56,7 +56,7 @@ const AddressForm = ({ shippingPrice, checkoutToken, next }) => {
     </div>
   }
 
-  const CustForm = () => {
+  return (
     <>
       <Typography variant="h6" gutterBottom>Asiakkaan tiedot</Typography>
       <FormProvider {...methods}>
@@ -131,9 +131,7 @@ const AddressForm = ({ shippingPrice, checkoutToken, next }) => {
         </form>
       </FormProvider>
     </>
-  }
-    
-  return (checkoutToken ? <CustForm /> : <Spinner />)
+  );
 };
 
 export default AddressForm;

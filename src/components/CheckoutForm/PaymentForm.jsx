@@ -88,7 +88,7 @@ const PaymentForm = ({ shippingPrice, library, checkoutToken, nextStep, backStep
       <Review products={library} checkoutToken={checkoutToken} shippingPrice={shippingPrice} />
       <Divider />
       <form id="contact-form">
-        <Button variant="contained" fullWidth color="primary" onClick={(e) => handleOrder(e)}>Tilaa lasku</Button>
+        <Button variant="contained" fullWidth color="primary" onClick={(e) => handleOrder(e)}>Tilaa lasku / Lähetä tilaus</Button>
         <input type='hidden' name='contact_number' value={shippingData.phone} />
         <input type='hidden' name='cust_name' value={`${shippingData.firstName} ${shippingData.lastName}`} />
         <input type='hidden' name='products' value={products} />
