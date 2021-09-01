@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Typography, Button, Divider, Paper } from '@material-ui/core';
+import { Typography, Button, Divider, Paper, TextField, Input } from '@material-ui/core';
 import { Elements, CardElement, ElementsConsumer } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';import { init, sendForm } from 'emailjs-com';
 
@@ -51,7 +51,7 @@ const PaymentForm = ({ shippingPrice, library, checkoutToken, nextStep, backStep
           extra_fields: { extr_A12JwrBdYwPjnk: shippingData.phone },
         fulfillment: { shipping_method: shippingData.shippingOption },
         payment: {
-          gateway: 'stripe',
+          gateway: "stripe",
           stripe: {
             payment_method_id: paymentMethod.id,
           },
@@ -104,7 +104,9 @@ const PaymentForm = ({ shippingPrice, library, checkoutToken, nextStep, backStep
         <input type='hidden' name='b_city' value={shippingData.billingCity} />
         <input type='hidden' name='b_area' value={shippingData.billingSubdivision} />
         <input type='hidden' name='b_zip' value={shippingData.billingZip} />
-        <input type='hidden' name='total' value={checkoutToken.live.subtotal.formatted_with_symbol} />
+        <input type='hidden' name='shipping' value={shippingPrice} />
+        <input type='hidden' name='subtotal' value={checkoutToken.live.subtotal.formatted_with_symbol} />
+        <input type='hidden' name='total' value={checkoutToken.live.subtotal.raw + shippingPrice} />
       </form>
       <Paper style={{ padding: '0 10px 10px' }}>
       <Typography variant="h6" gutterBottom style={{ margin: '20px 0', textAlign: 'center' }}>Tai maksa kortilla</Typography>

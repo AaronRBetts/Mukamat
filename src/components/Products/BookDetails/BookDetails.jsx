@@ -1,6 +1,6 @@
 import React from 'react'
 import { AddShoppingCart } from '@material-ui/icons'
-import { Grid, Typography, Card, Button, Fade, CardActions, Paper, FormControl, TextField, Divider } from '@material-ui/core';
+import { Grid, Typography, Card, Button, Fade, CardActions, Paper, FormControl, TextField, Divider, ListItem, ListItemText, Container } from '@material-ui/core';
 // import Book from '../Product/Book/Book'
 import { Gallery } from '../../../components'
 import useStyles from './styles'
@@ -33,11 +33,14 @@ const BookDetails = ({products, onAddToCart}) => {
         <Fade in timeout={1500}>
         <Grid container spacing={4}>
         <Card className={classes.content} sm={12} md={6}>
-            <Typography variant="h4">{products[0].name}</Typography>
+        <ListItem style={{padding: '10px 0'}} >
+            <Container>
+                <Typography variant="h4">{products[0].name}</Typography>
                 <Typography variant="body2">{products[0].isbn}</Typography>
-            <Divider />
-                <Typography variant="h6" gutterBottom>{products[0].price.formatted_with_symbol}</Typography>
-                <Typography variant="body2" gutterBottom>{`€${products[0].beforeTax} +${products[0].tax}% ALV`}</Typography>
+            </Container>
+            {/* <ListItemText style={{padding: '5px'}} primary={products[0].name} secondary={products[0].isbn}/> */}
+            <ListItemText align="right" style={{padding: '5px'}} primary={products[0].price.formatted_with_symbol} secondary={`€${products[0].beforeTax} +${products[0].tax}% ALV`}/>
+        </ListItem>
             <Divider />
             <Typography variant="body1" gutterBottom dangerouslySetInnerHTML={{__html: products[0].description}}>
             </Typography>

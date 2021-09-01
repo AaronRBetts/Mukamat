@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { InputLabel, Select, MenuItem, Button, Grid, Typography, Divider, CircularProgress } from '@material-ui/core';
+import { InputLabel, Select, MenuItem, Button, Grid, Typography, Divider, CircularProgress, Card } from '@material-ui/core';
 import { useForm, FormProvider } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
@@ -122,6 +122,7 @@ const AddressForm = ({ shippingPrice, checkoutToken, next }) => {
                 ))}
               </Select>
             </Grid>
+              <FormInput name="message" label="Jätä viesti" style={{height: '200px'}} />
           </Grid>
           <br />
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>

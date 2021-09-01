@@ -79,7 +79,8 @@ const App = () => {
         refreshCart();
     }
 
-    const calculateShippingPrice = (orderQty) => {
+    const updateShippingPrice = (orderQty) => {
+        // const response = await commerce.checkout.update({"shipping_methods":[{"id":"EASY_SHIP_123","description":"Overnight","price":9.95}])
         const qtySmContainers = orderQty % 20 < 10 ? 1 : 0;
         const qtyMdContainers = (orderQty % 20 < 15 && !qtySmContainers) ? 1 : 0;
         const qtyLgContainers = Math.floor((orderQty + 5) / 20);
@@ -97,7 +98,7 @@ const App = () => {
     }, []);
 
     useEffect(() => {
-        calculateShippingPrice(cart ? cart.total_items : 0)
+        updateShippingPrice(cart ? cart.total_items : 0)
     }, [cart]);
 
     return (

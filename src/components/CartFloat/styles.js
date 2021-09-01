@@ -4,13 +4,18 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   button: {
       position: 'fixed',
-      top: '80px',
+      top: '16px',
       right: '16px',
-      zIndex: '100',
-      background: '#3c40c6',
-      boxShadow: '2px 2px 10px rgba(0,0,0,0.7), inset 10px 10px 20px rgba(255,255,255,0.2)',
-      borderRadius: '10px',
+      zIndex: '1200',
+      background: '#3f51b5',    
+      boxShadow: '0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%)',
+      borderRadius: '5px',
       color: '#ffdd59',
       transition: 'all 0.1s ease',
+      ["@media (max-width:600px)"]: { 
+        borderRadius: '0 0 0 5px',
+        top: '10px',
+        right: '10px',
+      }
   }
 }));
