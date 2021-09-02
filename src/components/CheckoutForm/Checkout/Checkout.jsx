@@ -62,7 +62,7 @@ const Checkout = ({ shippingPrice, products, cart, onCaptureCheckout, order, err
 
   let EmailSent = () => (
     <>
-        <Typography variant="h5">Kiitos tilauksestasi! Lähetämme laskun sähköpostitse.</Typography>
+      <Typography variant="h5">Kiitos tilauksesta!</Typography>
       <br />
       <Button component={Link} variant="outlined" type="button" to="/">Takaisin etusivulle</Button>
     </>

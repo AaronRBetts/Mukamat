@@ -10,19 +10,13 @@ const Hero = () => {
     return(
         <Fade in timeout={1500}>
         <div className={classes.HeroSection}>
-        <Fade in timeout={2500}>
+            <Fade in timeout={2500}>
             <div className={classes.HeroTitle}>
                 <Typography variant="h1">Mukamat</Typography>
                 <Typography variant="h4">Suomen ja englannin kielen oppima­teri­aalia erityisen tuen tarpeessa oleville oppilaille.</Typography>
                 {/* <ListItem button variant="contained" component={ScrollLink} offset={-80} smooth={true} duration={500} to="kirjamme">Tutustu oppimateriaaleihimme</ListItem> */}
                 <Button variant="contained" color="primary" component={ScrollLink} offset={-80} smooth={true} duration={500} to="kirjamme">Tutustu oppimateriaaleihimme</Button>
             </div>
-        </Fade>
-            <Fade in timeout={1500}>
-                <Paper className={classes.mediaCard}>
-                    <CardMedia className={classes.media} component="img"
-                image={bgImage} />
-                </Paper>
             </Fade>
         </div>
         </Fade>

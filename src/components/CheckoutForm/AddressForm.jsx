@@ -112,16 +112,6 @@ const AddressForm = ({ shippingPrice, checkoutToken, next }) => {
             <FormInput name="billingEmail" label="Sähköposti" />
             <FormInput name="billingCity" label="Kaupinki" />
             <FormInput name="billingZip" label="Postinumero" />
-            <Grid item xs={12} sm={6}>
-              <InputLabel>toimituksen alaosasto</InputLabel>
-              <Select value={billingSubdivision} fullWidth onChange={(e) => setBillingSubdivision(e.target.value)}>
-                {Object.entries(shippingSubdivisions).map(([code, name]) => ({ id: code, label: name })).map((item) => (
-                  <MenuItem key={item.id} value={item.id}>
-                    {item.label}
-                  </MenuItem>
-                ))}
-              </Select>
-            </Grid>
               <FormInput messageBox name="message" label="Jätä viesti" style={{height: '200px'}} />
           </Grid>
           <br />
