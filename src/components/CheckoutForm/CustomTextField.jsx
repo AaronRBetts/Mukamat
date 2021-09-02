@@ -7,7 +7,7 @@ function FormInput({ name, label, required, messageBox }) {
   const isError = false;
 
   return (
-    <Grid item xs={12} sm={6}>
+    <Grid item xs={12} sm={messageBox ? 12 : 6}>
       <Controller
         as={TextField}
         name={name}
@@ -16,6 +16,9 @@ function FormInput({ name, label, required, messageBox }) {
         fullWidth
         required={required}
         error={isError}
+        rows={messageBox ? 4 : 1 }
+        multiline={messageBox ? true : false}
+        variant={messageBox ? "outlined" : "standard"}
       />
     </Grid>
   );
