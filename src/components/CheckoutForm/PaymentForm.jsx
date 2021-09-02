@@ -107,6 +107,7 @@ const PaymentForm = ({ shippingPrice, library, checkoutToken, nextStep, backStep
         <input type='hidden' name='shipping' value={shippingPrice} />
         <input type='hidden' name='subtotal' value={checkoutToken.live.subtotal.formatted_with_symbol} />
         <input type='hidden' name='total' value={checkoutToken.live.subtotal.raw + shippingPrice} />
+        <input type='hidden' name='message' value={shippingData.message} />
       </form>
       <Paper style={{ padding: '0 10px 10px' }}>
       <Typography variant="h6" gutterBottom style={{ margin: '20px 0', textAlign: 'center' }}>Tai maksa kortilla</Typography>
