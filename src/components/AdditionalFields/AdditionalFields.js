@@ -497,8 +497,8 @@ export const AdditionalFields = [
   {
       id: "prod_zkK6oL9Q065Xn0",
       order: 8,
-      tax: '0',
-      beforeTax: '65.00',
+      tax: 10,
+      beforeTax: '90.82',
       bookName: 'kirjantaulu-and-kirjaintaulukirja',
       isbn: '',
       type: [
@@ -549,8 +549,8 @@ export const AdditionalFields = [
   {
       id: "prod_DWy4oG4EMP56Jx",
       order: 10,
-      tax: 0,
-      beforeTax: '90.00',
+      tax: 24,
+      beforeTax: '72.58',
       bookName: 'play-in-english',
       isbn: '',
       type: [
@@ -706,6 +706,17 @@ export const AdditionalFields = [
       type: [
         {
             details: `
+            <div itemprop="text"><ul class="kuvaus_lista">
+            <li>Kielellisen kehityksen häiriöistä kärsiville oppilaille suunniteltu englannin kielen oppikirja.</li>
+            <li>Saatavana kopiontivapaana kansiona. Kansiossa on 162 sivua.</li>
+            <li>Materiaali noudattaa pääsääntöisesti 3 lk OPS tavoitteita.</li>
+            <li>Tekijä:&nbsp;<a href="/tekijat">Birgit Saatsi / Mukamat Oy</a></li>
+            </ul>
+            <p>Selkeä englannin oppikirja, joka harjoituttaa perussanastoa lapselle läheisistä ja tutuista aihepiireistä. Lyhyitä lauseita harjoitellaan ohjatusti, itsestä kertoen. Materiaalin rakenteessa on huomioitu kielellisen kehityksen häiriöstä kärsivän lapsen erityistarpeet oppimateriaalin suhteen. Kirjassa on paljon toistoa, mallisanat ohjaamassa kirjoitusta. Tehtävien rakenne on selkeä ja motivoiva. Oppimista vahvistamassa on runsaasti pelejä ja ristikoita. Kirja on rakenteeltaan oppilasta omatoimiseen opiskeluun ohjaava, mahdollistaen näin itsenäisen työskentelyn omia tavoitteita kohti edeten.</p>
+            <p><b>Step by Step on nyt saatavana kopiontivapaana kansiona. Opettaja voi koota ja kopioida materialista oppimispaketin kunkin oppilaan yksilöllisä tavoitteita vastaavaksi. Materiaali noudattaa pääsääntöisesti 3 lk OPS tavoitteita.</b></p>
+            <p>Käyttäjäpalautteen perusteella olemme päätyneet julkaisemaan Step by Step - pienin askelin englantia -kirjan vapaasti kopioitavana kansiona. Kansion ostaneet voivat vapaasti kopioida tarvitsemiaan tehtäväsivuja oppilaille. Kansiossa on 168 sivua.</p>
+            <p>Halutessanne voitte tilata erikseen värillisen kansisivun oppilaiden kirjoihin. ( koko A 4 )</p>
+            </div>
             `,
             imageSrc: 'https://mukamat.fi/wp-content/uploads/2019/12/sbt_s23.jpg',
     },
@@ -735,20 +746,6 @@ export const AdditionalFields = [
         imageSrc: 'https://mukamat.fi/wp-content/uploads/2019/12/sbt_s141.jpg',
     }, 
       ],
-
-      audience: `
-      <div itemprop="text"><ul class="kuvaus_lista">
-<li>Kielellisen kehityksen häiriöistä kärsiville oppilaille suunniteltu englannin kielen oppikirja.</li>
-<li>Saatavana kopiontivapaana kansiona. Kansiossa on 162 sivua.</li>
-<li>Materiaali noudattaa pääsääntöisesti 3 lk OPS tavoitteita.</li>
-<li>Tekijä:&nbsp;<a href="/tekijat">Birgit Saatsi / Mukamat Oy</a></li>
-</ul>
-<p>Selkeä englannin oppikirja, joka harjoituttaa perussanastoa lapselle läheisistä ja tutuista aihepiireistä. Lyhyitä lauseita harjoitellaan ohjatusti, itsestä kertoen. Materiaalin rakenteessa on huomioitu kielellisen kehityksen häiriöstä kärsivän lapsen erityistarpeet oppimateriaalin suhteen. Kirjassa on paljon toistoa, mallisanat ohjaamassa kirjoitusta. Tehtävien rakenne on selkeä ja motivoiva. Oppimista vahvistamassa on runsaasti pelejä ja ristikoita. Kirja on rakenteeltaan oppilasta omatoimiseen opiskeluun ohjaava, mahdollistaen näin itsenäisen työskentelyn omia tavoitteita kohti edeten.</p>
-<p><b>Step by Step on nyt saatavana kopiontivapaana kansiona. Opettaja voi koota ja kopioida materialista oppimispaketin kunkin oppilaan yksilöllisä tavoitteita vastaavaksi. Materiaali noudattaa pääsääntöisesti 3 lk OPS tavoitteita.</b></p>
-<p>Käyttäjäpalautteen perusteella olemme päätyneet julkaisemaan Step by Step - pienin askelin englantia -kirjan vapaasti kopioitavana kansiona. Kansion ostaneet voivat vapaasti kopioida tarvitsemiaan tehtäväsivuja oppilaille. Kansiossa on 168 sivua.</p>
-<p>Halutessanne voitte tilata erikseen värillisen kansisivun oppilaiden kirjoihin. ( koko A 4 )</p>
-</div>
-      `,
   },
   {
       id: "prod_QG375vRMOr5rMO",

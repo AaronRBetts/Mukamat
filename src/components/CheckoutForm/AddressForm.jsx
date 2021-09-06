@@ -58,7 +58,7 @@ const AddressForm = ({ shippingPrice, checkoutToken, next }) => {
 
   return (
     <>
-      <Typography variant="h6" gutterBottom>Asiakkaan tiedot</Typography>
+      <Typography variant="h6" gutterBottom>Toimitus Osoite</Typography>
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit((data) => next({ ...data, shippingCountry, shippingSubdivision, shippingOption, billingSubdivision }))}>
           <Grid container spacing={3}>
@@ -79,31 +79,11 @@ const AddressForm = ({ shippingPrice, checkoutToken, next }) => {
                 ))}
               </Select>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <InputLabel>toimituksen alaosasto</InputLabel>
-              <Select value={shippingSubdivision} fullWidth onChange={(e) => setShippingSubdivision(e.target.value)}>
-                {Object.entries(shippingSubdivisions).map(([code, name]) => ({ id: code, label: name })).map((item) => (
-                  <MenuItem key={item.id} value={item.id}>
-                    {item.label}
-                  </MenuItem>
-                ))}
-              </Select>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <InputLabel>Toimitus vaihtoehdot</InputLabel>
-              <Select value={shippingOption} fullWidth onChange={(e) => setShippingOption(e.target.value)}>
-                {shippingOptions.map((sO) => ({ id: sO.id, label: `${sO.description} - €${shippingPrice.toFixed(2)}` })).map((item) => (
-                  <MenuItem key={item.id} value={item.id}>
-                    {item.label}
-                  </MenuItem>
-                ))}
-              </Select>
-            </Grid>
           </Grid>
           <br />
           <br />
           <Divider />
-          <Typography variant="h6" gutterBottom>Laskutuksen tiedot</Typography>
+          <Typography variant="h6" gutterBottom>Laskutus Osoite</Typography>
           <Grid container spacing={3}>
             <FormInput name="billingFirstName" label="Etunimi" />
             <FormInput name="billingLastName" label="Sukunimi" />
