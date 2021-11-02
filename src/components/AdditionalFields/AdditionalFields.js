@@ -5,6 +5,7 @@ export const AdditionalFields = [
         tax: 10,
         beforeTax: '28.00',
         bookName: 'vesseli',
+        sale: '',
         isbn: 'ISBN 978-952-93-8211-8',
         type: [
             {
@@ -94,6 +95,7 @@ export const AdditionalFields = [
       tax: 10,
       beforeTax: '24.09',
       bookName: 'matti',
+      sale: '',
       isbn: 'ISBN 978-951-98149-1-9',
       type: [
           {
@@ -184,8 +186,9 @@ export const AdditionalFields = [
       id: "prod_9BAmwJj7QweXdn",
       order: 2,
       tax: 10,
-      beforeTax: '24.09',
+      beforeTax: '20.45',
       bookName: 'mukamatti',
+      sale: '€26.50 - 15%',
       isbn: 'ISBN 978-951-98149-0-2',
       type: [
           {
@@ -266,6 +269,7 @@ export const AdditionalFields = [
       tax: 10,
       beforeTax: '25.00',
       bookName: 'matilda',
+      sale: '',
       isbn: 'ISBN 951-98149-3-0',
       type: [
         {
@@ -404,6 +408,7 @@ export const AdditionalFields = [
       tax: 10,
       beforeTax: '34.09',
       bookName: 'lukukirja',
+      sale: '',
       isbn: 'ISBN 978-952-92-4192-7',
       type: [
           {
@@ -500,6 +505,7 @@ export const AdditionalFields = [
       tax: 10,
       beforeTax: '90.82',
       bookName: 'kirjantaulu-and-kirjaintaulukirja',
+      sale: '',
       isbn: '',
       type: [
           {
@@ -552,6 +558,7 @@ export const AdditionalFields = [
       tax: 24,
       beforeTax: '72.58',
       bookName: 'play-in-english',
+      sale: '',
       isbn: '',
       type: [
           {
@@ -702,6 +709,7 @@ export const AdditionalFields = [
       tax: 10,
       beforeTax: '190.91',
       bookName: 'step-by-step',
+      sale: '',
       isbn: '',
       type: [
         {
@@ -753,6 +761,7 @@ export const AdditionalFields = [
       tax: '10',
       beforeTax: '26.91',
       bookName: 'matkaan',
+      sale: '',
       isbn: 'ISBN 978-951-98149-4-0',
       type: [
           {
@@ -810,6 +819,7 @@ export const AdditionalFields = [
       tax: '24',
       beforeTax: '72.58',
       bookName: "Pikku-Matin mukavat - peli I (pienaakkoset)",
+      sale: '',
       isbn: '',
       type: [
           {
@@ -936,6 +946,7 @@ export const AdditionalFields = [
       tax: '24',
       beforeTax: '72.58',
       bookName: "Pikku-Matin mukavat - peli 1 (suuraakkoset)",
+      sale: '',
       isbn: '',
       type: [
           {
@@ -1062,6 +1073,7 @@ export const AdditionalFields = [
       tax: '24',
       beforeTax: '72.58',
       bookName: "Pikku-Matin mukavat - peli 2",
+      sale: '',
       isbn: '',
       type: [
           {

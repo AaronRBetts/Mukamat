@@ -33,12 +33,21 @@ const BookDetails = ({products, onAddToCart}) => {
         <Fade in timeout={1500}>
         <Grid container spacing={4}>
         <Card className={classes.content} sm={12} md={6}>
+                {products[0].sale ? 
+                <Typography align="center" variant="h4" style={{padding: '2px 10px', backgroundColor: 'yellow',color:'red', boxShadow: '2px 2px 2px #ccc'}} >
+                Marraskuun Ale! -15%
+                </Typography> : <></>}
+            {products[0].sale ? 
+                        <ListItemText align="right" variant="h6" style={{width: 'fit-content', marginLeft: 'auto',padding: '0px 5px',borderRadius: '3px', backgroundColor: 'yellow',color:'red', boxShadow: '2px 2px 2px #ccc'}} >
+                        {products[0].sale}
+                        </ListItemText> : <></>}
         <ListItem style={{padding: '10px 0'}} >
             <Container>
                 <Typography variant="h4">{products[0].name}</Typography>
                 <Typography variant="body2">{products[0].isbn}</Typography>
             </Container>
             {/* <ListItemText style={{padding: '5px'}} primary={products[0].name} secondary={products[0].isbn}/> */}
+
             <ListItemText align="right" style={{padding: '5px'}} primary={products[0].price.formatted_with_symbol} secondary={`€${products[0].beforeTax} +${products[0].tax}% ALV`}/>
         </ListItem>
             <Divider />

@@ -18,6 +18,10 @@ const Product = ({ product, onAddToCart }) => {
     return (
         <Fade in timeout={1500}>
         <Card className={classes.root}>
+                {product.sale ? 
+                <Typography align="center" variant="h4" style={{padding: '2px 10px', backgroundColor: 'yellow',color:'red'}} >
+                Marraskuun Ale!
+                </Typography> : <></>}
             <Fade in timeout={2500}>
             <Book product={product}/>
             </Fade>
@@ -26,6 +30,10 @@ const Product = ({ product, onAddToCart }) => {
                 <div className={classes.cardContent}>
                     <Typography variant="h4">{product.name}</Typography>
                     <div className={classes.prices}>
+                        {product.sale ? 
+                        <Typography align="right" variant="h6" style={{padding: '0px 5px',borderRadius: '3px', backgroundColor: 'yellow',color:'red', boxShadow: '2px 2px 2px #ccc'}} >
+                        {product.sale}
+                        </Typography> : <></>}
                     <Typography variant="body1" >
                         {product.price.formatted_with_symbol}
                     </Typography>
