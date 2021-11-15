@@ -14,8 +14,8 @@ const CartFloat = ({ totalItems }) => {
                 {location.pathname !== ('/cart' || 'checkout') && (
                     <div className={classes.button}>
                             <Badge badgeContent={totalItems} color="secondary" anchorOrigin={{vertical: 'top', horizontal: 'left'}}>
-                                <Button component={Link} to="/cart" variant="contained" color="primary" aria-label="Show cart items" style={{color: '#ffdd59'}}>
-                                    <ShoppingCart style={{marginRight: '10px'}} /> Ostoskori
+                                <Button component={Link} to="/cart" variant="contained" color="primary" aria-label="Show cart items">
+                                    <ShoppingCart style={{marginRight: '10px', color: '#ffdd59'}} /> Ostoskori
                                 </Button>
                             </Badge>
                     </div>

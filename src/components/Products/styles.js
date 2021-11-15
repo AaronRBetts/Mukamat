@@ -8,9 +8,9 @@ export default makeStyles((theme) => ({
     boxShadow: '2px 5px 40px rgba(0,0,0,0.3)',
     borderRadius: '10px',
     padding: theme.spacing(3),
-    maxWidth: '1280px',
+    maxWidth: '960px',
     margin: '64px auto 0',
-    background: 'white'
+    background: 'white',
   },
   root: {
     flexGrow: 1,

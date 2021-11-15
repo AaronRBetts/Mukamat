@@ -59,6 +59,6 @@ export default makeStyles(() => ({
         padding: '10px',
     },
     seeMore: {
-        color: '#ffdd59'
+        color: 'white'
     }
 }));

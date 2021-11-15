@@ -4,6 +4,7 @@ import Classroom from '../../images/classroom.png'
 
 export default makeStyles((theme) => ({
     HeroSection: {
+        boxShadow: '2px 5px 40px rgba(0,0,0,0.3)',
         padding: '64px auto 0',
         display: 'flex',
         flexWrap: 'wrap',
@@ -33,20 +34,18 @@ export default makeStyles((theme) => ({
             maxWidth: '350px',
         },
         '& h1': {
-            color: '#fff',
+            color: 'rgb(26, 146, 233)',
             lineHeight: '0.8',
-            fontSize: '3em',
+            fontSize: '4em',
             margin: '0',
             // background: '#fff',
-            padding: '2px',
+            padding: '0',
             paddingBottom: '10px',
             borderRadius: '5px 5px 0 0'
         },
         '& h4': {
             color: '#fff',
-            padding: '2px',
-            paddingLeft: '10px',
-            borderLeft: '6px solid #CE9FFC',
+            marginRight: '20px',
             fontSize: '1.6em',
             marginBottom: '10px',
             // background: '#fff',

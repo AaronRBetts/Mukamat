@@ -43,7 +43,7 @@ const BookDetails = ({products, onAddToCart}) => {
                         </ListItemText> : <></>}
         <ListItem style={{padding: '10px 0'}} >
             <Container>
-                <Typography variant="h4">{products[0].name}</Typography>
+                <Typography variant="h2" style={{color: 'rgb(26, 146, 233)'}}>{products[0].name}</Typography>
                 <Typography variant="body2">{products[0].isbn}</Typography>
             </Container>
             {/* <ListItemText style={{padding: '5px'}} primary={products[0].name} secondary={products[0].isbn}/> */}
@@ -70,8 +70,8 @@ const BookDetails = ({products, onAddToCart}) => {
                     variant="outlined"
                     />
                     </FormControl>
-                    <Button size="large" variant="contained" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(products[0].id, qty)}>
-                        <AddShoppingCart /> <Typography variant="body2">Lisää ostoskoriin</Typography>
+                    <Button style={{ marginLeft: '10px' }} size="large" variant="contained" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(products[0].id, qty)}>
+                        <AddShoppingCart style={{color: '#ffdd59', marginRight: '10px' }} /> <Typography variant="body2">Lisää ostoskoriin</Typography>
                     </Button>
 
                 </Paper>

@@ -59,8 +59,8 @@ const Product = ({ product, onAddToCart }) => {
                     variant="outlined"
                     />
                     </FormControl>
-                    <Button style={{color: '#ffdd59'}} variant="contained" size="small" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(product.id, qty)}>
-                        <AddShoppingCart />Lisää ostoskoriin
+                    <Button variant="contained" size="small" color="primary" aria-label="Lisää ostoskoriin" onClick={() => onAddToCart(product.id, qty)}>
+                        <AddShoppingCart style={{color: '#ffdd59', marginRight: '10px' }} />Lisää ostoskoriin
                     </Button>
 
                 </Paper>

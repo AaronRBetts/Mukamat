@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: '0',
+    padding: '10px',
   },
   Watermark: {
     margin: 'auto auto 0 auto',
@@ -83,23 +83,21 @@ const useStyles = makeStyles((theme) => ({
   },
   navIcon: {
     '& svg': {
-      color: 'rgb(26, 146, 233)',
-      borderRadius: '3px',
+      color: '#ffdd59',
+      borderRadius: '50%',
       background: '#3c40c6',
-      padding: '2px',
-      margin: '2px',
-      boxShadow: '2px 2px 10px rgb(0 0 0 / 40%), inset 10px 10px 20px rgb(255 255 255 / 20%)',
+      padding: '5px',
+      boxShadow: '2px 2px 10px rgb(0 0 0 / 70%), inset 10px 10px 20px rgb(255 255 255 / 20%)',
     },
   },
   linkItem: {
-    fontSize: '0.8rem',
-    margin: '2px 1em'
+    fontSize: '0.8rem'
   },
   bookTitle: {
     fontSize: '0.6rem'
   },
   footerIcon: {
-    color: 'rgb(26, 146, 233)'
+    color: '#CE9FFC'
   },
   mobileLogo: {
     overflow: 'hidden',
