@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
     '& svg': {
       color: 'rgb(26, 146, 233)',
       borderRadius: '3px',
-      background: '#3c40c6',
+      background: '#defff8',
       padding: '2px',
       margin: '2px',
       boxShadow: '2px 2px 10px rgb(0 0 0 / 40%), inset 10px 10px 20px rgb(255 255 255 / 20%)',
@@ -206,7 +206,7 @@ function Navbar(props) {
                 </ListItem>
                 <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/Kirjaintaulut-and-kirjaintaulukirja">
                   
-                  Kirjaintaulut & Kirjaintaulukirja
+                  Kirjaintaulut &amp; Kirjaintaulukirja
                 </ListItem>
                 <ListItem className={classes.linkItem} button component={Link} to="/kirjamme/Play-in-English">
                   

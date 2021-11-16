@@ -34,6 +34,10 @@ export default makeStyles((theme) => ({
             maxWidth: '350px',
         },
         '& h1': {
+              fontFamily: [
+                'Josefin Sans',
+                'sans-serif',
+              ].join(','),
             color: 'rgb(26, 146, 233)',
             lineHeight: '0.8',
             fontSize: '4em',
@@ -44,6 +48,10 @@ export default makeStyles((theme) => ({
             borderRadius: '5px 5px 0 0'
         },
         '& h4': {
+              fontFamily: [
+                'Josefin Sans',
+                'sans-serif',
+              ].join(','),
             color: '#fff',
             marginRight: '20px',
             fontSize: '1.6em',
