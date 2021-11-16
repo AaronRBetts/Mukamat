@@ -19,7 +19,7 @@ const Products = ({ products, onAddToCart }) => {
             Katso kirjavalikoimaamme, napauta kirjaa nähdäksesi lisää.</Typography>
             <Grid container justify="center" spacing={4}>
                 {products.map((product) => (
-                    <Grid item key={product.id} sm={12} md={6} lg={6} xl={4}>
+                    <Grid item key={product.id} sm={12} md={6} lg={4} xl={4}>
                         <Product product={product} onAddToCart={onAddToCart} />
                     </Grid>
                 ))}
