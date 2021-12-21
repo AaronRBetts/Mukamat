@@ -188,7 +188,7 @@ export const AdditionalFields = [
       tax: 10,
       beforeTax: '20.45',
       bookName: 'mukamatti',
-      sale: '€26.50 - 15%',
+      sale: '',
       isbn: 'ISBN 978-951-98149-0-2',
       type: [
           {
