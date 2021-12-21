@@ -35,7 +35,6 @@ export default makeStyles((theme) => ({
         },
         '& h1': {
               fontFamily: [
-                'Fredoka One',
                 'Josefin Sans',
                 'sans-serif',
               ].join(','),

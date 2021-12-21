@@ -186,7 +186,7 @@ export const AdditionalFields = [
       id: "prod_9BAmwJj7QweXdn",
       order: 2,
       tax: 10,
-      beforeTax: '20.45',
+      beforeTax: '24.09',
       bookName: 'mukamatti',
       sale: '',
       isbn: 'ISBN 978-951-98149-0-2',
