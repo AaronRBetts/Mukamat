@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     backgroundImage: `url(${bgImage})`,
+    fontFamily: 'Open sans, cursive'
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {

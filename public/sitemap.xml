@@ -7,10 +7,67 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
-<url>
-  <loc>https://mukamat.fi/</loc>
-  <lastmod>2021-09-20T09:53:28+00:00</lastmod>
-</url>
+  <url>
+    <loc>https://mukamat.fi/</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/vesseli</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/matilda</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/matti</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/lukukirja</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/kirjaintaulut</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/kirjaintaulut-and-kirjaintaulukirja</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/play-in-english</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/step-by-step</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/matkaan</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/pikku-matin-mukavat-peli-1</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/pikku-matin-mukavat-peli-2</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/mukamatti</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mukamat.fi/kirjamme/pikku-matin-mukavat-peli-1-suuraakkoset</loc>
+    <lastmod>2021-09-20T09:53:28+00:00</lastmod>
+  </url>
+
 
 
 </urlset>

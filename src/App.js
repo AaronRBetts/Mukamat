@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import CartFloat from './components/CartFloat/CartFloat'
 import { Element } from 'react-scroll';
 import { AdditionalFields } from './components/AdditionalFields/AdditionalFields';
+import { createMuiTheme } from '@material-ui/core'
 
 const App = () => {
     const [products, setProducts] = useState([]);
@@ -14,6 +15,13 @@ const App = () => {
     const [shippingPrice, setShippingPrice] = useState(0);
     const [shippingContainers, setShippingContainers] = useState({});
 
+    const font =  "Montserrat, sans-serif";
+
+    const theme = createMuiTheme({
+      typography: {
+        fontFamily: font,
+      }
+    });
 
     const fetchProducts = async () => {
         const { data } = await commerce.products.list();

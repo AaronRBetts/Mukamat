@@ -35,11 +35,12 @@ export default makeStyles((theme) => ({
         },
         '& h1': {
               fontFamily: [
-                'Josefin Sans',
+                'Open Sans',
                 'sans-serif',
               ].join(','),
             color: 'rgb(26, 146, 233)',
             lineHeight: '0.8',
+            fontWeight: '800',
             fontSize: '4em',
             margin: '0',
             // background: '#fff',
@@ -49,7 +50,7 @@ export default makeStyles((theme) => ({
         },
         '& h4': {
               fontFamily: [
-                'Josefin Sans',
+                'Open Sans',
                 'sans-serif',
               ].join(','),
             color: '#fff',

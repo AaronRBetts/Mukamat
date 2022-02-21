@@ -14,7 +14,7 @@ const Products = ({ products, onAddToCart }) => {
 
     :
         <main className={classes.content} id="kirjamme">
-            <Typography variant="h2" style={{color: 'rgb(26, 146, 233)', textShadow: '2px 2px 10px rgba(0,0,0,0.2'}} gutterBottom>Kirjamme</Typography>
+            <Typography variant="h2" style={{color: 'rgb(26, 146, 233)', fontWeight: '800'}} gutterBottom>Kirjamme</Typography>
             <Typography variant="h5" gutterBottom>
             Katso kirjavalikoimaamme, napauta kirjaa nähdäksesi lisää.</Typography>
             <Grid container justify="center" spacing={4}>
